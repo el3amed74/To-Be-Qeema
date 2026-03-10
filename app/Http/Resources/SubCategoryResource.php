@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class CategoryResource extends JsonResource
+class SubCategoryResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -19,12 +19,12 @@ class CategoryResource extends JsonResource
             'id' => $this->id,
             'name' => $this->getTranslation('name', $locale),
             'description' => $this->getTranslation('description', $locale),
-            'type' => $this->type_slug ?? null,
             'image_url' => $this->image_url,
+            'category_id' => $this->category_id,
             'courses_count' => $this->whenCounted('courses'),
             
             // Relations logic
-            'sub_categories' => SubCategoryResource::collection($this->whenLoaded('subCategories')),
+            'category' => new CategoryResource($this->whenLoaded('category')),
             'courses' => CourseResource::collection($this->whenLoaded('courses')),
         ];
     }

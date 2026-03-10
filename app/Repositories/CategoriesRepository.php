@@ -9,7 +9,7 @@ class CategoriesRepository
 {
     public function paginate($perPage = 10, $search = null, $loads = [])
     {
-        return Category::with($loads)->when($search, function ($query) use ($search) {
+        return Category::with($loads)->withCount('courses')->when($search, function ($query) use ($search) {
             $query->where('searchable_name', 'like', "%{$search}%")
                 ->orWhere('searchable_description', 'like', "%{$search}%")
                 ->orWhere('type_slug', 'like', "%{$search}%");
@@ -46,7 +46,7 @@ class CategoriesRepository
 
     public function findById($id, $loads = [])
     {
-        return Category::with($loads)->findOrFail($id);
+        return Category::with($loads)->withCount('courses')->findOrFail($id);
     }
 
     public function update($id, array $data)
