@@ -24,7 +24,7 @@ class IndexRequest extends FormRequest
     {
         return [
             'search' => 'nullable|string',
-            'category_id' => 'nullable|exists:categories,id',
+            'sub_category_id' => 'nullable|exists:sub_categories,id',
             'level_id' => 'nullable|exists:levels,id',
             'type' => 'nullable|in:'.implode(',', Course::TYPES),
             'mentor_id' => 'nullable|exists:users,id',
@@ -37,7 +37,7 @@ class IndexRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'category_id.exists' => __('The category does not exist.'),
+            'sub_category_id.exists' => __('The sub category does not exist.'),
             'level_id.exists' => __('The level does not exist.'),
             'type.in' => __('The type is invalid.'),
             'mentor_id.exists' => __('The mentor does not exist.'),
@@ -52,7 +52,7 @@ class IndexRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'category_id' => __('Category'),
+            'sub_category_id' => __('Sub Category'),
             'level_id' => __('Level'),
             'type' => __('Type'),
             'min_price' => __('Minimum Price'),

@@ -31,7 +31,7 @@ class CourseController extends Controller
             ->index(
                 $request->per_page ?? 10,
                 $request->search,
-                $request->category_id,
+                $request->sub_category_id,
                 $request->level_id,
                 $request->type,
                 $request->mentor_id,
@@ -39,7 +39,7 @@ class CourseController extends Controller
                 $request->max_price,
                 $request->accepted,
                 $request->loads ?? [
-                    'category',
+                    'subCategory',
                     'level',
                     'mentor',
                 ],[
@@ -79,7 +79,7 @@ class CourseController extends Controller
         $course = $this->courseService->create($data);
         return response()->json([
             'message' => __('Course created successfully.'),
-            'course' => new CourseResource($course->load('category', 'level', 'mentor')),
+            'course' => new CourseResource($course->load('subCategory', 'level', 'mentor')),
         ], 201);
     }
 
@@ -89,7 +89,7 @@ class CourseController extends Controller
     public function show(string $id)
     {
         $course =  $this->courseService->findById($id, [
-            'category',
+            'subCategory',
             'level',
             'mentor',
             'lessons',

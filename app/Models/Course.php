@@ -23,7 +23,7 @@ class Course extends Model
         'url',
         'searchable_name',
         'searchable_description',
-        'category_id',
+        'sub_category_id',
         'level_id',
         'mentor_id',
         'accepted_at',
@@ -48,9 +48,9 @@ class Course extends Model
 
     //===============================================
 
-    public function category()
+    public function subCategory()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(SubCategory::class);
     }
 
     public function level()

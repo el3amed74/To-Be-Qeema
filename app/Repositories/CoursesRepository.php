@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class CoursesRepository
 {
-    public function paginate($perPage = 10 , $search = null , $categoryId = null , $levelId = null , $type = null , $mentorId = null , $minPrice = null , $maxPrice = null , $accepted = null, $loads = [], $counts = [])
+    public function paginate($perPage = 10 , $search = null , $subCategoryId = null , $levelId = null , $type = null , $mentorId = null , $minPrice = null , $maxPrice = null , $accepted = null, $loads = [], $counts = [])
     {
         return Course::with($loads)->withCount($counts)
         ->when($search, function ($query) use ($search) {
@@ -16,8 +16,8 @@ class CoursesRepository
                 $query->where('searchable_name', 'like', "%{$search}%")
                     ->orWhere('searchable_description', 'like', "%{$search}%");
             });
-        })->when($categoryId, function ($query) use ($categoryId) {
-            $query->where('category_id', $categoryId);
+        })->when($subCategoryId, function ($query) use ($subCategoryId) {
+            $query->where('sub_category_id', $subCategoryId);
         })->when($levelId, function ($query) use ($levelId) {
             $query->where('level_id', $levelId);
         })->when($type, function ($query) use ($type) {
@@ -54,7 +54,7 @@ class CoursesRepository
             'type' => $data['type'],
             'price' => $data['price'] ?? 0.00,
             'url' => $data['url'] ?? null,
-            'category_id' => $data['category_id'],
+            'sub_category_id' => $data['sub_category_id'],
             'level_id' => $data['level_id'],
             'mentor_id' => $data['mentor_id'],
             'earning_points' => $data['earning_points'] ?? 0,
@@ -96,7 +96,7 @@ class CoursesRepository
             'type' => $data['type'] ?? $course->type,
             'price' => $data['price'] ?? $course->price,
             'url' => $data['url'] ?? $course->url,
-            'category_id' => $data['category_id'] ?? $course->category_id,
+            'sub_category_id' => $data['sub_category_id'] ?? $course->sub_category_id,
             'level_id' => $data['level_id'] ?? $course->level_id,
             'mentor_id' => $data['mentor_id'] ?? $course->mentor_id,
         ]);

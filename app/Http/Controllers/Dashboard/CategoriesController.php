@@ -27,7 +27,7 @@ class CategoriesController extends Controller
             'search' => 'nullable|string|max:255',
         ]);
 
-        $categories = $this->categoryService->index($request->per_page ?? 10, $request->search);
+        $categories = $this->categoryService->index($request->per_page ?? 10, $request->search, ['subCategories.courses']);
 
         return response()->json([
             'message' => __('Categories fetched successfully.'),
@@ -63,7 +63,7 @@ class CategoriesController extends Controller
      */
     public function show(string $id)
     {
-        $category = $this->categoryService->showCategory($id);
+        $category = $this->categoryService->showCategory($id, ['subCategories.courses']);
 
         return response()->json([
             'message' => __('Category fetched successfully.'),

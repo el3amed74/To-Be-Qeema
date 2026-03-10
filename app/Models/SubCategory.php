@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
 
-class Category extends Model
+class SubCategory extends Model
 {
     use HasFactory, HasTranslations, ImageAttributeTrait;
 
-    protected $fillable = ['name', 'description', 'image', 'searchable_name', 'searchable_description', 'type_slug'];
+    protected $fillable = ['name', 'description', 'image', 'searchable_name', 'searchable_description', 'category_id'];
 
     public $translatable = ['name', 'description'];
 
@@ -21,13 +21,13 @@ class Category extends Model
 
     // ===============================================
 
-    public function subCategories()
+    public function category()
     {
-        return $this->hasMany(SubCategory::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function courses()
     {
-        return $this->hasManyThrough(Course::class, SubCategory::class);
+        return $this->hasMany(Course::class);
     }
 }

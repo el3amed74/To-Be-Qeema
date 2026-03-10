@@ -3,6 +3,7 @@
 use App\Http\Controllers\Dashboard\ArticleController;
 use App\Http\Controllers\Dashboard\BannerController;
 use App\Http\Controllers\Dashboard\CategoriesController;
+use App\Http\Controllers\Dashboard\SubCategoriesController;
 use App\Http\Controllers\Dashboard\CourseController;
 use App\Http\Controllers\Dashboard\FaqsController;
 use App\Http\Controllers\Dashboard\LessonController;
@@ -38,6 +39,8 @@ Route::group([
         ], function () {
             Route::apiResource('categories', CategoriesController::class);
             Route::get('categories/{id}/edit', [CategoriesController::class, 'foredit']);
+
+            Route::apiResource('sub-categories', SubCategoriesController::class);
         });
 
         Route::group([
