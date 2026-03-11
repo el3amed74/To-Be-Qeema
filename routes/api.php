@@ -12,6 +12,7 @@ use App\Http\Controllers\Dashboard\MentorController;
 use App\Http\Controllers\Dashboard\PermissionController;
 use App\Http\Controllers\Dashboard\RoleController;
 use App\Http\Controllers\Dashboard\UserAuthController;
+use App\Http\Controllers\Dashboard\UserController;
 use App\Http\Controllers\Dashboard\UserRolePermissionController;
 use App\Http\Controllers\VideoUploadController;
 use Illuminate\Support\Facades\Route;
@@ -42,6 +43,12 @@ Route::group([
             Route::get('categories/{id}/edit', [CategoriesController::class, 'foredit']);
 
             Route::apiResource('sub-categories', SubCategoriesController::class);
+        });
+
+        Route::group([
+            'middleware' => 'role_or_permission:super-admin',
+        ], function () {
+            Route::post('users', [UserController::class, 'store']);
         });
 
         Route::group([
