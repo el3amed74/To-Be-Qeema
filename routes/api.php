@@ -15,6 +15,7 @@ use App\Http\Controllers\Dashboard\UserAuthController;
 use App\Http\Controllers\Dashboard\UserRolePermissionController;
 use App\Http\Controllers\VideoUploadController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\AuthController;
 
 Route::group([
     'prefix' => 'dashboard',
@@ -134,4 +135,14 @@ Route::group([
         Route::post('roles/{role}/permissions', [RoleController::class, 'assignPermission'])
             ->name('api.roles.permissions.assign');
     });
+});
+
+Route::group([
+    'prefix' => 'mobile',
+    'middleware' => [
+        'locale',
+    ],
+], function () {
+    Route::post('sign-up', [AuthController::class, 'signUp']);
+    Route::post('login', [AuthController::class, 'login']);
 });
