@@ -6,6 +6,7 @@ use App\DTOs\StoreUserDTO;
 use App\Repositories\UsersRepository;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use App\DTOs\WriterDetailDTO;
 
 class UserService
 {
@@ -45,5 +46,12 @@ class UserService
             Log::error('Error creating user: ' . $e->getMessage());
             throw $e;
         }
+    }
+    /**
+     * Get details for an article writer.
+     */
+    public function getWriterDetails(WriterDetailDTO $dto)
+    {
+        return $this->usersRepository->getWriterDetails($dto->id);
     }
 }

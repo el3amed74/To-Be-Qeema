@@ -270,4 +270,23 @@ class UsersRepository
     {
         return User::findOrFail($userId)->hasRole($role);
     }
+
+    /**
+     * Get details for an article writer (mentor).
+     */
+    public function getWriterDetails(int $id): User
+    {
+        $user = User::withCount(['mentoredCourses', 'articles'])
+            ->with([
+                'mentoredCourses' => function ($query) {
+                    $query->withCount('users');
+                },
+                'articles'
+            ])
+            ->findOrFail($id);
+
+        $user->total_students_count = $user->mentoredCourses->sum('users_count');
+
+        return $user;
+    }
 }

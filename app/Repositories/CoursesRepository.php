@@ -5,6 +5,8 @@ namespace App\Repositories;
 use App\Models\Course;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use App\DTOs\CourseListDTO;
+use App\Models\User;
 
 class CoursesRepository
 {
@@ -126,6 +128,35 @@ class CoursesRepository
     public function getNextOrder($courseId)
     {
         return Course::where('id', $courseId)->max('order') + 1;
+    }
+
+    public function getMyCourses(User $user, CourseListDTO $dto)
+    {
+        return Course::query()
+            ->when($user->hasRole('mentor'), function ($query) use ($user) {
+                $query->where('mentor_id', $user->id);
+            })
+            ->when(!$user->hasRole('mentor'), function ($query) use ($user) {
+                $query->whereHas('users', function ($query) use ($user) {
+                    $query->where('course_user.user_id', $user->id);
+                });
+            })
+            ->when($dto->search, function ($query) use ($dto) {
+                $query->where(function ($query) use ($dto) {
+                    $query->where('searchable_name', 'like', "%{$dto->search}%")
+                        ->orWhere('searchable_description', 'like', "%{$dto->search}%");
+                });
+            })
+            ->when($dto->categoryId, function ($query) use ($dto) {
+                $query->where('sub_category_id', $dto->categoryId);
+            })
+            ->when($dto->levelId, function ($query) use ($dto) {
+                $query->where('level_id', $dto->levelId);
+            })
+            ->when($dto->type, function ($query) use ($dto) {
+                $query->where('type', $dto->type);
+            })
+            ->paginate($dto->perPage);
     }
 
 }

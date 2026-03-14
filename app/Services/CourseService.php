@@ -3,6 +3,8 @@
 namespace App\Services;
 
 use App\Repositories\CoursesRepository;
+use App\DTOs\CourseListDTO;
+use App\Models\User;
 
 class CourseService
 {
@@ -69,6 +71,11 @@ class CourseService
     public function getNextOrder($courseId)
     {
         return $this->coursesRepository->getNextOrder($courseId);
+    }
+
+    public function getMyCourses(User $user, CourseListDTO $dto)
+    {
+        return $this->coursesRepository->getMyCourses($user, $dto);
     }
 
 }
