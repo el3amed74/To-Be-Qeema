@@ -58,6 +58,14 @@ class Course extends Model
         return $this->belongsTo(Level::class);
     }
 
+    public function mentors()
+    {
+        return $this->belongsToMany(User::class, 'course_mentor')->withPivot('is_primary')->withTimestamps();
+    }
+
+    /**
+     * @deprecated Use mentors() instead.
+     */
     public function mentor()
     {
         return $this->belongsTo(User::class, 'mentor_id', 'id');

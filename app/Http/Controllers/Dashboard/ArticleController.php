@@ -36,6 +36,7 @@ class ArticleController extends Controller
             'course.subCategory',
             'course.level',
             'course.mentor',
+            'course.mentors',
             'user',
         ];
         $articles = $this->articleService->index(
@@ -93,6 +94,7 @@ class ArticleController extends Controller
             'course.subCategory',
             'course.level',
             'course.mentor',
+            'course.mentors',
             'user',
             'usersRead',
             'usersLiked',

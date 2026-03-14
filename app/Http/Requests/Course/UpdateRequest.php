@@ -34,6 +34,8 @@ class UpdateRequest extends FormRequest
             'sub_category_id' => 'sometimes|required|exists:sub_categories,id',
             'level_id' => 'sometimes|required|exists:levels,id',
             'mentor_id' => 'sometimes|required|exists:users,id',
+            'mentors' => 'sometimes|nullable|array',
+            'mentors.*' => 'exists:users,id',
             'earning_points' => 'sometimes|required|numeric|min:0',
         ];
     }
@@ -69,6 +71,8 @@ class UpdateRequest extends FormRequest
             'level_id.exists' => __('The level does not exist.'),
             'mentor_id.required' => __('The mentor field is required.'),
             'mentor_id.exists' => __('The mentor does not exist.'),
+            'mentors.array' => __('The mentors field must be an array.'),
+            'mentors.*.exists' => __('One or more mentors do not exist.'),
             'earning_points.required' => __('The earning points field is required.'),
             'earning_points.numeric' => __('The earning points field must be a number.'),
             'earning_points.min' => __('The earning points field must be greater than 0.'),

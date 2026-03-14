@@ -26,6 +26,7 @@ class CourseResource extends JsonResource
             'sub_category' => new SubCategoryResource($this->whenLoaded('subCategory')),
             'level' => new LevelResource($this->whenLoaded('level')),
             'mentor' => new UserResource($this->whenLoaded('mentor')),
+            'mentors' => UserResource::collection($this->whenLoaded('mentors')),
 
             'students_count' => $this->whenCounted('users'),
             'lessons_count' => $this->whenCounted('lessons'),

@@ -24,7 +24,7 @@ class ListCourseController extends Controller
         $dto = $request->toDTO();
         $user = $request->user();
 
-        $courses = $this->courseService->getMyCourses($user, $dto);
+        $courses = $this->courseService->getMyCourses($user, $dto)->load('mentors');
 
         return CourseResource::collection($courses);
     }

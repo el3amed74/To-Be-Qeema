@@ -41,7 +41,7 @@ class CoursesRepository
 
     public function create(array $data)
     {
-        return Course::create([
+        $course = Course::create([
             'name' => [
                 'en' => $data['name_en'],
                 'ar' => $data['name_ar'],
@@ -58,10 +58,24 @@ class CoursesRepository
             'url' => $data['url'] ?? null,
             'sub_category_id' => $data['sub_category_id'],
             'level_id' => $data['level_id'],
-            'mentor_id' => $data['mentor_id'],
+            'mentor_id' => $data['mentor_id'], // Keep for compatibility
             'earning_points' => $data['earning_points'] ?? 0,
             'accepted_at' => isset($data['accepted_at']) ? now() : null,
         ]);
+
+        $mentors = isset($data['mentors']) ? array_values((array) $data['mentors']) : [];
+        if (isset($data['mentor_id']) && !in_array($data['mentor_id'], $mentors)) {
+            $mentors[] = $data['mentor_id'];
+        }
+
+        $syncData = [];
+        foreach ($mentors as $mid) {
+            $syncData[$mid] = ['is_primary' => (isset($data['mentor_id']) && $mid == $data['mentor_id'])];
+        }
+
+        $course->mentors()->sync($syncData);
+
+        return $course;
     }
 
     public function findById($id, $loads = [], $counts = [])
@@ -83,7 +97,7 @@ class CoursesRepository
         $indexedDescription = $data['description_en'] ?? $course->getTranslation('description', 'en');
         $indexedDescription .= " ".($data['description_ar'] ?? $course->getTranslation('description', 'ar'));
 
-        return $course->update([
+        $course->update([
             'name' => [
                 'en' => $data['name_en'] ?? $course->getTranslation('name', 'en'),
                 'ar' => $data['name_ar'] ?? $course->getTranslation('name', 'ar'),
@@ -102,6 +116,24 @@ class CoursesRepository
             'level_id' => $data['level_id'] ?? $course->level_id,
             'mentor_id' => $data['mentor_id'] ?? $course->mentor_id,
         ]);
+
+        $mentorsData = isset($data['mentors']) ? array_values((array) $data['mentors']) : null;
+        $primaryMentorId = $data['mentor_id'] ?? $course->mentor_id;
+
+        if ($mentorsData !== null || isset($data['mentor_id'])) {
+            $mentors = $mentorsData ?? $course->mentors()->pluck('user_id')->toArray();
+            if ($primaryMentorId && !in_array($primaryMentorId, $mentors)) {
+                $mentors[] = $primaryMentorId;
+            }
+
+            $syncData = [];
+            foreach ($mentors as $mid) {
+                $syncData[$mid] = ['is_primary' => ($mid == $primaryMentorId)];
+            }
+            $course->mentors()->sync($syncData);
+        }
+
+        return $course;
     }
 
     public function delete(Course $course)
