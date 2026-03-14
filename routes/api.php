@@ -17,6 +17,8 @@ use App\Http\Controllers\Dashboard\UserRolePermissionController;
 use App\Http\Controllers\VideoUploadController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\ListCourseController;
+use App\Http\Controllers\Api\WriterController;
 
 Route::group([
     'prefix' => 'dashboard',
@@ -152,4 +154,9 @@ Route::group([
 ], function () {
     Route::post('sign-up', [AuthController::class, 'signUp']);
     Route::post('login', [AuthController::class, 'login']);
+
+    Route::middleware('auth:sanctum')->group(function () {
+        Route::get('my-courses', [ListCourseController::class, 'myCourses']);
+        Route::get('writers/{id}', [WriterController::class, 'show']);
+    });
 });

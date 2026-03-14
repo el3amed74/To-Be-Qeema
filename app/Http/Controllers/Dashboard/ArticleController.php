@@ -21,11 +21,19 @@ class ArticleController extends Controller
     }
     /**
      * Display a listing of the resource.
+     * mentor  => function($query) {
+      *          $query->with(['roles', 'mentorDetail'])
+        *              ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);
+        *    }
+     * user => function($query) {
+     *           $query->with(['roles', 'mentorDetail', 'wallet'])
+      *                ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);
+      *      }
      */
     public function index(IndexRequest $request)
     {
         $loads = [
-            'course.category',
+            'course.subCategory',
             'course.level',
             'course.mentor',
             'user',
@@ -70,15 +78,22 @@ class ArticleController extends Controller
 
     /**
      * Display the specified resource.
+     * mentor  => function($query) {
+      *          $query->with(['roles', 'mentorDetail'])
+       *               ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);
+       *     }
+     *  user=> function($query) {
+        *        $query->with(['roles', 'mentorDetail', 'wallet'])
+        *              ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);
+         *   }
      */
     public function show(string $id)
     {
         $article = $this->articleService->show($id,[
-            'course.category',
+            'course.subCategory',
             'course.level',
-            'course',
+            'course.mentor',
             'user',
-        ],[
             'usersRead',
             'usersLiked',
         ]);
