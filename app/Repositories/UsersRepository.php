@@ -279,7 +279,7 @@ class UsersRepository
         $user = User::withCount(['mentoredCourses', 'articles'])
             ->with([
                 'mentoredCourses' => function ($query) {
-                    $query->withCount('users');
+                    $query->withCount('users')->with('mentors');
                 },
                 'articles'
             ])

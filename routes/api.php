@@ -14,11 +14,13 @@ use App\Http\Controllers\Dashboard\RoleController;
 use App\Http\Controllers\Dashboard\UserAuthController;
 use App\Http\Controllers\Dashboard\UserController;
 use App\Http\Controllers\Dashboard\UserRolePermissionController;
+use App\Http\Controllers\Dashboard\ReservationController as AdminReservationController;
 use App\Http\Controllers\VideoUploadController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\ListCourseController;
 use App\Http\Controllers\Api\WriterController;
+use App\Http\Controllers\Api\ReservationController;
 
 Route::group([
     'prefix' => 'dashboard',
@@ -140,6 +142,12 @@ Route::group([
                 ->name('api.users.roles.sync');
         });
 
+        // ----- Reservations (Admin) -----
+        Route::get('reservations', [AdminReservationController::class, 'index'])
+            ->name('api.reservations.index');
+        Route::patch('reservations/{id}/status', [AdminReservationController::class, 'updateStatus'])
+            ->name('api.reservations.status.update');
+
         // Optional: Assign permission directly to a role (role-level management)
         Route::post('roles/{role}/permissions', [RoleController::class, 'assignPermission'])
             ->name('api.roles.permissions.assign');
@@ -158,5 +166,10 @@ Route::group([
     Route::middleware('auth:sanctum')->group(function () {
         Route::get('my-courses', [ListCourseController::class, 'myCourses']);
         Route::get('writers/{id}', [WriterController::class, 'show']);
+
+        // ----- Reservations -----
+        Route::get('reservations', [ReservationController::class, 'index']);
+        Route::post('reservations', [ReservationController::class, 'store']);
+        Route::get('reservations/{id}', [ReservationController::class, 'show']);
     });
 });

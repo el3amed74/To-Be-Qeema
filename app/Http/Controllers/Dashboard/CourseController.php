@@ -42,6 +42,7 @@ class CourseController extends Controller
                     'subCategory',
                     'level',
                     'mentor',
+                    'mentors',
                 ],[
                     'users',
                     'lessons',
@@ -79,7 +80,7 @@ class CourseController extends Controller
         $course = $this->courseService->create($data);
         return response()->json([
             'message' => __('Course created successfully.'),
-            'course' => new CourseResource($course->load('subCategory', 'level', 'mentor')),
+            'course' => new CourseResource($course->load('subCategory', 'level', 'mentor', 'mentors')),
         ], 201);
     }
 
@@ -92,6 +93,7 @@ class CourseController extends Controller
             'subCategory',
             'level',
             'mentor',
+            'mentors',
             'lessons',
             'posts',
             'polls',
@@ -119,6 +121,7 @@ class CourseController extends Controller
         $course = $this->courseService->update($id, $data);
         return response()->json([
             'message' => __('Course updated successfully.'),
+            'course' => new CourseResource($course->load('subCategory', 'level', 'mentor', 'mentors')),
         ], 200);
     }
 

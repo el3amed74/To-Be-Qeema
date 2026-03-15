@@ -74,9 +74,17 @@ class User extends Authenticatable
 
     //===============================================
 
+    /**
+     * @deprecated Use mentoringCourses() instead.
+     */
     public function mentoredCourses()
     {
         return $this->hasMany(Course::class, 'mentor_id', 'id');
+    }
+
+    public function mentoringCourses()
+    {
+        return $this->belongsToMany(Course::class, 'course_mentor')->withPivot('is_primary')->withTimestamps();
     }
 
     public function courses()
