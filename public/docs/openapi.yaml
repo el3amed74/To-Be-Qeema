@@ -1,0 +1,3754 @@
+openapi: 3.0.3
+info:
+  title: 'Laravel API Documentation'
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'https://tobe.teamqeematech.site'
+tags:
+  -
+    name: Endpoints
+    description: ''
+paths:
+  /api/dashboard/login:
+    post:
+      summary: ''
+      operationId: postApiDashboardLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address. The <code>email</code> of an existing record in the users table.'
+                  example: gbailey@example.net
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: '+-0pBNvYgxwmi/#iw'
+              required:
+                - email
+                - password
+      security: []
+  /api/dashboard/logout:
+    post:
+      summary: ''
+      operationId: postApiDashboardLogout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/dashboard/logout-all-devices:
+    post:
+      summary: ''
+      operationId: postApiDashboardLogoutAllDevices
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/dashboard/profile:
+    get:
+      summary: ''
+      operationId: getApiDashboardProfile
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/dashboard/password:
+    put:
+      summary: ''
+      operationId: putApiDashboardPassword
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: '|]|{+-'
+                password_confirmation:
+                  type: string
+                  description: 'The value and <code>password</code> must match. Must be at least 8 characters.'
+                  example: vdljnikhwaykcmyuwpwlvqwrsi
+              required:
+                - password
+                - password_confirmation
+      security: []
+  /api/dashboard/categories:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                search:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                  nullable: true
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                name_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                description_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: g
+                  nullable: true
+                description_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: z
+                  nullable: true
+                type_slug:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: m
+                  nullable: true
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+              required:
+                - name_en
+                - name_ar
+      security: []
+  '/api/dashboard/categories/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the category.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/dashboard/sub-categories:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                search:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                  nullable: true
+                category_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the categories table.'
+                  example: null
+                  nullable: true
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                name_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                description_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: g
+                  nullable: true
+                description_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: z
+                  nullable: true
+                category_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the categories table.'
+                  example: architecto
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+              required:
+                - name_en
+                - name_ar
+                - category_id
+      security: []
+  '/api/dashboard/sub-categories/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                name_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                description_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: g
+                  nullable: true
+                description_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: z
+                  nullable: true
+                category_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the categories table.'
+                  example: architecto
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+              required:
+                - name_en
+                - name_ar
+                - category_id
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the sub category.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/dashboard/consultation-categories:
+    get:
+      summary: ''
+      operationId: getApiDashboardConsultationCategories
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiDashboardConsultationCategories
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                name_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                description_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                description_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                type_slug:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                slug:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: g
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+              required:
+                - name_en
+                - name_ar
+                - description_en
+                - description_ar
+                - type_slug
+                - slug
+      security: []
+  '/api/dashboard/consultation-categories/{id}':
+    get:
+      summary: ''
+      operationId: getApiDashboardConsultationCategoriesId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      operationId: putApiDashboardConsultationCategoriesId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                name_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                description_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                description_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                type_slug:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                slug:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: g
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+              required:
+                - name_en
+                - name_ar
+                - description_en
+                - description_ar
+                - type_slug
+                - slug
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiDashboardConsultationCategoriesId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the consultation category.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/dashboard/consultation-sub-categories:
+    get:
+      summary: ''
+      operationId: getApiDashboardConsultationSubCategories
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiDashboardConsultationSubCategories
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                name_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                description_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                description_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                consultation_category_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the consultation_categories table.'
+                  example: architecto
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+              required:
+                - name_en
+                - name_ar
+                - description_en
+                - description_ar
+                - consultation_category_id
+      security: []
+  '/api/dashboard/consultation-sub-categories/{id}':
+    get:
+      summary: ''
+      operationId: getApiDashboardConsultationSubCategoriesId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      operationId: putApiDashboardConsultationSubCategoriesId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                name_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                description_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                description_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                consultation_category_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the consultation_categories table.'
+                  example: architecto
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+              required:
+                - name_en
+                - name_ar
+                - description_en
+                - description_ar
+                - consultation_category_id
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiDashboardConsultationSubCategoriesId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the consultation sub category.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/dashboard/consultation-sessions:
+    get:
+      summary: ''
+      operationId: getApiDashboardConsultationSessions
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiDashboardConsultationSessions
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                name_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                description_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                description_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                content_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                content_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                price:
+                  type: number
+                  description: ''
+                  example: 4326.41688
+                duration:
+                  type: integer
+                  description: ''
+                  example: 16
+                type:
+                  type: string
+                  description: ''
+                  example: offline
+                  enum:
+                    - live
+                    - recorded
+                    - offline
+                earning_points:
+                  type: integer
+                  description: ''
+                  example: 16
+                consultation_sub_category_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the consultation_sub_categories table.'
+                  example: architecto
+                mentor_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: architecto
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+                video_url:
+                  type: string
+                  description: 'Must be a valid URL.'
+                  example: 'http://bailey.com/'
+                  nullable: true
+              required:
+                - name_en
+                - name_ar
+                - description_en
+                - description_ar
+                - content_en
+                - content_ar
+                - price
+                - duration
+                - type
+                - earning_points
+                - consultation_sub_category_id
+                - mentor_id
+      security: []
+  '/api/dashboard/consultation-sessions/{id}':
+    get:
+      summary: ''
+      operationId: getApiDashboardConsultationSessionsId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      operationId: putApiDashboardConsultationSessionsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                name_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                description_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                description_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                content_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                content_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                price:
+                  type: number
+                  description: ''
+                  example: 4326.41688
+                duration:
+                  type: integer
+                  description: ''
+                  example: 16
+                type:
+                  type: string
+                  description: ''
+                  example: live
+                  enum:
+                    - live
+                    - recorded
+                    - offline
+                earning_points:
+                  type: integer
+                  description: ''
+                  example: 16
+                consultation_sub_category_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the consultation_sub_categories table.'
+                  example: architecto
+                mentor_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: architecto
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+                video_url:
+                  type: string
+                  description: 'Must be a valid URL.'
+                  example: 'http://bailey.com/'
+                  nullable: true
+              required:
+                - name_en
+                - name_ar
+                - description_en
+                - description_ar
+                - content_en
+                - content_ar
+                - price
+                - duration
+                - type
+                - earning_points
+                - consultation_sub_category_id
+                - mentor_id
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiDashboardConsultationSessionsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the consultation session.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/dashboard/consultation-reservations:
+    get:
+      summary: ''
+      operationId: getApiDashboardConsultationReservations
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/dashboard/consultation-reservations/{id}/status':
+    patch:
+      summary: ''
+      operationId: patchApiDashboardConsultationReservationsIdStatus
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+                  description: ''
+                  example: confirmed
+                  enum:
+                    - pending
+                    - confirmed
+                    - cancelled
+                    - paid
+              required:
+                - status
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the consultation reservation.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/dashboard/users:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                email:
+                  type: string
+                  description: 'This field is required when <code>phone_number</code> is not present. Must be a valid email address.'
+                  example: zbailey@example.net
+                  nullable: true
+                phone_number:
+                  type: string
+                  description: 'This field is required when <code>email</code> is not present. Must not be greater than 15 characters.'
+                  example: i
+                  nullable: true
+                roles:
+                  type: array
+                  description: 'The <code>id</code> of an existing record in the roles table.'
+                  example: null
+                  items:
+                    type: string
+                bank_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'y'
+                bank_account_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: v
+                bank_account_number:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: d
+                deduction_type:
+                  type: string
+                  description: ''
+                  example: fixed
+                  enum:
+                    - percentage
+                    - fixed
+                deduction_value:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 37
+              required:
+                - name
+      security: []
+  /api/dashboard/levels:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                search:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                  nullable: true
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                name_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                description_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: true
+                description_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: true
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+              required:
+                - name_en
+                - name_ar
+      security: []
+  '/api/dashboard/levels/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the level.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/dashboard/faqs:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                search:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                  nullable: true
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                question_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                question_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                answer_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                answer_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+              required:
+                - question_en
+                - question_ar
+                - answer_en
+                - answer_ar
+      security: []
+  '/api/dashboard/faqs/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the faq.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  '/api/dashboard/faqs/{id}/edit':
+    get:
+      summary: ''
+      operationId: getApiDashboardFaqsIdEdit
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the faq.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/dashboard/about-us:
+    get:
+      summary: ''
+      operationId: getApiDashboardAboutUs
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/dashboard/about-us/update:
+    post:
+      summary: ''
+      operationId: postApiDashboardAboutUsUpdate
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                about_us_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: true
+                about_us_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: true
+      security: []
+  /api/dashboard/mentors:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                search:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                  nullable: true
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: zbailey@example.net
+                phone_number:
+                  type: string
+                  description: 'Must match the regex ^01[0-2]\s\d{1,8}$. Must not be greater than 255 characters.'
+                  example: i
+                  nullable: true
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: '0pBNvYgxwmi/#iw/kX'
+              required:
+                - name
+                - email
+                - password
+      security: []
+  '/api/dashboard/mentors/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the mentor.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/dashboard/banners:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                search:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                  nullable: true
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                name_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                description_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: g
+                  nullable: true
+                description_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: z
+                  nullable: true
+                button_text_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: m
+                  nullable: true
+                button_text_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: i
+                  nullable: true
+                button_url:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'http://www.okon.com/accusantium-harum-mollitia-modi-deserunt-aut-ab'
+                  nullable: true
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+              required:
+                - name_en
+                - name_ar
+      security: []
+  '/api/dashboard/banners/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the banner.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  '/api/dashboard/banners/{id}/update-img':
+    post:
+      summary: ''
+      operationId: postApiDashboardBannersIdUpdateImg
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the banner.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/dashboard/lesson/upload-chunk:
+    post:
+      summary: ''
+      operationId: postApiDashboardLessonUploadChunk
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: 'Must be a file.'
+                lesson_id:
+                  type: string
+                  description: "'mimetypes:video/mp4,video/avi,video/quicktime,video/x-matroska'. The <code>id</code> of an existing record in the lessons table."
+                  example: architecto
+                dzuuid:
+                  type: string
+                  description: ''
+                  example: 6ff8f7f6-1eb3-3525-be4a-3932c805afed
+                dzchunkindex:
+                  type: integer
+                  description: ''
+                  example: 16
+                dztotalchunkcount:
+                  type: integer
+                  description: ''
+                  example: 16
+              required:
+                - file
+                - lesson_id
+                - dzuuid
+                - dzchunkindex
+                - dztotalchunkcount
+      security: []
+  /api/dashboard/courses:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                search:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: true
+                sub_category_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the sub_categories table.'
+                  example: null
+                  nullable: true
+                level_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the levels table.'
+                  example: null
+                  nullable: true
+                type:
+                  type: string
+                  description: ''
+                  example: recorded
+                  enum:
+                    - live
+                    - offline
+                    - recorded
+                  nullable: true
+                mentor_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: null
+                  nullable: true
+                min_price:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 39
+                  nullable: true
+                max_price:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 84
+                  nullable: true
+                accepted:
+                  type: boolean
+                  description: ''
+                  example: false
+                  nullable: true
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                name_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                description_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: true
+                description_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: true
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                type:
+                  type: string
+                  description: ''
+                  example: offline
+                  enum:
+                    - live
+                    - offline
+                    - recorded
+                price:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 39
+                url:
+                  type: string
+                  description: 'This field is required when <code>type</code> is <code>recorded</code>. Must be a valid URL.'
+                  example: 'http://crooks.biz/et-fugiat-sunt-nihil-accusantium'
+                  nullable: true
+                sub_category_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the sub_categories table.'
+                  example: architecto
+                level_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the levels table.'
+                  example: architecto
+                mentor_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: architecto
+                mentors:
+                  type: array
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: null
+                  items:
+                    type: string
+                earning_points:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 39
+              required:
+                - name_en
+                - name_ar
+                - image
+                - type
+                - price
+                - sub_category_id
+                - level_id
+                - mentor_id
+                - earning_points
+      security: []
+  '/api/dashboard/courses/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                name_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                description_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                description_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                type:
+                  type: string
+                  description: ''
+                  example: offline
+                  enum:
+                    - live
+                    - offline
+                    - recorded
+                price:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 39
+                url:
+                  type: string
+                  description: 'This field is required when <code>type</code> is <code>recorded</code>. Must be a valid URL.'
+                  example: 'http://crooks.biz/et-fugiat-sunt-nihil-accusantium'
+                sub_category_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the sub_categories table.'
+                  example: null
+                level_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the levels table.'
+                  example: null
+                mentor_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: null
+                mentors:
+                  type: array
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: null
+                  items:
+                    type: string
+                earning_points:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 52
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the course.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/dashboard/courses/{id}/edit':
+    get:
+      summary: ''
+      operationId: getApiDashboardCoursesIdEdit
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the course.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/dashboard/courses/{id}/accept':
+    put:
+      summary: ''
+      operationId: putApiDashboardCoursesIdAccept
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the course.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/dashboard/courses/{id}/reject':
+    put:
+      summary: ''
+      operationId: putApiDashboardCoursesIdReject
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the course.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/dashboard/lessons:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                per_page:
+                  type: integer
+                  description: 'Must be at least 1.'
+                  example: 16
+                  nullable: true
+                search:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: true
+                course_id:
+                  type: integer
+                  description: 'The <code>id</code> of an existing record in the courses table.'
+                  example: 16
+                  nullable: true
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                course_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the courses table.'
+                  example: architecto
+                title_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                title_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: g
+                content_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                content_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                video_url:
+                  type: string
+                  description: 'Must be a valid URL.'
+                  example: 'http://bailey.com/'
+                  nullable: true
+                duration:
+                  type: integer
+                  description: ''
+                  example: 16
+                order:
+                  type: integer
+                  description: ''
+                  example: 16
+              required:
+                - course_id
+                - title_en
+                - title_ar
+                - content_en
+                - content_ar
+                - duration
+                - order
+      security: []
+  '/api/dashboard/lessons/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title_en:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                title_ar:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                content_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                content_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                video_url:
+                  type: string
+                  description: 'Must be a valid URL.'
+                  example: 'http://bailey.com/'
+                duration:
+                  type: integer
+                  description: ''
+                  example: 16
+                order:
+                  type: integer
+                  description: ''
+                  example: 16
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the lesson.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  '/api/dashboard/lessons/{id}/edit':
+    get:
+      summary: ''
+      operationId: getApiDashboardLessonsIdEdit
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the lesson.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  '/api/dashboard/lessons/{course_id}/next-order':
+    get:
+      summary: ''
+      operationId: getApiDashboardLessonsCourse_idNextOrder
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: course_id
+        description: 'The ID of the course.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/dashboard/articles:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: "mentor  => function($query) {\n         $query->with(['roles', 'mentorDetail'])\n             ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);\n   }\nuser => function($query) {\n          $query->with(['roles', 'mentorDetail', 'wallet'])\n               ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);\n     }"
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                course_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the courses table.'
+                  example: null
+                  nullable: true
+                user_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: null
+                  nullable: true
+                is_published:
+                  type: boolean
+                  description: ''
+                  example: false
+                  nullable: true
+                accepted:
+                  type: boolean
+                  description: ''
+                  example: false
+                  nullable: true
+                search:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                  nullable: true
+                per_page:
+                  type: integer
+                  description: 'Must be at least 1. Must not be greater than 100.'
+                  example: 22
+                  nullable: true
+                page:
+                  type: integer
+                  description: 'Must be at least 1.'
+                  example: 67
+                  nullable: true
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                course_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the courses table.'
+                  example: architecto
+                content_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                content_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                title_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                title_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+                earning_points:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 39
+                  nullable: true
+                is_published:
+                  type: boolean
+                  description: ''
+                  example: false
+                  nullable: true
+              required:
+                - course_id
+                - content_en
+                - content_ar
+                - title_en
+                - title_ar
+      security: []
+  '/api/dashboard/articles/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: "mentor  => function($query) {\n         $query->with(['roles', 'mentorDetail'])\n              ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);\n    }\n user=> function($query) {\n       $query->with(['roles', 'mentorDetail', 'wallet'])\n             ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);\n  }"
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                name_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                description_en:
+                  type: string
+                  description: ''
+                  example: architecto
+                description_ar:
+                  type: string
+                  description: ''
+                  example: architecto
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                type:
+                  type: string
+                  description: ''
+                  example: offline
+                  enum:
+                    - live
+                    - offline
+                    - recorded
+                price:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 39
+                url:
+                  type: string
+                  description: 'This field is required when <code>type</code> is <code>recorded</code>. Must be a valid URL.'
+                  example: 'http://crooks.biz/et-fugiat-sunt-nihil-accusantium'
+                sub_category_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the sub_categories table.'
+                  example: null
+                level_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the levels table.'
+                  example: null
+                mentor_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: null
+                mentors:
+                  type: array
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: null
+                  items:
+                    type: string
+                earning_points:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 52
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the article.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  '/api/dashboard/articles/{id}/edit':
+    get:
+      summary: 'Show the form for editing the specified resource.'
+      operationId: showTheFormForEditingTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the article.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  '/api/dashboard/articles/{id}/publish':
+    put:
+      summary: ''
+      operationId: putApiDashboardArticlesIdPublish
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the article.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  '/api/dashboard/articles/{id}/unpublish':
+    put:
+      summary: ''
+      operationId: putApiDashboardArticlesIdUnpublish
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the article.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  '/api/dashboard/articles/{id}/accept':
+    put:
+      summary: ''
+      operationId: putApiDashboardArticlesIdAccept
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the article.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  '/api/dashboard/articles/{id}/reject':
+    put:
+      summary: ''
+      operationId: putApiDashboardArticlesIdReject
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the article.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/dashboard/roles:
+    get:
+      summary: ''
+      operationId: getApiDashboardRoles
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiDashboardRoles
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: architecto
+                guard_name:
+                  type: string
+                  description: ''
+                  example: architecto
+              required:
+                - name
+                - guard_name
+      security: []
+  '/api/dashboard/roles/{id}':
+    get:
+      summary: ''
+      operationId: getApiDashboardRolesId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      operationId: putApiDashboardRolesId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: architecto
+                guard_name:
+                  type: string
+                  description: ''
+                  example: architecto
+              required:
+                - name
+                - guard_name
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiDashboardRolesId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the role.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/dashboard/permissions:
+    get:
+      summary: ''
+      operationId: getApiDashboardPermissions
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiDashboardPermissions
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: architecto
+                guard_name:
+                  type: string
+                  description: ''
+                  example: architecto
+              required:
+                - name
+                - guard_name
+      security: []
+  '/api/dashboard/permissions/{id}':
+    get:
+      summary: ''
+      operationId: getApiDashboardPermissionsId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      operationId: putApiDashboardPermissionsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: architecto
+                guard_name:
+                  type: string
+                  description: ''
+                  example: architecto
+              required:
+                - name
+                - guard_name
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiDashboardPermissionsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the permission.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  '/api/dashboard/users/{user_id}/roles-permissions':
+    get:
+      summary: ''
+      operationId: getApiDashboardUsersUser_idRolesPermissions
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/dashboard/users/{user_id}/roles':
+    post:
+      summary: ''
+      operationId: postApiDashboardUsersUser_idRoles
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                roles:
+                  type: array
+                  description: 'The <code>name</code> of an existing record in the roles table.'
+                  example: null
+                  items:
+                    type: string
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiDashboardUsersUser_idRoles
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                roles:
+                  type: array
+                  description: 'The <code>name</code> of an existing record in the roles table.'
+                  example: null
+                  items:
+                    type: string
+      security: []
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/dashboard/users/{user_id}/roles/sync':
+    put:
+      summary: ''
+      operationId: putApiDashboardUsersUser_idRolesSync
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                roles:
+                  type: array
+                  description: 'The <code>name</code> of an existing record in the roles table.'
+                  example:
+                    - architecto
+                  items:
+                    type: string
+      security: []
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/dashboard/reservations:
+    get:
+      summary: ''
+      operationId: getApiDashboardReservations
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/dashboard/reservations/{id}/status':
+    patch:
+      summary: ''
+      operationId: patchApiDashboardReservationsIdStatus
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+                  description: ''
+                  example: confirmed
+                  enum:
+                    - pending
+                    - confirmed
+                    - cancelled
+                    - paid
+              required:
+                - status
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the reservation.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/mobile/sign-up:
+    post:
+      summary: ''
+      operationId: postApiMobileSignUp
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'n'
+                email:
+                  type: string
+                  description: 'This field is required when <code>phone_number</code> is not present. Must be a valid email address.'
+                  example: ashly64@example.com
+                  nullable: true
+                phone_number:
+                  type: string
+                  description: 'This field is required when <code>email</code> is not present.'
+                  example: architecto
+                  nullable: true
+                password:
+                  type: string
+                  description: ''
+                  example: '|]|{+-'
+              required:
+                - first_name
+                - last_name
+                - password
+      security: []
+  /api/mobile/login:
+    post:
+      summary: ''
+      operationId: postApiMobileLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                identifier:
+                  type: string
+                  description: ''
+                  example: architecto
+                password:
+                  type: string
+                  description: ''
+                  example: '|]|{+-'
+              required:
+                - identifier
+                - password
+      security: []
+  /api/mobile/my-courses:
+    get:
+      summary: "Get the authenticated user's courses (mentored or enrolled)."
+      operationId: getTheAuthenticatedUsersCoursesmentoredOrEnrolled
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                search:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: true
+                per_page:
+                  type: integer
+                  description: 'Must be at least 1. Must not be greater than 100.'
+                  example: 22
+                  nullable: true
+                category_id:
+                  type: integer
+                  description: 'The <code>id</code> of an existing record in the categories table.'
+                  example: 16
+                  nullable: true
+                level_id:
+                  type: integer
+                  description: 'The <code>id</code> of an existing record in the levels table.'
+                  example: 16
+                  nullable: true
+                type:
+                  type: string
+                  description: ''
+                  example: live
+                  enum:
+                    - live
+                    - offline
+                    - recorded
+                  nullable: true
+      security: []
+  '/api/mobile/writers/{id}':
+    get:
+      summary: 'Display details about a specific article writer.'
+      operationId: displayDetailsAboutASpecificArticleWriter
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the writer.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/mobile/articles:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: "mentor  => function($query) {\n         $query->with(['roles', 'mentorDetail'])\n             ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);\n   }\nuser => function($query) {\n          $query->with(['roles', 'mentorDetail', 'wallet'])\n               ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);\n     }"
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                course_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the courses table.'
+                  example: null
+                  nullable: true
+                user_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: null
+                  nullable: true
+                is_published:
+                  type: boolean
+                  description: ''
+                  example: true
+                  nullable: true
+                accepted:
+                  type: boolean
+                  description: ''
+                  example: true
+                  nullable: true
+                search:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                  nullable: true
+                per_page:
+                  type: integer
+                  description: 'Must be at least 1. Must not be greater than 100.'
+                  example: 22
+                  nullable: true
+                page:
+                  type: integer
+                  description: 'Must be at least 1.'
+                  example: 67
+                  nullable: true
+      security: []
+  '/api/mobile/articles/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: "mentor  => function($query) {\n         $query->with(['roles', 'mentorDetail'])\n              ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);\n    }\n user=> function($query) {\n       $query->with(['roles', 'mentorDetail', 'wallet'])\n             ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);\n  }"
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the article.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/mobile/courses:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                search:
+                  type: string
+                  description: ''
+                  example: architecto
+                  nullable: true
+                sub_category_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the sub_categories table.'
+                  example: null
+                  nullable: true
+                level_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the levels table.'
+                  example: null
+                  nullable: true
+                type:
+                  type: string
+                  description: ''
+                  example: offline
+                  enum:
+                    - live
+                    - offline
+                    - recorded
+                  nullable: true
+                mentor_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: null
+                  nullable: true
+                min_price:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 39
+                  nullable: true
+                max_price:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 84
+                  nullable: true
+                accepted:
+                  type: boolean
+                  description: ''
+                  example: true
+                  nullable: true
+      security: []
+  '/api/mobile/courses/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the course.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/mobile/reservations:
+    get:
+      summary: ''
+      operationId: getApiMobileReservations
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiMobileReservations
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                course_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the courses table.'
+                  example: architecto
+                mentor_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: architecto
+                phone_number:
+                  type: string
+                  description: ''
+                  example: architecto
+                job_title:
+                  type: string
+                  description: ''
+                  example: architecto
+                human_type:
+                  type: string
+                  description: ''
+                  example: architecto
+                location:
+                  type: string
+                  description: ''
+                  example: architecto
+                date:
+                  type: string
+                  description: 'Must be a valid date in the format <code>Y-m-d</code>.'
+                  example: '2026-03-16'
+                time:
+                  type: string
+                  description: 'Must be a valid date in the format <code>H:i</code>.'
+                  example: '19:56'
+                payment_gateway:
+                  type: string
+                  description: ''
+                  example: cash
+                  enum:
+                    - cash
+                    - paymob_visa
+                    - paymob_wallet
+              required:
+                - course_id
+                - mentor_id
+                - phone_number
+                - job_title
+                - human_type
+                - location
+                - date
+                - time
+                - payment_gateway
+      security: []
+  '/api/mobile/reservations/{id}':
+    get:
+      summary: ''
+      operationId: getApiMobileReservationsId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the reservation.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/mobile/consultations/categories:
+    get:
+      summary: ''
+      operationId: getApiMobileConsultationsCategories
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/mobile/consultations/sub-categories:
+    get:
+      summary: ''
+      operationId: getApiMobileConsultationsSubCategories
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/mobile/consultations/sessions:
+    get:
+      summary: ''
+      operationId: getApiMobileConsultationsSessions
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/mobile/consultations/sessions/{id}':
+    get:
+      summary: ''
+      operationId: getApiMobileConsultationsSessionsId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the session.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/mobile/consultation-reservations:
+    get:
+      summary: ''
+      operationId: getApiMobileConsultationReservations
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiMobileConsultationReservations
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                consultation_session_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the consultation_sessions table.'
+                  example: architecto
+                phone_number:
+                  type: string
+                  description: ''
+                  example: architecto
+                date:
+                  type: string
+                  description: 'Must be a valid date in the format <code>Y-m-d</code>.'
+                  example: '2026-03-16'
+                time:
+                  type: string
+                  description: 'Must be a valid date in the format <code>H:i</code>.'
+                  example: '19:56'
+                payment_gateway:
+                  type: string
+                  description: ''
+                  example: cash
+                  enum:
+                    - cash
+                    - paymob_visa
+                    - paymob_wallet
+              required:
+                - consultation_session_id
+                - phone_number
+                - date
+                - time
+                - payment_gateway
+      security: []
+  '/api/mobile/consultation-reservations/{id}':
+    get:
+      summary: ''
+      operationId: getApiMobileConsultationReservationsId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the consultation reservation.'
+        example: architecto
+        required: true
+        schema:
+          type: string
