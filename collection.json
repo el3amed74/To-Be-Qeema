@@ -1,0 +1,3470 @@
+{
+  "info": {
+    "name": "To-Be API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost/tobe/public/api",
+      "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "Auth",
+          "item": [
+            {
+              "name": "Login",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/login"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"email\": \"admin@example.com\", \"password\": \"password123\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Logout",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/logout"
+                }
+              }
+            },
+            {
+              "name": "Logout All Devices",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/logout-all-devices"
+                }
+              }
+            },
+            {
+              "name": "Get Profile",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/profile"
+                }
+              }
+            },
+            {
+              "name": "Update Profile",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/user"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\": \"Admin Name\", \"email\": \"admin@example.com\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Update Password",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/password"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"password\": \"NewPass@123\", \"password_confirmation\": \"NewPass@123\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Users",
+          "item": [
+            {
+              "name": "Create User (super-admin)",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/users"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\": \"John Doe\", \"email\": \"john@example.com\", \"phone_number\": null, \"roles\": [1], \"bank_name\": \"CIB\", \"bank_account_name\": \"John Doe\", \"bank_account_number\": \"123456789\", \"deduction_type\": \"percentage\", \"deduction_value\": 10}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Roles & Permissions",
+          "item": [
+            {
+              "name": "List Roles",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/roles"
+                }
+              }
+            },
+            {
+              "name": "Create Role",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/roles"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\": \"editor\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Show Role",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/roles/1"
+                }
+              }
+            },
+            {
+              "name": "Update Role",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/roles/1"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\": \"editor\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete Role",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/roles/1"
+                }
+              }
+            },
+            {
+              "name": "Assign Permission to Role",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/roles/1/permissions"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"permission_id\": 1}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "List Permissions",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/permissions"
+                }
+              }
+            },
+            {
+              "name": "Create Permission",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/permissions"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\": \"courses\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Show Permission",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/permissions/1"
+                }
+              }
+            },
+            {
+              "name": "Update Permission",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/permissions/1"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\": \"courses\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete Permission",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/permissions/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "User Roles & Permissions",
+          "item": [
+            {
+              "name": "Show User Roles & Permissions",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/users/1/roles-permissions"
+                }
+              }
+            },
+            {
+              "name": "Assign Role to User",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/users/1/roles"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"role_id\": 1}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Remove Role from User",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/users/1/roles"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"role_id\": 1}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Sync User Roles",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/users/1/roles/sync"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"roles\": [1, 2]}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Assign Permission to User",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/users/1/permissions"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"permission_id\": 1}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Remove Permission from User",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/users/1/permissions"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"permission_id\": 1}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Categories",
+          "item": [
+            {
+              "name": "List Categories",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/categories"
+                }
+              }
+            },
+            {
+              "name": "Create Category",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/categories"
+                },
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name_en",
+                      "value": "Education",
+                      "type": "text"
+                    },
+                    {
+                      "key": "name_ar",
+                      "value": "تعليم",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_en",
+                      "value": "Education category",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_ar",
+                      "value": "فئة تعليمية",
+                      "type": "text"
+                    },
+                    {
+                      "key": "type_slug",
+                      "value": "education",
+                      "type": "text"
+                    },
+                    {
+                      "key": "image",
+                      "type": "file",
+                      "src": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Show Category",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/categories/1"
+                }
+              }
+            },
+            {
+              "name": "Edit Category (for edit)",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/categories/1/edit"
+                }
+              }
+            },
+            {
+              "name": "Update Category",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/categories/1"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name_en\": \"Education\", \"name_ar\": \"تعليم\", \"type_slug\": \"education\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete Category",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/categories/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Sub-Categories",
+          "item": [
+            {
+              "name": "List Sub-Categories",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/sub-categories"
+                }
+              }
+            },
+            {
+              "name": "Create Sub-Category",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/sub-categories"
+                },
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name_en",
+                      "value": "Math",
+                      "type": "text"
+                    },
+                    {
+                      "key": "name_ar",
+                      "value": "رياضيات",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_en",
+                      "value": "Math sub-category",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_ar",
+                      "value": "قسم رياضيات",
+                      "type": "text"
+                    },
+                    {
+                      "key": "category_id",
+                      "value": "1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "image",
+                      "type": "file",
+                      "src": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Show Sub-Category",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/sub-categories/1"
+                }
+              }
+            },
+            {
+              "name": "Update Sub-Category",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/sub-categories/1"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name_en\": \"Math\", \"name_ar\": \"رياضيات\", \"category_id\": 1}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete Sub-Category",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/sub-categories/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Levels",
+          "item": [
+            {
+              "name": "List Levels",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/levels"
+                }
+              }
+            },
+            {
+              "name": "Create Level",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/levels"
+                },
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name_en",
+                      "value": "Beginner",
+                      "type": "text"
+                    },
+                    {
+                      "key": "name_ar",
+                      "value": "مبتدئ",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_en",
+                      "value": "Beginner level",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_ar",
+                      "value": "مستوى مبتدئ",
+                      "type": "text"
+                    },
+                    {
+                      "key": "image",
+                      "type": "file",
+                      "src": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Show Level",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/levels/1"
+                }
+              }
+            },
+            {
+              "name": "Edit Level (for edit)",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/levels/1/edit"
+                }
+              }
+            },
+            {
+              "name": "Update Level",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/levels/1"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name_en\": \"Beginner\", \"name_ar\": \"مبتدئ\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete Level",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/levels/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Mentors",
+          "item": [
+            {
+              "name": "List Mentors",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/mentors"
+                }
+              }
+            },
+            {
+              "name": "Create Mentor",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/mentors"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\": \"Ahmed Ali\", \"email\": \"ahmed@example.com\", \"phone_number\": \"01012345678\", \"roles\": [2], \"bank_name\": \"NBE\", \"bank_account_name\": \"Ahmed Ali\", \"bank_account_number\": \"987654321\", \"deduction_type\": \"percentage\", \"deduction_value\": 15}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Show Mentor",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/mentors/1"
+                }
+              }
+            },
+            {
+              "name": "Update Mentor",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/mentors/1"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\": \"Ahmed Updated\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete Mentor",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/mentors/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Banners",
+          "item": [
+            {
+              "name": "List Banners",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/banners"
+                }
+              }
+            },
+            {
+              "name": "Create Banner",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/banners"
+                },
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name_en",
+                      "value": "Banner 1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "name_ar",
+                      "value": "بانر 1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_en",
+                      "value": "Description",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_ar",
+                      "value": "وصف",
+                      "type": "text"
+                    },
+                    {
+                      "key": "button_text_en",
+                      "value": "Click",
+                      "type": "text"
+                    },
+                    {
+                      "key": "button_text_ar",
+                      "value": "اضغط",
+                      "type": "text"
+                    },
+                    {
+                      "key": "button_url",
+                      "value": "https://example.com",
+                      "type": "text"
+                    },
+                    {
+                      "key": "image",
+                      "type": "file",
+                      "src": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Show Banner",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/banners/1"
+                }
+              }
+            },
+            {
+              "name": "Update Banner",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/banners/1"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name_en\": \"Updated Banner\", \"name_ar\": \"بانر محدث\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Update Banner Image",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/banners/1/update-img"
+                },
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "image",
+                      "type": "file",
+                      "src": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Delete Banner",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/banners/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "FAQs & About Us",
+          "item": [
+            {
+              "name": "List FAQs",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/faqs"
+                }
+              }
+            },
+            {
+              "name": "Create FAQ",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/faqs"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"question_en\": \"What is this?\", \"question_ar\": \"ما هذا؟\", \"answer_en\": \"This is a platform.\", \"answer_ar\": \"هذه منصة.\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Show FAQ",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/faqs/1"
+                }
+              }
+            },
+            {
+              "name": "Edit FAQ (for edit)",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/faqs/1/edit"
+                }
+              }
+            },
+            {
+              "name": "Update FAQ",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/faqs/1"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"question_en\": \"Updated?\", \"question_ar\": \"محدث؟\", \"answer_en\": \"Updated answer.\", \"answer_ar\": \"إجابة محدثة.\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete FAQ",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/faqs/1"
+                }
+              }
+            },
+            {
+              "name": "Get About Us Page",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/about-us"
+                }
+              }
+            },
+            {
+              "name": "Update About Us Page",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/about-us/update"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"content_en\": \"About us content\", \"content_ar\": \"محتوى عنا\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Courses",
+          "item": [
+            {
+              "name": "List Courses",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/courses"
+                }
+              }
+            },
+            {
+              "name": "Create Course",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/courses"
+                },
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name_en",
+                      "value": "Laravel Course",
+                      "type": "text"
+                    },
+                    {
+                      "key": "name_ar",
+                      "value": "كورس لارافيل",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_en",
+                      "value": "Learn Laravel",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_ar",
+                      "value": "تعلم لارافيل",
+                      "type": "text"
+                    },
+                    {
+                      "key": "type",
+                      "value": "live",
+                      "type": "text"
+                    },
+                    {
+                      "key": "price",
+                      "value": "500",
+                      "type": "text"
+                    },
+                    {
+                      "key": "sub_category_id",
+                      "value": "1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "level_id",
+                      "value": "1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "mentor_id",
+                      "value": "1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "earning_points",
+                      "value": "100",
+                      "type": "text"
+                    },
+                    {
+                      "key": "image",
+                      "type": "file",
+                      "src": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Show Course",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/courses/1"
+                }
+              }
+            },
+            {
+              "name": "Edit Course (for edit)",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/courses/1/edit"
+                }
+              }
+            },
+            {
+              "name": "Update Course",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/courses/1"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name_en\": \"Laravel Updated\", \"price\": 600}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Accept Course",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/courses/1/accept"
+                }
+              }
+            },
+            {
+              "name": "Reject Course",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/courses/1/reject"
+                }
+              }
+            },
+            {
+              "name": "Delete Course",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/courses/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Lessons",
+          "item": [
+            {
+              "name": "List Lessons",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/lessons"
+                }
+              }
+            },
+            {
+              "name": "Create Lesson",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/lessons"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"course_id\": 1, \"title_en\": \"Introduction\", \"title_ar\": \"مقدمة\", \"content_en\": \"Content here\", \"content_ar\": \"المحتوى هنا\", \"video_url\": \"https://example.com/video\", \"duration\": 60, \"order\": 1}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Show Lesson",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/lessons/1"
+                }
+              }
+            },
+            {
+              "name": "Edit Lesson (for edit)",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/lessons/1/edit"
+                }
+              }
+            },
+            {
+              "name": "Get Next Order",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/lessons/1/next-order"
+                }
+              }
+            },
+            {
+              "name": "Update Lesson",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/lessons/1"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"title_en\": \"Updated Intro\", \"duration\": 90, \"order\": 1}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete Lesson",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/lessons/1"
+                }
+              }
+            },
+            {
+              "name": "Upload Video Chunk",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/lesson/upload-chunk"
+                },
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "src": ""
+                    },
+                    {
+                      "key": "dzchunkindex",
+                      "value": "0",
+                      "type": "text"
+                    },
+                    {
+                      "key": "dztotalchunkcount",
+                      "value": "1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "dzuuid",
+                      "value": "uuid-here",
+                      "type": "text"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Articles",
+          "item": [
+            {
+              "name": "List Articles",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/articles"
+                }
+              }
+            },
+            {
+              "name": "Create Article",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/articles"
+                },
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "course_id",
+                      "value": "1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "title_en",
+                      "value": "Article Title",
+                      "type": "text"
+                    },
+                    {
+                      "key": "title_ar",
+                      "value": "عنوان المقال",
+                      "type": "text"
+                    },
+                    {
+                      "key": "content_en",
+                      "value": "Content here",
+                      "type": "text"
+                    },
+                    {
+                      "key": "content_ar",
+                      "value": "المحتوى هنا",
+                      "type": "text"
+                    },
+                    {
+                      "key": "earning_points",
+                      "value": "50",
+                      "type": "text"
+                    },
+                    {
+                      "key": "is_published",
+                      "value": "0",
+                      "type": "text"
+                    },
+                    {
+                      "key": "image",
+                      "type": "file",
+                      "src": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Show Article",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/articles/1"
+                }
+              }
+            },
+            {
+              "name": "Edit Article (for edit)",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/articles/1/edit"
+                }
+              }
+            },
+            {
+              "name": "Update Article",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/articles/1"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"title_en\": \"Updated Title\", \"content_en\": \"Updated content\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Publish Article",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/articles/1/publish"
+                }
+              }
+            },
+            {
+              "name": "Unpublish Article",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/articles/1/unpublish"
+                }
+              }
+            },
+            {
+              "name": "Accept Article",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/articles/1/accept"
+                }
+              }
+            },
+            {
+              "name": "Reject Article",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/articles/1/reject"
+                }
+              }
+            },
+            {
+              "name": "Delete Article",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/articles/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Course Reservations (Admin)",
+          "item": [
+            {
+              "name": "List Reservations",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/reservations"
+                }
+              }
+            },
+            {
+              "name": "Update Reservation Status",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/reservations/1/status"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"status\": \"confirmed\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Wallets (Admin)",
+          "item": [
+            {
+              "name": "List Wallets",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/wallets"
+                }
+              }
+            },
+            {
+              "name": "Show Wallet",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/wallets/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Consultation Categories (Admin)",
+          "item": [
+            {
+              "name": "List Consultation Categories",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-categories"
+                }
+              }
+            },
+            {
+              "name": "Create Consultation Category",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-categories"
+                },
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name_en",
+                      "value": "Business",
+                      "type": "text"
+                    },
+                    {
+                      "key": "name_ar",
+                      "value": "أعمال",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_en",
+                      "value": "Business consulting",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_ar",
+                      "value": "استشارات أعمال",
+                      "type": "text"
+                    },
+                    {
+                      "key": "type_slug",
+                      "value": "business",
+                      "type": "text"
+                    },
+                    {
+                      "key": "slug",
+                      "value": "business",
+                      "type": "text"
+                    },
+                    {
+                      "key": "image",
+                      "type": "file",
+                      "src": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Show Consultation Category",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-categories/1"
+                }
+              }
+            },
+            {
+              "name": "Update Consultation Category",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-categories/1"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name_en\": \"Business\", \"name_ar\": \"أعمال\", \"description_en\": \"desc\", \"description_ar\": \"وصف\", \"type_slug\": \"business\", \"slug\": \"business\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete Consultation Category",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-categories/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Consultation Sub-Categories (Admin)",
+          "item": [
+            {
+              "name": "List Consultation Sub-Categories",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-sub-categories"
+                }
+              }
+            },
+            {
+              "name": "Create Consultation Sub-Category",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-sub-categories"
+                },
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name_en",
+                      "value": "Marketing",
+                      "type": "text"
+                    },
+                    {
+                      "key": "name_ar",
+                      "value": "تسويق",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_en",
+                      "value": "Marketing consulting",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_ar",
+                      "value": "استشارات تسويق",
+                      "type": "text"
+                    },
+                    {
+                      "key": "consultation_category_id",
+                      "value": "1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "image",
+                      "type": "file",
+                      "src": ""
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Show Consultation Sub-Category",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-sub-categories/1"
+                }
+              }
+            },
+            {
+              "name": "Update Consultation Sub-Category",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-sub-categories/1"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name_en\": \"Marketing\", \"name_ar\": \"تسويق\", \"description_en\": \"desc\", \"description_ar\": \"وصف\", \"consultation_category_id\": 1}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete Consultation Sub-Category",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-sub-categories/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Consultation Sessions (Admin)",
+          "item": [
+            {
+              "name": "List Consultation Sessions",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-sessions"
+                }
+              }
+            },
+            {
+              "name": "Create Consultation Session",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-sessions"
+                },
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name_en",
+                      "value": "1-on-1 Session",
+                      "type": "text"
+                    },
+                    {
+                      "key": "name_ar",
+                      "value": "جلسة فردية",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_en",
+                      "value": "One on one session",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description_ar",
+                      "value": "جلسة فردية",
+                      "type": "text"
+                    },
+                    {
+                      "key": "content_en",
+                      "value": "Session content",
+                      "type": "text"
+                    },
+                    {
+                      "key": "content_ar",
+                      "value": "محتوى الجلسة",
+                      "type": "text"
+                    },
+                    {
+                      "key": "price",
+                      "value": "300",
+                      "type": "text"
+                    },
+                    {
+                      "key": "duration",
+                      "value": "60",
+                      "type": "text"
+                    },
+                    {
+                      "key": "type",
+                      "value": "live",
+                      "type": "text"
+                    },
+                    {
+                      "key": "earning_points",
+                      "value": "50",
+                      "type": "text"
+                    },
+                    {
+                      "key": "consultation_sub_category_id",
+                      "value": "1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "mentor_id",
+                      "value": "1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "image",
+                      "type": "file",
+                      "src": ""
+                    },
+                    {
+                      "key": "video_url",
+                      "value": "",
+                      "type": "text"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Show Consultation Session",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-sessions/1"
+                }
+              }
+            },
+            {
+              "name": "Update Consultation Session",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-sessions/1"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name_en\": \"Updated Session\", \"price\": 350, \"type\": \"live\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete Consultation Session",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-sessions/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Consultation Reservations (Admin)",
+          "item": [
+            {
+              "name": "List Consultation Reservations",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-reservations"
+                }
+              }
+            },
+            {
+              "name": "Show Consultation Reservation",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-reservations/1"
+                }
+              }
+            },
+            {
+              "name": "Update Consultation Reservation Status",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-reservations/1/status"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"status\": \"confirmed\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Consultation Requests (Admin)",
+          "item": [
+            {
+              "name": "List Consultation Requests",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-requests"
+                }
+              }
+            },
+            {
+              "name": "Show Consultation Request",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-requests/1"
+                }
+              }
+            },
+            {
+              "name": "Update Consultation Request Status",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-requests/1/status"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"status\": \"reviewed\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete Consultation Request",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/dashboard/consultation-requests/1"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mobile",
+      "item": [
+        {
+          "name": "Auth",
+          "item": [
+            {
+              "name": "Sign Up",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/sign-up"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"first_name\": \"John\", \"last_name\": \"Doe\", \"email\": \"john@example.com\", \"phone_number\": null, \"password\": \"Pass@1234\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Login",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/login"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"identifier\": \"john@example.com\", \"password\": \"Pass@1234\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Courses",
+          "item": [
+            {
+              "name": "List Courses",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/courses"
+                }
+              }
+            },
+            {
+              "name": "Show Course",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/courses/1"
+                }
+              }
+            },
+            {
+              "name": "My Courses",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/my-courses"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Articles",
+          "item": [
+            {
+              "name": "List Articles",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/articles"
+                }
+              }
+            },
+            {
+              "name": "Show Article",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/articles/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Writers",
+          "item": [
+            {
+              "name": "Show Writer",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/writers/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Course Reservations",
+          "item": [
+            {
+              "name": "List My Reservations",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/reservations"
+                }
+              }
+            },
+            {
+              "name": "Create Reservation",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/reservations"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"course_id\": 1, \"mentor_id\": 1, \"phone_number\": \"01012345678\", \"job_title\": \"Developer\", \"human_type\": \"individual\", \"location\": \"Cairo\", \"date\": \"2026-04-01\", \"time\": \"10:00\", \"payment_gateway\": \"cash\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Show Reservation",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/reservations/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Consultations",
+          "item": [
+            {
+              "name": "Get Consultation Categories",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/consultations/categories"
+                }
+              }
+            },
+            {
+              "name": "Get Consultation Sub-Categories",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/consultations/sub-categories"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"consultation_category_id\": 1}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Get Consultation Sessions",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/consultations/sessions"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"consultation_sub_category_id\": 1}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Get Session Details",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/consultations/sessions/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Consultation Reservations",
+          "item": [
+            {
+              "name": "List My Consultation Reservations",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/consultation-reservations"
+                }
+              }
+            },
+            {
+              "name": "Create Consultation Reservation",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/consultation-reservations"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"consultation_session_id\": 1, \"phone_number\": \"01012345678\", \"date\": \"2026-04-01\", \"time\": \"10:00\", \"payment_gateway\": \"cash\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Show Consultation Reservation",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/consultation-reservations/1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Consultation Requests",
+          "item": [
+            {
+              "name": "Submit Request (Personal)",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/consultation-requests"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"type\": \"personal\", \"trainning_type\": \"Leadership\", \"email\": \"user@example.com\", \"phone_num\": \"01012345678\", \"time_to_call\": \"10:00 AM\", \"location\": \"online\", \"customer_needs\": \"I need leadership training\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Submit Request (Company)",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/mobile/consultation-requests"
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"type\": \"company\", \"trainning_type\": \"Management\", \"email\": \"company@example.com\", \"phone_num\": \"01012345678\", \"time_to_call\": \"09:00 AM\", \"location\": \"offline\", \"company_name\": \"ACME Corp\", \"employees_num\": 50, \"company_needs\": \"Team management training\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
