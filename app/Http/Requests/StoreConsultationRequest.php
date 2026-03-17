@@ -35,9 +35,9 @@ class StoreConsultationRequest extends FormRequest
             'customer_needs' => ['required_if:type,personal', 'nullable', 'string'],
             
             // Company fields
-            'company_name' => ['required_if:type,company', 'nullable', 'string', 'max:255'],
-            'employees_num' => ['required_if:type,company', 'nullable', 'integer', 'min:1'],
-            'company_needs' => ['required_if:type,company', 'nullable', 'string'],
+            'company_name' => ['required_if:type,company', 'nullable_if:type,personal', 'string', 'max:255'],
+            'employees_num' => ['required_if:type,company', 'nullable_if:type,personal', 'integer', 'min:1'],
+            'company_needs' => ['required_if:type,company', 'nullable_if:type,personal', 'string'],
         ];
     }
 

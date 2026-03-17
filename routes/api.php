@@ -20,6 +20,7 @@ use App\Http\Controllers\Dashboard\ConsultationSessionController;
 use App\Http\Controllers\Dashboard\ConsultationReservationController as DashboardConsultationReservationController;
 use App\Http\Controllers\Dashboard\ConsultationRequestController as DashboardConsultationRequestController;
 use App\Http\Controllers\Dashboard\ReservationController as AdminReservationController;
+use App\Http\Controllers\Dashboard\WalletController as DashboardWalletController;
 use App\Http\Controllers\VideoUploadController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
@@ -182,6 +183,10 @@ Route::group([
                 Route::patch('reservations/{id}/status', [AdminReservationController::class , 'updateStatus'])
                     ->name('api.reservations.status.update');
 
+                // ----- Wallets (Admin) -----
+                Route::get('wallets', [DashboardWalletController::class, 'index']);
+                Route::get('wallets/{id}', [DashboardWalletController::class, 'show']);
+
                 // Optional: Assign permission directly to a role (role-level management)
                 Route::post('roles/{role}/permissions', [RoleController::class , 'assignPermission'])
                     ->name('api.roles.permissions.assign');
@@ -211,8 +216,8 @@ Route::group([
 
             // ----- Consultations -----
             Route::get('consultations/categories', [MobileConsultationController::class, 'categories']);
-            Route::get('consultations/sub-categories', [MobileConsultationController::class, 'subCategories']);
-            Route::get('consultations/sessions', [MobileConsultationController::class, 'sessions']);
+            Route::post('consultations/sub-categories', [MobileConsultationController::class, 'subCategories']);
+            Route::post('consultations/sessions', [MobileConsultationController::class, 'sessions']);
             Route::get('consultations/sessions/{id}', [MobileConsultationController::class, 'sessionDetails']);
 
             // ----- Consultation Reservations -----

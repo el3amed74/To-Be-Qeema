@@ -6,6 +6,7 @@ use App\Repositories\ReservationRepository;
 use App\Repositories\UsersRepository;
 use App\DTOs\ReservationDTO;
 use App\Models\CourseReservation;
+use App\Models\Course;
 
 class ReservationService
 {
@@ -20,6 +21,9 @@ class ReservationService
             return true;
         }
         return false;
+    }
+    public function checkCourseMentore(int $courseId, int $mentorId){
+        return $this->reservationRepository->checkCourseMentore($courseId, $mentorId);
     }
     
     public function createReservation(ReservationDTO $dto): CourseReservation

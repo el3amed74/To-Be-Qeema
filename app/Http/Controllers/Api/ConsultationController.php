@@ -10,6 +10,7 @@ use App\Services\ConsultationCategoryService;
 use App\Services\ConsultationSubCategoryService;
 use App\Services\ConsultationSessionService;
 use Illuminate\Http\Request;
+use App\Services\CategoryService;
 
 class ConsultationController extends Controller
 {
@@ -21,7 +22,8 @@ class ConsultationController extends Controller
         ConsultationCategoryService $categoryService,
         ConsultationSubCategoryService $subCategoryService,
         ConsultationSessionService $sessionService
-    ) {
+        )
+    {
         $this->categoryService = $categoryService;
         $this->subCategoryService = $subCategoryService;
         $this->sessionService = $sessionService;
@@ -38,6 +40,11 @@ class ConsultationController extends Controller
 
     public function subCategories(Request $request)
     {
+        
+        $request->validate([
+            'category_id' => 'required|exists:consultation_categories,id',
+        ]);
+
         $subCategories = $this->subCategoryService->index(
             $request->per_page ?? 15,
             $request->search,
@@ -51,12 +58,16 @@ class ConsultationController extends Controller
 
     public function sessions(Request $request)
     {
+        $request->validate([
+            'sub_category_id' => 'required|exists:consultation_sub_categories,id',
+        ]);
+
         $sessions = $this->sessionService->index(
             $request->per_page ?? 15,
             $request->search,
             $request->sub_category_id,
             $request->mentor_id,
-            ['mentor']
+        ['mentor']
         );
         return response()->json([
             'message' => __('Sessions fetched successfully.'),

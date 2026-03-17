@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\CourseReservation;
 use App\DTOs\ReservationDTO;
+use App\Models\Course;
 
 class ReservationRepository
 {
@@ -50,5 +51,13 @@ class ReservationRepository
         $reservation = $this->findById($id);
         $reservation->update(['status' => $status]);
         return $reservation;
+    }
+
+    public function checkCourseMentore(int $courseId, int $mentorId){
+        $course = Course::findOrFail($courseId);
+        if($course->mentor_id== $mentorId){
+            return true;
+        }
+        return false;
     }
 }
