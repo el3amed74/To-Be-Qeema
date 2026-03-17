@@ -30,4 +30,36 @@ class UserController extends Controller
             'data' => $user->load('roles', 'mentorDetail'),
         ], 201);
     }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function index(Request $request)
+    {
+        $users = $this->userService->getAllUsers($request->all());
+
+        return \App\Http\Resources\UserResource::collection($users);
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(int $id)
+    {
+        $user = $this->userService->getUserById($id);
+
+        return new \App\Http\Resources\UserResource($user);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(int $id)
+    {
+        $this->userService->deleteUser($id);
+
+        return response()->json([
+            'message' => 'User deleted successfully',
+        ]);
+    }
 }

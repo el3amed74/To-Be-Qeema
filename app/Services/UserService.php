@@ -54,4 +54,33 @@ class UserService
     {
         return $this->usersRepository->getWriterDetails($dto->id);
     }
+
+    /**
+     * Get all users with pagination and filters.
+     */
+    public function getAllUsers(array $filters)
+    {
+        $perPage = $filters['per_page'] ?? 10;
+        $search = $filters['search'] ?? null;
+        $role = $filters['role'] ?? null;
+
+        return $this->usersRepository->paginate($perPage, $search, $role);
+    }
+
+    /**
+     * Get user by ID with relations.
+     */
+    public function getUserById(int $id)
+    {
+        return $this->usersRepository->findById($id, ['roles', 'mentorDetail', 'wallet']);
+    }
+
+    /**
+     * Delete a user.
+     */
+    public function deleteUser(int $id)
+    {
+        $user = $this->usersRepository->findById($id);
+        return $this->usersRepository->delete($user);
+    }
 }
