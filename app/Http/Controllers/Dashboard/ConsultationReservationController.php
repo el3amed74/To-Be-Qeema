@@ -25,6 +25,15 @@ class ConsultationReservationController extends Controller
         ], 200);
     }
 
+    public function show($id)
+    {
+        $reservation = $this->reservationService->getReservation($id);
+
+        return response()->json([
+            'reservation' => new ConsultationReservationResource($reservation),
+        ], 200);
+    }
+
     public function updateStatus(Request $request, $id)
     {
         $request->validate([

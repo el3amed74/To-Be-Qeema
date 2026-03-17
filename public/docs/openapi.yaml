@@ -806,7 +806,7 @@ paths:
                 type:
                   type: string
                   description: ''
-                  example: offline
+                  example: recorded
                   enum:
                     - live
                     - recorded
@@ -919,7 +919,7 @@ paths:
                 type:
                   type: string
                   description: ''
-                  example: live
+                  example: recorded
                   enum:
                     - live
                     - recorded
@@ -1000,6 +1000,37 @@ paths:
       tags:
         - Endpoints
       security: []
+  '/api/dashboard/consultation-reservations/{id}':
+    get:
+      summary: ''
+      operationId: getApiDashboardConsultationReservationsId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the consultation reservation.'
+        example: architecto
+        required: true
+        schema:
+          type: string
   '/api/dashboard/consultation-reservations/{id}/status':
     patch:
       summary: ''
@@ -1019,7 +1050,7 @@ paths:
                 status:
                   type: string
                   description: ''
-                  example: confirmed
+                  example: pending
                   enum:
                     - pending
                     - confirmed
@@ -1033,6 +1064,100 @@ paths:
         in: path
         name: id
         description: 'The ID of the consultation reservation.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  /api/dashboard/consultation-requests:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/dashboard/consultation-requests/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the consultation request.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  '/api/dashboard/consultation-requests/{id}/status':
+    patch:
+      summary: 'Update the status of the consultation request.'
+      operationId: updateTheStatusOfTheConsultationRequest
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+                  description: ''
+                  example: architecto
+              required:
+                - status
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the consultation request.'
         example: architecto
         required: true
         schema:
@@ -1783,7 +1908,7 @@ paths:
                 type:
                   type: string
                   description: ''
-                  example: recorded
+                  example: offline
                   enum:
                     - live
                     - offline
@@ -1850,7 +1975,7 @@ paths:
                 type:
                   type: string
                   description: ''
-                  example: offline
+                  example: live
                   enum:
                     - live
                     - offline
@@ -1957,7 +2082,7 @@ paths:
                 type:
                   type: string
                   description: ''
-                  example: offline
+                  example: live
                   enum:
                     - live
                     - offline
@@ -2368,12 +2493,12 @@ paths:
                 is_published:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                   nullable: true
                 accepted:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                   nullable: true
                 search:
                   type: string
@@ -3284,7 +3409,7 @@ paths:
                 accepted:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
                   nullable: true
                 search:
                   type: string
@@ -3403,7 +3528,7 @@ paths:
                 accepted:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
                   nullable: true
       security: []
   '/api/mobile/courses/{id}':
@@ -3501,15 +3626,15 @@ paths:
                 date:
                   type: string
                   description: 'Must be a valid date in the format <code>Y-m-d</code>.'
-                  example: '2026-03-16'
+                  example: '2026-03-17'
                 time:
                   type: string
                   description: 'Must be a valid date in the format <code>H:i</code>.'
-                  example: '19:56'
+                  example: '09:31'
                 payment_gateway:
                   type: string
                   description: ''
-                  example: cash
+                  example: paymob_visa
                   enum:
                     - cash
                     - paymob_visa
@@ -3701,11 +3826,11 @@ paths:
                 date:
                   type: string
                   description: 'Must be a valid date in the format <code>Y-m-d</code>.'
-                  example: '2026-03-16'
+                  example: '2026-03-17'
                 time:
                   type: string
                   description: 'Must be a valid date in the format <code>H:i</code>.'
-                  example: '19:56'
+                  example: '09:31'
                 payment_gateway:
                   type: string
                   description: ''
@@ -3752,3 +3877,77 @@ paths:
         required: true
         schema:
           type: string
+  /api/mobile/consultation-requests:
+    post:
+      summary: 'Store a new consultation request.'
+      operationId: storeANewConsultationRequest
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  description: ''
+                  example: personal
+                  enum:
+                    - personal
+                    - company
+                trainning_type:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: b
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: zbailey@example.net
+                phone_num:
+                  type: string
+                  description: 'Must not be greater than 20 characters.'
+                  example: iyvdljnikhwaykcm
+                time_to_call:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'y'
+                location:
+                  type: string
+                  description: ''
+                  example: offline
+                  enum:
+                    - online
+                    - offline
+                customer_needs:
+                  type: string
+                  description: 'This field is required when <code>type</code> is <code>personal</code>.'
+                  example: architecto
+                  nullable: true
+                company_name:
+                  type: string
+                  description: 'This field is required when <code>type</code> is <code>company</code>. Must not be greater than 255 characters.'
+                  example: 'n'
+                  nullable: true
+                employees_num:
+                  type: integer
+                  description: 'This field is required when <code>type</code> is <code>company</code>. Must be at least 1.'
+                  example: 67
+                  nullable: true
+                company_needs:
+                  type: string
+                  description: 'This field is required when <code>type</code> is <code>company</code>.'
+                  example: architecto
+                  nullable: true
+              required:
+                - type
+                - trainning_type
+                - email
+                - phone_num
+                - time_to_call
+                - location
+      security: []

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel API Documentation",
-        "_postman_id": "c917a8ce-4ac3-4d06-b8ac-dc4a747787b4",
+        "_postman_id": "70270187-f72b-4840-ae5a-889a61bde06b",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -1428,7 +1428,7 @@
                                 },
                                 {
                                     "key": "type",
-                                    "value": "offline",
+                                    "value": "recorded",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -1607,7 +1607,7 @@
                                 },
                                 {
                                     "key": "type",
-                                    "value": "live",
+                                    "value": "recorded",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -1739,6 +1739,62 @@
                     ]
                 },
                 {
+                    "name": "GET api\/dashboard\/consultation-reservations\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/dashboard\/consultation-reservations\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/dashboard\/consultation-reservations\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "architecto",
+                                    "description": "The ID of the consultation reservation."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
                     "name": "PATCH api\/dashboard\/consultation-reservations\/{id}\/status",
                     "request": {
                         "url": {
@@ -1768,8 +1824,187 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"status\":\"confirmed\"}"
+                            "raw": "{\"status\":\"pending\"}"
                         },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/dashboard\/consultation-requests",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/dashboard\/consultation-requests"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/dashboard\/consultation-requests\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/dashboard\/consultation-requests\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "architecto",
+                                    "description": "The ID of the consultation request."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the status of the consultation request.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/dashboard\/consultation-requests\/:id\/status",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/dashboard\/consultation-requests\/:id\/status",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "architecto",
+                                    "description": "The ID of the consultation request."
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"status\":\"architecto\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/dashboard\/consultation-requests\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/dashboard\/consultation-requests\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "architecto",
+                                    "description": "The ID of the consultation request."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
                         "description": "",
                         "auth": {
                             "type": "noauth"
@@ -2944,7 +3179,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"search\":\"architecto\",\"type\":\"recorded\",\"min_price\":39,\"max_price\":84,\"accepted\":false}"
+                            "raw": "{\"search\":\"architecto\",\"type\":\"offline\",\"min_price\":39,\"max_price\":84,\"accepted\":false}"
                         },
                         "description": "",
                         "auth": {
@@ -3022,7 +3257,7 @@
                                 },
                                 {
                                     "key": "type",
-                                    "value": "offline",
+                                    "value": "live",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -3189,7 +3424,7 @@
                                 },
                                 {
                                     "key": "type",
-                                    "value": "offline",
+                                    "value": "live",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -3741,7 +3976,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"is_published\":false,\"accepted\":false,\"search\":\"b\",\"per_page\":22,\"page\":67}"
+                            "raw": "{\"is_published\":true,\"accepted\":true,\"search\":\"b\",\"per_page\":22,\"page\":67}"
                         },
                         "description": "mentor  => function($query) {\n         $query->with(['roles', 'mentorDetail'])\n             ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);\n   }\nuser => function($query) {\n          $query->with(['roles', 'mentorDetail', 'wallet'])\n               ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);\n     }",
                         "auth": {
@@ -5110,7 +5345,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"is_published\":true,\"accepted\":true,\"search\":\"b\",\"per_page\":22,\"page\":67}"
+                            "raw": "{\"is_published\":true,\"accepted\":false,\"search\":\"b\",\"per_page\":22,\"page\":67}"
                         },
                         "description": "mentor  => function($query) {\n         $query->with(['roles', 'mentorDetail'])\n             ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);\n   }\nuser => function($query) {\n          $query->with(['roles', 'mentorDetail', 'wallet'])\n               ->withCount(['courses', 'mentoredCourses', 'posts', 'comments', 'articles', 'articlesRead', 'pollsCreated']);\n     }",
                         "auth": {
@@ -5217,7 +5452,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"search\":\"architecto\",\"type\":\"offline\",\"min_price\":39,\"max_price\":84,\"accepted\":true}"
+                            "raw": "{\"search\":\"architecto\",\"type\":\"offline\",\"min_price\":39,\"max_price\":84,\"accepted\":false}"
                         },
                         "description": "",
                         "auth": {
@@ -5372,7 +5607,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"course_id\":\"architecto\",\"mentor_id\":\"architecto\",\"phone_number\":\"architecto\",\"job_title\":\"architecto\",\"human_type\":\"architecto\",\"location\":\"architecto\",\"date\":\"2026-03-16\",\"time\":\"19:56\",\"payment_gateway\":\"cash\"}"
+                            "raw": "{\"course_id\":\"architecto\",\"mentor_id\":\"architecto\",\"phone_number\":\"architecto\",\"job_title\":\"architecto\",\"human_type\":\"architecto\",\"location\":\"architecto\",\"date\":\"2026-03-17\",\"time\":\"09:31\",\"payment_gateway\":\"paymob_visa\"}"
                         },
                         "description": "",
                         "auth": {
@@ -5707,7 +5942,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"consultation_session_id\":\"architecto\",\"phone_number\":\"architecto\",\"date\":\"2026-03-16\",\"time\":\"19:56\",\"payment_gateway\":\"cash\"}"
+                            "raw": "{\"consultation_session_id\":\"architecto\",\"phone_number\":\"architecto\",\"date\":\"2026-03-17\",\"time\":\"09:31\",\"payment_gateway\":\"cash\"}"
                         },
                         "description": "",
                         "auth": {
@@ -5771,6 +6006,37 @@
                             "name": ""
                         }
                     ]
+                },
+                {
+                    "name": "Store a new consultation request.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/mobile\/consultation-requests",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/mobile\/consultation-requests"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"type\":\"personal\",\"trainning_type\":\"b\",\"email\":\"zbailey@example.net\",\"phone_num\":\"iyvdljnikhwaykcm\",\"time_to_call\":\"y\",\"location\":\"offline\",\"customer_needs\":\"architecto\",\"company_name\":\"n\",\"employees_num\":67,\"company_needs\":\"architecto\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
                 }
             ]
         }

@@ -18,6 +18,7 @@ use App\Http\Controllers\Dashboard\ConsultationCategoryController;
 use App\Http\Controllers\Dashboard\ConsultationSubCategoryController;
 use App\Http\Controllers\Dashboard\ConsultationSessionController;
 use App\Http\Controllers\Dashboard\ConsultationReservationController as DashboardConsultationReservationController;
+use App\Http\Controllers\Dashboard\ConsultationRequestController as DashboardConsultationRequestController;
 use App\Http\Controllers\Dashboard\ReservationController as AdminReservationController;
 use App\Http\Controllers\VideoUploadController;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,7 @@ use App\Http\Controllers\Api\WriterController;
 use App\Http\Controllers\Api\ReservationController;
 use App\Http\Controllers\Api\ConsultationController as MobileConsultationController;
 use App\Http\Controllers\Api\ConsultationReservationController as MobileConsultationReservationController;
+use App\Http\Controllers\Api\ConsultationRequestController;
 
 Route::group([
     'prefix' => 'dashboard',
@@ -61,7 +63,14 @@ Route::group([
 
                     // Consultation Reservations
                     Route::get('consultation-reservations', [DashboardConsultationReservationController::class, 'index']);
+                    Route::get('consultation-reservations/{id}', [DashboardConsultationReservationController::class, 'show']);
                     Route::patch('consultation-reservations/{id}/status', [DashboardConsultationReservationController::class, 'updateStatus']);
+
+                    // Consultation Requests (Admin)
+                    Route::get('consultation-requests', [DashboardConsultationRequestController::class, 'index']);
+                    Route::get('consultation-requests/{id}', [DashboardConsultationRequestController::class, 'show']);
+                    Route::patch('consultation-requests/{id}/status', [DashboardConsultationRequestController::class, 'updateStatus']);
+                    Route::delete('consultation-requests/{id}', [DashboardConsultationRequestController::class, 'destroy']);
                 }
                 );
 
@@ -210,6 +219,9 @@ Route::group([
             Route::get('consultation-reservations', [MobileConsultationReservationController::class, 'index']);
             Route::post('consultation-reservations', [MobileConsultationReservationController::class, 'store']);
             Route::get('consultation-reservations/{id}', [MobileConsultationReservationController::class, 'show']);
+
+            // ----- Consultation Requests -----
+            Route::post('consultation-requests', [ConsultationRequestController::class, 'store']);
         }
         );
     });
