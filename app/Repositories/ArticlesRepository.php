@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\Article;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class ArticlesRepository
@@ -169,6 +170,29 @@ class ArticlesRepository
         }
 
         return true;
+    }
+
+    /**
+     * Mark as read and reward points if applicable.
+     */
+    public function markAsReadReward($articleId, $userId)
+    {
+        return DB::transaction(function () use ($articleId, $userId) {
+            $article = Article::findOrFail($articleId);
+
+            if ($article->usersRead()->where('user_id', $userId)->exists()) {
+                return false;
+            }
+
+            $article->usersRead()->attach($userId);
+
+            if ($article->earning_points > 0) {
+                $walletRepo = new WalletRepository(); // Using direct instantiation for repository within transaction
+                $walletRepo->deposit($userId, $article->earning_points);
+            }
+
+            return true;
+        });
     }
 
     public function like($articleId, $userId)

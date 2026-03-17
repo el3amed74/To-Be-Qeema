@@ -36,6 +36,11 @@ class ReservationController extends Controller
             'message' => __('there is an error in request .')
             ],403);
         }
+        if(!$this->reservationService->checkCourseMentore($request->course_id,$request->mentor_id)){
+            return response()->json([
+            'message' => __('please select a vaild course mentor .')
+            ],403);
+        }
         $course = Course::findOrFail($request->course_id);
         
         $dto = $request->toDTO($course->price);

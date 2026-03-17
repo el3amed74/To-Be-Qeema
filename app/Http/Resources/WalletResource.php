@@ -15,6 +15,15 @@ class WalletResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this->id,
+            'user' => $this->whenLoaded('user', function() {
+                return [
+                    'id' => $this->user->id,
+                    'name' => $this->user->name,
+                    'email' => $this->user->email,
+                    'points' => $this->user->points,
+                ];
+            }),
             'balance' => $this->balance,
             'transactions' => TransactionResource::collection($this->whenLoaded('transactions')),
         ];

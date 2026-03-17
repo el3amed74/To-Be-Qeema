@@ -37,7 +37,15 @@ class ArticleService
 
     public function show($id, $loads = [], $counts = [])
     {
-        return $this->articlesRepository->findById($id, $loads, $counts);
+        $article = $this->articlesRepository->findById($id, $loads, $counts);
+
+        // Logic for rewarding points on read
+        $userId = auth('sanctum')->id();
+        if ($userId) {
+            $this->articlesRepository->markAsReadReward($id, $userId);
+        }
+
+        return $article;
     }
 
     public function publish($id)

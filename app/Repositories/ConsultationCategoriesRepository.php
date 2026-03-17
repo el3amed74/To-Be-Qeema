@@ -22,17 +22,17 @@ class ConsultationCategoriesRepository
 
     public function findById($id, $loads = [])
     {
-        return ConsultationCategory::with($loads)->findOrFail($id);
+        return ConsultationCategory::with($loads)->find($id);
     }
 
     public function update($id, array $data)
     {
         $category = ConsultationCategory::findOrFail($id);
-        
+
         if (isset($data['image']) && $data['image'] && $category->image) {
             Storage::disk('public')->delete($category->image);
         }
-        
+
         $category->update($data);
         return $category;
     }

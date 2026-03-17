@@ -40,6 +40,10 @@ class WalletRepository
                 'type' => Transaction::TYPE_DEPOSIT,
             ]);
 
+            // Sync User points
+            $wallet->refresh();
+            $wallet->user->update(['points' => (int) $wallet->balance]);
+
             return $transaction;
         });
     }
@@ -59,6 +63,10 @@ class WalletRepository
                 'amount' => $amount,
                 'type' => Transaction::TYPE_WITHDRAW,
             ]);
+
+            // Sync User points
+            $wallet->refresh();
+            $wallet->user->update(['points' => (int) $wallet->balance]);
 
             return $transaction;
         });
