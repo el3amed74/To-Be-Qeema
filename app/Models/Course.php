@@ -53,6 +53,11 @@ class Course extends Model
         return $this->belongsTo(SubCategory::class);
     }
 
+    public function category()
+    {
+        return $this->hasOneThrough(Category::class, SubCategory::class, 'id', 'id', 'sub_category_id', 'category_id');
+    }
+
     public function level()
     {
         return $this->belongsTo(Level::class);
