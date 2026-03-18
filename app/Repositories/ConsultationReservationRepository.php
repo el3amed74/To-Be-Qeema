@@ -38,4 +38,14 @@ class ConsultationReservationRepository
         $reservation->update(['status' => $status]);
         return $reservation;
     }
+
+    public function getUpcomingByUserId(int $userId)
+    {
+        return ConsultationReservation::where('user_id', $userId)
+            ->whereBetween('date', [now()->toDateString(), now()->addDays(2)->toDateString()])
+            ->with(['session', 'session.mentor'])
+            ->orderBy('date')
+            ->orderBy('time')
+            ->get();
+    }
 }
