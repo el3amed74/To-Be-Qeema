@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 10, 2026 at 09:53 AM
+-- Generation Time: Mar 18, 2026 at 12:47 PM
 -- Server version: 11.4.10-MariaDB
 -- PHP Version: 8.4.18
 
@@ -275,8 +275,7 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('laravel-cache-boost.roster.scan', 'a:2:{s:6:\"roster\";O:21:\"Laravel\\Roster\\Roster\":3:{s:13:\"\0*\0approaches\";O:29:\"Illuminate\\Support\\Collection\":2:{s:8:\"\0*\0items\";a:1:{i:0;O:23:\"Laravel\\Roster\\Approach\":1:{s:11:\"\0*\0approach\";E:38:\"Laravel\\Roster\\Enums\\Approaches:ACTION\";}}s:28:\"\0*\0escapeWhenCastingToString\";b:0;}s:11:\"\0*\0packages\";O:32:\"Laravel\\Roster\\PackageCollection\":2:{s:8:\"\0*\0items\";a:11:{i:0;O:22:\"Laravel\\Roster\\Package\":6:{s:9:\"\0*\0direct\";b:1;s:13:\"\0*\0constraint\";s:5:\"^1.30\";s:10:\"\0*\0package\";E:37:\"Laravel\\Roster\\Enums\\Packages:FORTIFY\";s:14:\"\0*\0packageName\";s:15:\"laravel/fortify\";s:10:\"\0*\0version\";s:6:\"1.34.0\";s:6:\"\0*\0dev\";b:0;}i:1;O:22:\"Laravel\\Roster\\Package\":6:{s:9:\"\0*\0direct\";b:1;s:13:\"\0*\0constraint\";s:5:\"^12.0\";s:10:\"\0*\0package\";E:37:\"Laravel\\Roster\\Enums\\Packages:LARAVEL\";s:14:\"\0*\0packageName\";s:17:\"laravel/framework\";s:10:\"\0*\0version\";s:7:\"12.49.0\";s:6:\"\0*\0dev\";b:0;}i:2;O:22:\"Laravel\\Roster\\Package\":6:{s:9:\"\0*\0direct\";b:0;s:13:\"\0*\0constraint\";s:7:\"v0.3.11\";s:10:\"\0*\0package\";E:37:\"Laravel\\Roster\\Enums\\Packages:PROMPTS\";s:14:\"\0*\0packageName\";s:15:\"laravel/prompts\";s:10:\"\0*\0version\";s:6:\"0.3.11\";s:6:\"\0*\0dev\";b:0;}i:3;O:22:\"Laravel\\Roster\\Package\":6:{s:9:\"\0*\0direct\";b:1;s:13:\"\0*\0constraint\";s:4:\"^4.0\";s:10:\"\0*\0package\";E:37:\"Laravel\\Roster\\Enums\\Packages:SANCTUM\";s:14:\"\0*\0packageName\";s:15:\"laravel/sanctum\";s:10:\"\0*\0version\";s:5:\"4.3.0\";s:6:\"\0*\0dev\";b:0;}i:4;O:22:\"Laravel\\Roster\\Package\":6:{s:9:\"\0*\0direct\";b:1;s:13:\"\0*\0constraint\";s:6:\"^2.9.0\";s:10:\"\0*\0package\";E:41:\"Laravel\\Roster\\Enums\\Packages:FLUXUI_FREE\";s:14:\"\0*\0packageName\";s:13:\"livewire/flux\";s:10:\"\0*\0version\";s:6:\"2.11.1\";s:6:\"\0*\0dev\";b:0;}i:5;O:22:\"Laravel\\Roster\\Package\":6:{s:9:\"\0*\0direct\";b:1;s:13:\"\0*\0constraint\";s:4:\"^4.0\";s:10:\"\0*\0package\";E:38:\"Laravel\\Roster\\Enums\\Packages:LIVEWIRE\";s:14:\"\0*\0packageName\";s:17:\"livewire/livewire\";s:10:\"\0*\0version\";s:5:\"4.1.0\";s:6:\"\0*\0dev\";b:0;}i:6;O:22:\"Laravel\\Roster\\Package\":6:{s:9:\"\0*\0direct\";b:0;s:13:\"\0*\0constraint\";s:6:\"v0.5.3\";s:10:\"\0*\0package\";E:33:\"Laravel\\Roster\\Enums\\Packages:MCP\";s:14:\"\0*\0packageName\";s:11:\"laravel/mcp\";s:10:\"\0*\0version\";s:5:\"0.5.3\";s:6:\"\0*\0dev\";b:1;}i:7;O:22:\"Laravel\\Roster\\Package\":6:{s:9:\"\0*\0direct\";b:1;s:13:\"\0*\0constraint\";s:5:\"^1.24\";s:10:\"\0*\0package\";E:34:\"Laravel\\Roster\\Enums\\Packages:PINT\";s:14:\"\0*\0packageName\";s:12:\"laravel/pint\";s:10:\"\0*\0version\";s:6:\"1.27.0\";s:6:\"\0*\0dev\";b:1;}i:8;O:22:\"Laravel\\Roster\\Package\":6:{s:9:\"\0*\0direct\";b:1;s:13:\"\0*\0constraint\";s:5:\"^1.41\";s:10:\"\0*\0package\";E:34:\"Laravel\\Roster\\Enums\\Packages:SAIL\";s:14:\"\0*\0packageName\";s:12:\"laravel/sail\";s:10:\"\0*\0version\";s:6:\"1.52.0\";s:6:\"\0*\0dev\";b:1;}i:9;O:22:\"Laravel\\Roster\\Package\":6:{s:9:\"\0*\0direct\";b:1;s:13:\"\0*\0constraint\";s:4:\"^4.3\";s:10:\"\0*\0package\";E:34:\"Laravel\\Roster\\Enums\\Packages:PEST\";s:14:\"\0*\0packageName\";s:12:\"pestphp/pest\";s:10:\"\0*\0version\";s:5:\"4.3.2\";s:6:\"\0*\0dev\";b:1;}i:10;O:22:\"Laravel\\Roster\\Package\":6:{s:9:\"\0*\0direct\";b:0;s:13:\"\0*\0constraint\";s:6:\"12.5.8\";s:10:\"\0*\0package\";E:37:\"Laravel\\Roster\\Enums\\Packages:PHPUNIT\";s:14:\"\0*\0packageName\";s:15:\"phpunit/phpunit\";s:10:\"\0*\0version\";s:6:\"12.5.8\";s:6:\"\0*\0dev\";b:1;}}s:28:\"\0*\0escapeWhenCastingToString\";b:0;}s:21:\"\0*\0nodePackageManager\";E:43:\"Laravel\\Roster\\Enums\\NodePackageManager:NPM\";}s:9:\"timestamp\";i:1770141666;}', 1770228066),
-('laravel-cache-spatie.permission.cache', 'a:3:{s:5:\"alias\";a:4:{s:1:\"a\";s:2:\"id\";s:1:\"b\";s:4:\"name\";s:1:\"c\";s:10:\"guard_name\";s:1:\"r\";s:5:\"roles\";}s:11:\"permissions\";a:70:{i:0;a:4:{s:1:\"a\";s:1:\"1\";s:1:\"b\";s:10:\"categories\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:1;a:4:{s:1:\"a\";s:1:\"2\";s:1:\"b\";s:15:\"view_categories\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:2;a:4:{s:1:\"a\";s:1:\"3\";s:1:\"b\";s:17:\"create_categories\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:3;a:4:{s:1:\"a\";s:1:\"4\";s:1:\"b\";s:17:\"update_categories\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:4;a:4:{s:1:\"a\";s:1:\"5\";s:1:\"b\";s:17:\"delete_categories\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:5;a:4:{s:1:\"a\";s:1:\"6\";s:1:\"b\";s:6:\"levels\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:6;a:4:{s:1:\"a\";s:1:\"7\";s:1:\"b\";s:11:\"view_levels\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:7;a:4:{s:1:\"a\";s:1:\"8\";s:1:\"b\";s:13:\"create_levels\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:8;a:4:{s:1:\"a\";s:1:\"9\";s:1:\"b\";s:13:\"update_levels\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:9;a:4:{s:1:\"a\";s:2:\"10\";s:1:\"b\";s:13:\"delete_levels\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:10;a:4:{s:1:\"a\";s:2:\"11\";s:1:\"b\";s:4:\"faqs\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:11;a:4:{s:1:\"a\";s:2:\"12\";s:1:\"b\";s:9:\"view_faqs\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:12;a:4:{s:1:\"a\";s:2:\"13\";s:1:\"b\";s:11:\"create_faqs\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:13;a:4:{s:1:\"a\";s:2:\"14\";s:1:\"b\";s:11:\"update_faqs\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:14;a:4:{s:1:\"a\";s:2:\"15\";s:1:\"b\";s:11:\"delete_faqs\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:15;a:4:{s:1:\"a\";s:2:\"16\";s:1:\"b\";s:7:\"mentors\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:16;a:4:{s:1:\"a\";s:2:\"17\";s:1:\"b\";s:12:\"view_mentors\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:17;a:4:{s:1:\"a\";s:2:\"18\";s:1:\"b\";s:14:\"create_mentors\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:18;a:4:{s:1:\"a\";s:2:\"19\";s:1:\"b\";s:14:\"update_mentors\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:19;a:4:{s:1:\"a\";s:2:\"20\";s:1:\"b\";s:14:\"delete_mentors\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:20;a:4:{s:1:\"a\";s:2:\"21\";s:1:\"b\";s:7:\"banners\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:21;a:4:{s:1:\"a\";s:2:\"22\";s:1:\"b\";s:12:\"view_banners\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:22;a:4:{s:1:\"a\";s:2:\"23\";s:1:\"b\";s:14:\"create_banners\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:23;a:4:{s:1:\"a\";s:2:\"24\";s:1:\"b\";s:14:\"update_banners\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:24;a:4:{s:1:\"a\";s:2:\"25\";s:1:\"b\";s:14:\"delete_banners\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:25;a:4:{s:1:\"a\";s:2:\"26\";s:1:\"b\";s:7:\"courses\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:26;a:4:{s:1:\"a\";s:2:\"27\";s:1:\"b\";s:12:\"view_courses\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:27;a:4:{s:1:\"a\";s:2:\"28\";s:1:\"b\";s:14:\"create_courses\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:28;a:4:{s:1:\"a\";s:2:\"29\";s:1:\"b\";s:14:\"update_courses\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:29;a:4:{s:1:\"a\";s:2:\"30\";s:1:\"b\";s:14:\"delete_courses\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:30;a:4:{s:1:\"a\";s:2:\"31\";s:1:\"b\";s:7:\"lessons\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:31;a:4:{s:1:\"a\";s:2:\"32\";s:1:\"b\";s:12:\"view_lessons\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:32;a:4:{s:1:\"a\";s:2:\"33\";s:1:\"b\";s:14:\"create_lessons\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:33;a:4:{s:1:\"a\";s:2:\"34\";s:1:\"b\";s:14:\"update_lessons\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:34;a:4:{s:1:\"a\";s:2:\"35\";s:1:\"b\";s:14:\"delete_lessons\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:35;a:4:{s:1:\"a\";s:2:\"36\";s:1:\"b\";s:8:\"articles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:36;a:4:{s:1:\"a\";s:2:\"37\";s:1:\"b\";s:13:\"view_articles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:37;a:4:{s:1:\"a\";s:2:\"38\";s:1:\"b\";s:15:\"create_articles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:38;a:4:{s:1:\"a\";s:2:\"39\";s:1:\"b\";s:15:\"update_articles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:39;a:4:{s:1:\"a\";s:2:\"40\";s:1:\"b\";s:15:\"delete_articles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:40;a:4:{s:1:\"a\";s:2:\"41\";s:1:\"b\";s:5:\"roles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:41;a:4:{s:1:\"a\";s:2:\"42\";s:1:\"b\";s:10:\"view_roles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:42;a:4:{s:1:\"a\";s:2:\"43\";s:1:\"b\";s:12:\"create_roles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:43;a:4:{s:1:\"a\";s:2:\"44\";s:1:\"b\";s:12:\"update_roles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:44;a:4:{s:1:\"a\";s:2:\"45\";s:1:\"b\";s:12:\"delete_roles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:45;a:4:{s:1:\"a\";s:2:\"46\";s:1:\"b\";s:11:\"permissions\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:46;a:4:{s:1:\"a\";s:2:\"47\";s:1:\"b\";s:16:\"view_permissions\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:47;a:4:{s:1:\"a\";s:2:\"48\";s:1:\"b\";s:18:\"create_permissions\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:48;a:4:{s:1:\"a\";s:2:\"49\";s:1:\"b\";s:18:\"update_permissions\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:49;a:4:{s:1:\"a\";s:2:\"50\";s:1:\"b\";s:18:\"delete_permissions\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:50;a:4:{s:1:\"a\";s:2:\"51\";s:1:\"b\";s:5:\"users\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:51;a:4:{s:1:\"a\";s:2:\"52\";s:1:\"b\";s:10:\"view_users\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:52;a:4:{s:1:\"a\";s:2:\"53\";s:1:\"b\";s:12:\"create_users\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:53;a:4:{s:1:\"a\";s:2:\"54\";s:1:\"b\";s:12:\"update_users\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:54;a:4:{s:1:\"a\";s:2:\"55\";s:1:\"b\";s:12:\"delete_users\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:55;a:4:{s:1:\"a\";s:2:\"56\";s:1:\"b\";s:9:\"dashboard\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:56;a:4:{s:1:\"a\";s:2:\"57\";s:1:\"b\";s:14:\"view_dashboard\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:57;a:4:{s:1:\"a\";s:2:\"58\";s:1:\"b\";s:16:\"create_dashboard\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:58;a:4:{s:1:\"a\";s:2:\"59\";s:1:\"b\";s:16:\"update_dashboard\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:59;a:4:{s:1:\"a\";s:2:\"60\";s:1:\"b\";s:16:\"delete_dashboard\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:60;a:4:{s:1:\"a\";s:2:\"61\";s:1:\"b\";s:8:\"settings\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:61;a:4:{s:1:\"a\";s:2:\"62\";s:1:\"b\";s:13:\"view_settings\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:62;a:4:{s:1:\"a\";s:2:\"63\";s:1:\"b\";s:15:\"create_settings\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:63;a:4:{s:1:\"a\";s:2:\"64\";s:1:\"b\";s:15:\"update_settings\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:64;a:4:{s:1:\"a\";s:2:\"65\";s:1:\"b\";s:15:\"delete_settings\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:65;a:4:{s:1:\"a\";s:2:\"66\";s:1:\"b\";s:7:\"reports\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:66;a:4:{s:1:\"a\";s:2:\"67\";s:1:\"b\";s:12:\"view_reports\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:67;a:4:{s:1:\"a\";s:2:\"68\";s:1:\"b\";s:14:\"create_reports\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:68;a:4:{s:1:\"a\";s:2:\"69\";s:1:\"b\";s:14:\"update_reports\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:69;a:4:{s:1:\"a\";s:2:\"70\";s:1:\"b\";s:14:\"delete_reports\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}}s:5:\"roles\";a:1:{i:0;a:3:{s:1:\"a\";s:1:\"1\";s:1:\"b\";s:11:\"super-admin\";s:1:\"c\";s:3:\"web\";}}}', 1773053790);
+('laravel-cache-spatie.permission.cache', 'a:3:{s:5:\"alias\";a:4:{s:1:\"a\";s:2:\"id\";s:1:\"b\";s:4:\"name\";s:1:\"c\";s:10:\"guard_name\";s:1:\"r\";s:5:\"roles\";}s:11:\"permissions\";a:70:{i:0;a:4:{s:1:\"a\";s:1:\"1\";s:1:\"b\";s:10:\"categories\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:1;a:4:{s:1:\"a\";s:1:\"2\";s:1:\"b\";s:15:\"view_categories\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:2;a:4:{s:1:\"a\";s:1:\"3\";s:1:\"b\";s:17:\"create_categories\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:3;a:4:{s:1:\"a\";s:1:\"4\";s:1:\"b\";s:17:\"update_categories\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:4;a:4:{s:1:\"a\";s:1:\"5\";s:1:\"b\";s:17:\"delete_categories\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:5;a:4:{s:1:\"a\";s:1:\"6\";s:1:\"b\";s:6:\"levels\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:6;a:4:{s:1:\"a\";s:1:\"7\";s:1:\"b\";s:11:\"view_levels\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:7;a:4:{s:1:\"a\";s:1:\"8\";s:1:\"b\";s:13:\"create_levels\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:8;a:4:{s:1:\"a\";s:1:\"9\";s:1:\"b\";s:13:\"update_levels\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:9;a:4:{s:1:\"a\";s:2:\"10\";s:1:\"b\";s:13:\"delete_levels\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:10;a:4:{s:1:\"a\";s:2:\"11\";s:1:\"b\";s:4:\"faqs\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:11;a:4:{s:1:\"a\";s:2:\"12\";s:1:\"b\";s:9:\"view_faqs\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:12;a:4:{s:1:\"a\";s:2:\"13\";s:1:\"b\";s:11:\"create_faqs\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:13;a:4:{s:1:\"a\";s:2:\"14\";s:1:\"b\";s:11:\"update_faqs\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:14;a:4:{s:1:\"a\";s:2:\"15\";s:1:\"b\";s:11:\"delete_faqs\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:15;a:4:{s:1:\"a\";s:2:\"16\";s:1:\"b\";s:7:\"mentors\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:16;a:4:{s:1:\"a\";s:2:\"17\";s:1:\"b\";s:12:\"view_mentors\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:17;a:4:{s:1:\"a\";s:2:\"18\";s:1:\"b\";s:14:\"create_mentors\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:18;a:4:{s:1:\"a\";s:2:\"19\";s:1:\"b\";s:14:\"update_mentors\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:19;a:4:{s:1:\"a\";s:2:\"20\";s:1:\"b\";s:14:\"delete_mentors\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:20;a:4:{s:1:\"a\";s:2:\"21\";s:1:\"b\";s:7:\"banners\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:21;a:4:{s:1:\"a\";s:2:\"22\";s:1:\"b\";s:12:\"view_banners\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:22;a:4:{s:1:\"a\";s:2:\"23\";s:1:\"b\";s:14:\"create_banners\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:23;a:4:{s:1:\"a\";s:2:\"24\";s:1:\"b\";s:14:\"update_banners\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:24;a:4:{s:1:\"a\";s:2:\"25\";s:1:\"b\";s:14:\"delete_banners\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:25;a:4:{s:1:\"a\";s:2:\"26\";s:1:\"b\";s:7:\"courses\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:26;a:4:{s:1:\"a\";s:2:\"27\";s:1:\"b\";s:12:\"view_courses\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:27;a:4:{s:1:\"a\";s:2:\"28\";s:1:\"b\";s:14:\"create_courses\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:28;a:4:{s:1:\"a\";s:2:\"29\";s:1:\"b\";s:14:\"update_courses\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:29;a:4:{s:1:\"a\";s:2:\"30\";s:1:\"b\";s:14:\"delete_courses\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:30;a:4:{s:1:\"a\";s:2:\"31\";s:1:\"b\";s:7:\"lessons\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:31;a:4:{s:1:\"a\";s:2:\"32\";s:1:\"b\";s:12:\"view_lessons\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:32;a:4:{s:1:\"a\";s:2:\"33\";s:1:\"b\";s:14:\"create_lessons\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:33;a:4:{s:1:\"a\";s:2:\"34\";s:1:\"b\";s:14:\"update_lessons\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:34;a:4:{s:1:\"a\";s:2:\"35\";s:1:\"b\";s:14:\"delete_lessons\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:35;a:4:{s:1:\"a\";s:2:\"36\";s:1:\"b\";s:8:\"articles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:36;a:4:{s:1:\"a\";s:2:\"37\";s:1:\"b\";s:13:\"view_articles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:37;a:4:{s:1:\"a\";s:2:\"38\";s:1:\"b\";s:15:\"create_articles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:38;a:4:{s:1:\"a\";s:2:\"39\";s:1:\"b\";s:15:\"update_articles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:39;a:4:{s:1:\"a\";s:2:\"40\";s:1:\"b\";s:15:\"delete_articles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:40;a:4:{s:1:\"a\";s:2:\"41\";s:1:\"b\";s:5:\"roles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:41;a:4:{s:1:\"a\";s:2:\"42\";s:1:\"b\";s:10:\"view_roles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:42;a:4:{s:1:\"a\";s:2:\"43\";s:1:\"b\";s:12:\"create_roles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:43;a:4:{s:1:\"a\";s:2:\"44\";s:1:\"b\";s:12:\"update_roles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:44;a:4:{s:1:\"a\";s:2:\"45\";s:1:\"b\";s:12:\"delete_roles\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:45;a:4:{s:1:\"a\";s:2:\"46\";s:1:\"b\";s:11:\"permissions\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:46;a:4:{s:1:\"a\";s:2:\"47\";s:1:\"b\";s:16:\"view_permissions\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:47;a:4:{s:1:\"a\";s:2:\"48\";s:1:\"b\";s:18:\"create_permissions\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:48;a:4:{s:1:\"a\";s:2:\"49\";s:1:\"b\";s:18:\"update_permissions\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:49;a:4:{s:1:\"a\";s:2:\"50\";s:1:\"b\";s:18:\"delete_permissions\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:50;a:4:{s:1:\"a\";s:2:\"51\";s:1:\"b\";s:5:\"users\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:51;a:4:{s:1:\"a\";s:2:\"52\";s:1:\"b\";s:10:\"view_users\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:52;a:4:{s:1:\"a\";s:2:\"53\";s:1:\"b\";s:12:\"create_users\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:53;a:4:{s:1:\"a\";s:2:\"54\";s:1:\"b\";s:12:\"update_users\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:54;a:4:{s:1:\"a\";s:2:\"55\";s:1:\"b\";s:12:\"delete_users\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:55;a:4:{s:1:\"a\";s:2:\"56\";s:1:\"b\";s:9:\"dashboard\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:56;a:4:{s:1:\"a\";s:2:\"57\";s:1:\"b\";s:14:\"view_dashboard\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:57;a:4:{s:1:\"a\";s:2:\"58\";s:1:\"b\";s:16:\"create_dashboard\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:58;a:4:{s:1:\"a\";s:2:\"59\";s:1:\"b\";s:16:\"update_dashboard\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:59;a:4:{s:1:\"a\";s:2:\"60\";s:1:\"b\";s:16:\"delete_dashboard\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:60;a:4:{s:1:\"a\";s:2:\"61\";s:1:\"b\";s:8:\"settings\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:61;a:4:{s:1:\"a\";s:2:\"62\";s:1:\"b\";s:13:\"view_settings\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:62;a:4:{s:1:\"a\";s:2:\"63\";s:1:\"b\";s:15:\"create_settings\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:63;a:4:{s:1:\"a\";s:2:\"64\";s:1:\"b\";s:15:\"update_settings\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:64;a:4:{s:1:\"a\";s:2:\"65\";s:1:\"b\";s:15:\"delete_settings\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:65;a:4:{s:1:\"a\";s:2:\"66\";s:1:\"b\";s:7:\"reports\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:66;a:4:{s:1:\"a\";s:2:\"67\";s:1:\"b\";s:12:\"view_reports\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:67;a:4:{s:1:\"a\";s:2:\"68\";s:1:\"b\";s:14:\"create_reports\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:68;a:4:{s:1:\"a\";s:2:\"69\";s:1:\"b\";s:14:\"update_reports\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:69;a:4:{s:1:\"a\";s:2:\"70\";s:1:\"b\";s:14:\"delete_reports\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}}s:5:\"roles\";a:1:{i:0;a:3:{s:1:\"a\";s:1:\"1\";s:1:\"b\";s:11:\"super-admin\";s:1:\"c\";s:3:\"web\";}}}', 1773835340);
 
 -- --------------------------------------------------------
 
@@ -349,7 +348,13 @@ INSERT INTO `categories` (`id`, `name`, `description`, `image`, `searchable_name
 (40, '{\"en\":\"sdgsdg\",\"ar\":\"sdfv\"}', '{\"ar\":null}', NULL, 'sdgsdg sdfv', ' ', '2026-02-11 13:07:16', '2026-02-11 13:07:16', 'groups'),
 (41, '{\"en\":\"safsaf\",\"ar\":\"asd\"}', '{\"en\":\"eagreghrgg\",\"ar\":\"asdgr4e\"}', 'categories/wHr4XkBzJlyRwdq42L6l9pslCOBi8QpFSN4gQx6T.png', 'safsaf asd', 'eagreghrgg asdgr4e', '2026-02-11 13:43:00', '2026-02-11 13:43:00', 'groups'),
 (42, '{\"en\":\"hgjjhg\",\"ar\":\"thytr\"}', '{\"en\":\"hgjhgj\",\"ar\":\"hgj\"}', 'categories/d1lrvu0Mwo7gnabWXMyuSOvYcfwjnHvbagL3C7lR.png', 'hgjjhg thytr', 'hgjhgj hgj', '2026-02-11 14:31:57', '2026-02-11 14:31:57', 'groups'),
-(43, '{\"en\":\"new category\",\"ar\":\"ثقل\"}', '{\"en\":\"rdgergerg\",\"ar\":\"يسب\"}', 'categories/piloLw2Ap8ruTa7ipSaIUmLCtRAbFfcu0ikGrpyZ.png', 'new category ثقل', 'rdgergerg يسب', '2026-02-11 15:18:34', '2026-02-11 15:18:34', 'groups');
+(43, '{\"en\":\"new category\",\"ar\":\"ثقل\"}', '{\"en\":\"rdgergerg\",\"ar\":\"يسب\"}', 'categories/piloLw2Ap8ruTa7ipSaIUmLCtRAbFfcu0ikGrpyZ.png', 'new category ثقل', 'rdgergerg يسب', '2026-02-11 15:18:34', '2026-02-11 15:18:34', 'groups'),
+(44, '{\"en\":\"Test New Category by salem\",\"ar\":\"اختبار محموعة جديدة\"}', '{\"en\":\"new description\",\"ar\":\"ديسكريبشن\"}', NULL, 'Test New Category by salem اختبار محموعة جديدة', 'new description ديسكريبشن', '2026-03-10 22:22:47', '2026-03-10 22:22:47', 'new slug'),
+(45, '{\"en\":\"b\",\"ar\":\"n\"}', '{\"en\":\"g\",\"ar\":\"z\"}', NULL, 'b n', 'g z', '2026-03-17 12:45:53', '2026-03-17 12:45:53', 'm'),
+(46, '{\"en\":\"asjbcv\",\"ar\":\"شسر\"}', '{\"en\":\"jascusvusd\",\"ar\":\"شسؤرلاتسلار\"}', NULL, 'asjbcv شسر', 'jascusvusd شسؤرلاتسلار', '2026-03-17 17:02:20', '2026-03-17 17:02:20', 'sc'),
+(47, '{\"en\":\"abdo\",\"ar\":\"عبدو\"}', '{\"en\":\"sackesnvc\",\"ar\":\"شءفشس\"}', NULL, 'abdo عبدو', 'sackesnvc شءفشس', '2026-03-17 17:03:26', '2026-03-17 17:03:26', 'ai'),
+(48, '{\"en\":\"members\",\"ar\":\"افراد\"}', '{\"en\":\"dsvndsjv\",\"ar\":\"شسسبللبىت\"}', NULL, 'members افراد', 'dsvndsjv شسسبللبىت', '2026-03-17 20:15:03', '2026-03-17 20:15:03', 'members'),
+(49, '{\"en\":\"new\",\"ar\":\"جديد\"}', '{\"en\":\"ssvvg\",\"ar\":\"سشسثبث\"}', NULL, 'new جديد', 'ssvvg سشسثبث', '2026-03-17 20:28:59', '2026-03-17 20:28:59', 'ai');
 
 -- --------------------------------------------------------
 
@@ -610,6 +615,157 @@ INSERT INTO `comments` (`id`, `post_id`, `user_id`, `content`, `created_at`, `up
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `consultation_categories`
+--
+
+CREATE TABLE `consultation_categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`name`)),
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`description`)),
+  `image` varchar(255) DEFAULT NULL,
+  `type_slug` varchar(255) DEFAULT NULL,
+  `slug` varchar(255) DEFAULT NULL,
+  `searchable_name` text DEFAULT NULL,
+  `searchable_description` text DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `consultation_categories`
+--
+
+INSERT INTO `consultation_categories` (`id`, `name`, `description`, `image`, `type_slug`, `slug`, `searchable_name`, `searchable_description`, `created_at`, `updated_at`) VALUES
+(1, '{\"en\":\"ksdv\",\"ar\":\"شسنؤى\"}', '{\"en\":\"jevnjwekv\",\"ar\":\"تثؤتىث\"}', NULL, 'kln', 'jkh', 'ksdv شسنؤى', 'jevnjwekv تثؤتىث', '2026-03-17 15:19:59', '2026-03-17 15:19:59'),
+(3, '{\"en\":\"kldvd\",\"ar\":\"سةرلاتا\"}', '{\"en\":\"sdjbvsd\",\"ar\":\"يىي\"}', NULL, 'sdvn', 'mds', 'kldvd سةرلاتا', 'sdjbvsd يىي', '2026-03-17 15:32:04', '2026-03-17 15:32:21');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `consultation_requests`
+--
+
+CREATE TABLE `consultation_requests` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `type` enum('personal','company') NOT NULL,
+  `trainning_type` varchar(255) NOT NULL,
+  `customer_needs` text DEFAULT NULL,
+  `company_needs` text DEFAULT NULL,
+  `company_name` varchar(255) DEFAULT NULL,
+  `employees_num` int(11) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone_num` varchar(255) NOT NULL,
+  `time_to_call` varchar(255) NOT NULL,
+  `location` enum('online','offline') NOT NULL,
+  `status` varchar(255) NOT NULL DEFAULT 'pending',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `consultation_requests`
+--
+
+INSERT INTO `consultation_requests` (`id`, `user_id`, `type`, `trainning_type`, `customer_needs`, `company_needs`, `company_name`, `employees_num`, `email`, `phone_num`, `time_to_call`, `location`, `status`, `created_at`, `updated_at`) VALUES
+(1, 400, 'company', 'soft skills', NULL, 'need a consultation', 'company name', 5, 'company@gmail.com', '012012012', 'after 5pm', 'online', 'pending', '2026-03-17 09:49:11', '2026-03-17 09:49:11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `consultation_reservations`
+--
+
+CREATE TABLE `consultation_reservations` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `consultation_session_id` bigint(20) UNSIGNED NOT NULL,
+  `phone_number` varchar(255) NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL,
+  `payment_gateway` varchar(255) NOT NULL,
+  `payment_id` varchar(255) DEFAULT NULL,
+  `amount` decimal(10,2) NOT NULL,
+  `status` enum('pending','confirmed','cancelled','paid') NOT NULL DEFAULT 'pending',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `consultation_sessions`
+--
+
+CREATE TABLE `consultation_sessions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`name`)),
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`description`)),
+  `content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`content`)),
+  `image` varchar(255) DEFAULT NULL,
+  `video_url` varchar(255) DEFAULT NULL,
+  `price` decimal(10,2) NOT NULL DEFAULT 0.00,
+  `duration` int(11) DEFAULT NULL,
+  `type` enum('live','recorded','offline') NOT NULL DEFAULT 'live',
+  `earning_points` int(11) NOT NULL DEFAULT 0,
+  `consultation_sub_category_id` bigint(20) UNSIGNED NOT NULL,
+  `mentor_id` bigint(20) UNSIGNED NOT NULL,
+  `searchable_name` text DEFAULT NULL,
+  `searchable_description` text DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `consultation_sessions`
+--
+
+INSERT INTO `consultation_sessions` (`id`, `name`, `description`, `content`, `image`, `video_url`, `price`, `duration`, `type`, `earning_points`, `consultation_sub_category_id`, `mentor_id`, `searchable_name`, `searchable_description`, `created_at`, `updated_at`) VALUES
+(1, '{\"en\":\"b\",\"ar\":\"n\"}', '{\"en\":\"architecto\",\"ar\":\"architecto\"}', '{\"en\":\"architecto\",\"ar\":\"architecto\"}', NULL, 'http://bailey.com/', 4326.42, 16, 'recorded', 16, 2, 2, 'b n', 'architecto architecto', '2026-03-17 15:33:58', '2026-03-17 15:33:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `consultation_session_user`
+--
+
+CREATE TABLE `consultation_session_user` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `consultation_session_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `consultation_sub_categories`
+--
+
+CREATE TABLE `consultation_sub_categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`name`)),
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`description`)),
+  `image` varchar(255) DEFAULT NULL,
+  `consultation_category_id` bigint(20) UNSIGNED NOT NULL,
+  `searchable_name` text DEFAULT NULL,
+  `searchable_description` text DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `consultation_sub_categories`
+--
+
+INSERT INTO `consultation_sub_categories` (`id`, `name`, `description`, `image`, `consultation_category_id`, `searchable_name`, `searchable_description`, `created_at`, `updated_at`) VALUES
+(1, '{\"en\":\"b\",\"ar\":\"n\"}', '{\"en\":\"architecto\",\"ar\":\"architecto\"}', NULL, 1, 'b n', 'architecto architecto', '2026-03-17 15:28:51', '2026-03-17 15:28:51'),
+(2, '{\"en\":\"sdvds\",\"ar\":\"يرر\"}', '{\"en\":\"sdklmerko\",\"ar\":\"نسيىسي\"}', NULL, 1, 'sdvds يرر', 'sdklmerko نسيىسي', '2026-03-17 15:31:39', '2026-03-17 15:31:39');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `courses`
 --
 
@@ -623,53 +779,94 @@ CREATE TABLE `courses` (
   `url` varchar(255) DEFAULT NULL,
   `searchable_name` text NOT NULL,
   `searchable_description` text DEFAULT NULL,
-  `category_id` bigint(20) UNSIGNED DEFAULT NULL,
   `level_id` bigint(20) UNSIGNED DEFAULT NULL,
   `mentor_id` bigint(20) UNSIGNED DEFAULT NULL,
   `accepted_at` timestamp NULL DEFAULT NULL,
   `earning_points` int(11) NOT NULL DEFAULT 0,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `sub_category_id` bigint(20) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`id`, `name`, `description`, `image`, `type`, `price`, `url`, `searchable_name`, `searchable_description`, `category_id`, `level_id`, `mentor_id`, `accepted_at`, `earning_points`, `created_at`, `updated_at`) VALUES
-(1, '{\"ar\": \"Itaque laboriosam neque et.\", \"en\": \"Facilis ut eveniet laudantium esse.\"}', '{\"ar\":\"Officia fugiat consequatur ipsam expedita. Soluta quia facilis ea.ewgew\",\"en\":\"Officia fugiat consequatur ipsam expedita. Soluta quia facilis ea.\"}', 'courses/bJ42gaAAZnSNWhuJVer2EuyG7orfiMnmdxKE5UCx.png', 'offline', 966.16, 'https://www.schowalter.com/non-quae-voluptatem-eaque-voluptas-voluptates', 'Facilis ut eveniet laudantium esse. Itaque laboriosam neque et.', 'Officia fugiat consequatur ipsam expedita. Soluta quia facilis ea. Officia fugiat consequatur ipsam expedita. Soluta quia facilis ea.ewgew', 9, 5, 2, '2026-02-08 15:38:14', 0, '2026-02-03 14:32:48', '2026-02-11 13:59:06'),
-(2, '{\"ar\": \"Et et aliquam id.\", \"en\": \"Aspernatur voluptates placeat quam.\"}', '{\"ar\":\"Et ipsa expedita et quia provident et ipsum qui. Aliquam esse est et ea reprehenderit et. Sapiente enim sit earum sed inventore numquam. Tempora temporibus eveniet aut ut.\",\"en\":\"Et ipsa expedita et quia provident et ipsum qui. Aliquam esse est et ea reprehenderit et. Sapiente enim sit earum sed inventore numquam. Tempora temporibus eveniet aut ut.\"}', 'https://via.placeholder.com/640x480.png/008800?text=courses+voluptatem', 'recorded', 521.07, 'https://collier.com/cumque-praesentium-ad-est-laborum-illum.html', 'Aspernatur voluptates placeat quam. Et et aliquam id.', 'Et ipsa expedita et quia provident et ipsum qui. Aliquam esse est et ea reprehenderit et. Sapiente enim sit earum sed inventore numquam. Tempora temporibus eveniet aut ut. Et ipsa expedita et quia provident et ipsum qui. Aliquam esse est et ea reprehenderit et. Sapiente enim sit earum sed inventore numquam. Tempora temporibus eveniet aut ut.', 10, 6, 2, '2026-02-08 17:20:11', 0, '2026-02-03 14:32:48', '2026-02-08 15:38:41'),
-(3, '{\"ar\": \"Qui ut hic est.\", \"en\": \"Quaerat ut doloremque.\"}', '{\"ar\":\"Cupiditate expedita ad possimus officiis dolorum. Vero unde debitis iure sed esse similique. Optio qui quo unde non sed et.\",\"en\":\"Cupiditate expedita ad possimus officiis dolorum. Vero unde debitis iure sed esse similique. Optio qui quo unde non sed et.\"}', 'https://via.placeholder.com/640x480.png/00aaff?text=courses+et', 'offline', 242.33, 'http://www.krajcik.biz/sunt-asperiores-enim-aspernatur-animi-quis', 'Quaerat ut doloremque. Qui ut hic est.', 'Cupiditate expedita ad possimus officiis dolorum. Vero unde debitis iure sed esse similique. Optio qui quo unde non sed et. Cupiditate expedita ad possimus officiis dolorum. Vero unde debitis iure sed esse similique. Optio qui quo unde non sed et.', 11, 7, 5, '2026-02-09 11:25:19', 0, '2026-02-03 14:32:48', '2026-02-09 11:37:21'),
-(4, '{\"ar\": \"Minus delectus voluptas.\", \"en\": \"Repudiandae facere dolorum magni consequatur.\"}', '{\"ar\": \"Quia sint quas quia unde excepturi facere iusto. Dolorum vel earum et ut. Vel beatae porro possimus sed tempora provident accusantium.\", \"en\": \"Voluptas qui eum sed nam natus vitae voluptatibus. Non a aut aut molestiae aut dolore earum rerum. Amet et deserunt aut quisquam earum. Sit quis ut ut voluptate quia quidem.\"}', 'https://via.placeholder.com/640x480.png/00aa77?text=courses+fugiat', 'live', 33.04, 'http://rice.com/ut-corporis-odit-enim-odio-eveniet-similique-facere.html', 'Repudiandae facere dolorum magni consequatur. Minus delectus voluptas.', 'Voluptates aspernatur delectus ut quo accusamus doloribus rerum. Laboriosam non maxime enim omnis. Nesciunt a quis iure sequi quam numquam.', 12, 8, 6, '2026-02-09 13:17:21', 0, '2026-02-03 14:32:48', '2026-02-03 14:32:49'),
-(5, '{\"ar\": \"Porro rerum ea fugiat.\", \"en\": \"Sint hic tenetur molestias.\"}', '{\"ar\":\"Voluptatibus nobis assumenda voluptas aut voluptate earum aspernatur quis. Consequatur distinctio vel aperiam quibusdam suscipit. Provident molestias aut similique suscipit. Aut distinctio aut ullam ipsum error.\",\"en\":\"Voluptatibus nobis assumenda voluptas aut voluptate earum aspernatur quis. Consequatur distinctio vel aperiam quibusdam suscipit. Provident molestias aut similique suscipit. Aut distinctio aut ullam ipsum error.\"}', 'https://via.placeholder.com/640x480.png/006644?text=courses+distinctio', 'offline', 400.00, 'http://www.fritsch.info/enim-ab-quo-ea-eius', 'Sint hic tenetur molestias. Porro rerum ea fugiat.', 'Voluptatibus nobis assumenda voluptas aut voluptate earum aspernatur quis. Consequatur distinctio vel aperiam quibusdam suscipit. Provident molestias aut similique suscipit. Aut distinctio aut ullam ipsum error. Voluptatibus nobis assumenda voluptas aut voluptate earum aspernatur quis. Consequatur distinctio vel aperiam quibusdam suscipit. Provident molestias aut similique suscipit. Aut distinctio aut ullam ipsum error.', 13, 9, 5, '2026-02-11 15:37:42', 0, '2026-02-03 14:32:48', '2026-02-11 15:31:24'),
-(6, '{\"ar\": \"Minima consequuntur sequi vero.\", \"en\": \"Et ut doloribus sequi.\"}', '{\"ar\": \"Perspiciatis soluta sint ipsum odit accusantium ut error. Ratione minima ducimus laboriosam quasi ipsam. Modi labore distinctio voluptates placeat. Ea et cumque minus quos. Distinctio impedit aut ut id aut qui corporis.\", \"en\": \"Adipisci cupiditate vitae aut autem corporis dignissimos voluptas perferendis. Quas nesciunt ut praesentium pariatur culpa quibusdam qui. Et sed in asperiores quasi repellat.\"}', 'https://via.placeholder.com/640x480.png/003388?text=courses+illum', 'offline', 953.37, 'http://ledner.com/doloremque-voluptates-nihil-perferendis.html', 'Et ut doloribus sequi. Minima consequuntur sequi vero.', 'Ducimus nulla sit magnam consequuntur dolor impedit ut iusto. Architecto natus quia facilis voluptatum. Facere fugiat consectetur itaque deserunt officiis.', 14, 10, 5, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:49'),
-(7, '{\"ar\": \"Quis tenetur libero necessitatibus.\", \"en\": \"Illo aperiam fugit.\"}', '{\"ar\": \"Et autem ad veritatis repudiandae. Maxime dolorem beatae et repellendus. Eos dolores reprehenderit nisi dolor ut quam cumque.\", \"en\": \"Dolore in placeat eum sed optio. Id id minima et nostrum qui impedit. Esse iste qui eius quia totam illo praesentium sit.\"}', 'https://via.placeholder.com/640x480.png/00dd22?text=courses+quod', 'offline', 49.65, 'https://www.denesik.net/velit-sed-quia-enim-aspernatur-ut', 'Illo aperiam fugit. Quis tenetur libero necessitatibus.', 'Molestiae mollitia ullam labore magnam provident qui nulla. Ut totam porro perferendis magni delectus. Voluptatem hic aperiam nisi sequi ipsam maxime. Officiis quis ut blanditiis sit.', 15, 11, 3, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:50'),
-(8, '{\"ar\": \"Ab corporis reprehenderit.\", \"en\": \"Eum enim et omnis.\"}', '{\"ar\": \"Quo iste exercitationem nostrum quidem iste qui est. Et optio quisquam non consequatur voluptatibus delectus aut. Suscipit rerum asperiores accusantium optio suscipit. Qui distinctio a possimus eligendi ut ut ad.\", \"en\": \"Eligendi quo aut consequuntur eveniet ratione. Architecto vel qui at aspernatur. Porro sit at soluta laborum cumque. Qui eum reprehenderit asperiores nobis omnis soluta.\"}', 'https://via.placeholder.com/640x480.png/004488?text=courses+aut', 'recorded', 930.07, 'http://www.stokes.com/amet-est-tempora-tempora-quae.html', 'Eum enim et omnis. Ab corporis reprehenderit.', 'Optio est omnis ad culpa. Incidunt velit quia eum repudiandae repudiandae officia. Maxime atque officiis et. Similique laboriosam modi et. Aspernatur sunt atque et ipsum voluptates odit.', 16, 12, 5, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:50'),
-(9, '{\"ar\": \"Dicta et.\", \"en\": \"Cumque itaque reprehenderit a.\"}', '{\"ar\": \"Quis ipsam aut et. Omnis alias sit aut illum et quo. Debitis corporis dolor quas voluptas quam voluptatem. Voluptas et nihil officiis accusamus. Amet eos aut laborum aperiam impedit corporis expedita.\", \"en\": \"Sed velit voluptatum voluptatem dolore dolorem ea. Aliquam omnis eligendi nobis at quae tenetur dolores tenetur. Ipsa et voluptatum voluptatem alias autem ipsam qui. Id laboriosam assumenda eligendi sed commodi voluptatum.\"}', 'https://via.placeholder.com/640x480.png/001144?text=courses+aliquam', 'recorded', 947.07, 'https://www.gulgowski.com/error-ut-et-unde-hic-numquam', 'Cumque itaque reprehenderit a. Dicta et.', 'Corrupti dolore accusantium dolor doloremque ad. Laborum repellat aliquid omnis aperiam cupiditate aut repellendus. Nemo aut eligendi voluptate harum voluptatem libero. Quo eum est fuga veniam.', 17, 13, 6, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:51'),
-(10, '{\"ar\": \"Quod eveniet dolore nulla ea.\", \"en\": \"Tempora iste laborum.\"}', '{\"ar\": \"Molestiae rerum ipsam rerum voluptatibus animi sunt facilis. Optio omnis enim tempore officia officia. Porro nostrum ut ut quam delectus.\", \"en\": \"Temporibus qui asperiores consectetur magnam nihil. Incidunt repudiandae nihil pariatur atque ipsum. Iste cumque illum dolorem sed. Aut natus sed et dolor consequuntur consectetur et.\"}', 'https://via.placeholder.com/640x480.png/007755?text=courses+rerum', 'recorded', 878.97, 'http://www.gerhold.com/id-qui-odio-dolor.html', 'Tempora iste laborum. Quod eveniet dolore nulla ea.', 'Libero optio ut ut molestiae. Debitis dolorum ipsa in quasi ut in. Labore iure natus sapiente officiis et. Cupiditate illo consequatur voluptatum.', 18, 14, 6, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:51'),
-(11, '{\"ar\": \"Necessitatibus odio et.\", \"en\": \"Quibusdam dicta nemo optio accusantium.\"}', '{\"ar\": \"Ratione sit quo doloribus incidunt. Consequatur rerum animi nulla maiores autem corrupti quidem deleniti. Quo saepe ducimus facere quia autem ad numquam praesentium.\", \"en\": \"Aut eos minus fugiat aut non. Porro quis cumque quisquam corporis ab at ea.\"}', 'https://via.placeholder.com/640x480.png/0055bb?text=courses+unde', 'offline', 593.67, 'http://www.lemke.com/excepturi-eius-vel-dolor-consequatur', 'Quibusdam dicta nemo optio accusantium. Necessitatibus odio et.', 'Facilis ut voluptates non debitis sint in eligendi. Consequuntur animi excepturi aut architecto aut. Rerum aut aut architecto aut deserunt sit ea.', 19, 15, 2, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:51'),
-(12, '{\"ar\": \"Asperiores repellat magni.\", \"en\": \"Eum facere ipsa provident.\"}', '{\"ar\": \"Dolores et nesciunt dolorum placeat. Sed sed beatae consequatur qui quo. Totam repudiandae tempore veritatis maxime vero aut.\", \"en\": \"Magnam modi veritatis dolores quia. Sed praesentium tempora ea non quia. Libero quis iure adipisci quam et sequi. Autem libero vero est sint fugit. Voluptate qui adipisci accusantium similique occaecati ipsam.\"}', 'https://via.placeholder.com/640x480.png/001199?text=courses+est', 'recorded', 459.33, 'http://haley.com/aliquid-est-quis-quia-temporibus-quaerat-autem', 'Eum facere ipsa provident. Asperiores repellat magni.', 'Sit officiis voluptatum vel aut laborum quia. Aut ut blanditiis aspernatur temporibus in enim sed. Harum nulla velit laboriosam earum rerum veritatis est.', 20, 16, 4, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:52'),
-(13, '{\"ar\": \"Quod id.\", \"en\": \"Tenetur soluta in.\"}', '{\"ar\": \"Laboriosam veniam vel unde earum ipsum eos. Provident ea recusandae beatae nihil. Qui et ut magnam ipsa perferendis alias consequuntur.\", \"en\": \"Aut qui natus quo laudantium perferendis harum. Animi non necessitatibus recusandae autem. Et corporis perferendis quia molestiae. Corrupti amet voluptates tempora excepturi accusantium tempora. Voluptatum eos autem totam debitis libero minima.\"}', 'https://via.placeholder.com/640x480.png/00eeee?text=courses+odio', 'recorded', 413.46, 'http://www.hilpert.com/iure-id-culpa-quidem-vel-tenetur', 'Tenetur soluta in. Quod id.', 'Odio voluptatem minima ex nihil. Quia sit quam nostrum. Earum quos aut qui repellat.', NULL, 17, 2, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:52'),
-(14, '{\"ar\": \"Magni velit fugit ut.\", \"en\": \"Officiis eos sit.\"}', '{\"ar\": \"Enim molestias qui eos sed voluptas ut quos beatae. Animi velit placeat rerum dolor unde eum vel sit. Reprehenderit officiis qui perferendis qui nam et eius doloremque.\", \"en\": \"Velit asperiores et cumque non ut sunt. Architecto et voluptas facilis perspiciatis et vitae ut. Consequuntur et itaque dolorem ullam. Architecto nihil non in.\"}', 'https://via.placeholder.com/640x480.png/003377?text=courses+quo', 'live', 281.39, 'https://harvey.com/enim-rerum-nobis-iure.html', 'Officiis eos sit. Magni velit fugit ut.', 'Quia officia maxime voluptate sunt. Et adipisci eaque qui illo cupiditate qui nostrum. Ullam numquam aut voluptatem eius quas. Cumque eaque nihil ut.', 22, 18, 4, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:52'),
-(15, '{\"ar\": \"Vero cum illo.\", \"en\": \"Vero dolor dignissimos natus.\"}', '{\"ar\": \"Voluptatem et ut dignissimos. In optio recusandae totam ea itaque quia dolor. Hic repellendus dolores nobis.\", \"en\": \"Id aliquam eos aut quam eius. Vel eligendi reiciendis et est recusandae aut corporis sapiente. Eius praesentium accusantium enim et iusto animi rem.\"}', 'https://via.placeholder.com/640x480.png/00cc22?text=courses+laboriosam', 'live', 809.70, 'http://mayert.com/rerum-tempore-beatae-recusandae-minus-molestiae-modi-tenetur-velit', 'Vero dolor dignissimos natus. Vero cum illo.', 'Sunt ut perferendis et fuga delectus reprehenderit et. Rerum minus ad animi itaque. Reiciendis facere culpa asperiores autem iure magnam dolorem. Consectetur quos et repudiandae explicabo. Et vero sint et.', 23, 19, 6, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:52'),
-(16, '{\"ar\": \"Placeat voluptatibus alias voluptatibus.\", \"en\": \"Odit sint.\"}', '{\"ar\": \"Recusandae facilis aperiam rem modi. Repellendus voluptates voluptatibus aut optio vero est aut. Qui natus architecto veniam repellendus doloremque facilis.\", \"en\": \"Perspiciatis beatae aspernatur ea sint est doloribus. Reprehenderit reprehenderit ducimus quibusdam nihil. Est omnis odio harum.\"}', 'https://via.placeholder.com/640x480.png/009933?text=courses+nobis', 'live', 720.33, 'http://www.haag.com/accusamus-quia-sapiente-quasi-tenetur-aut-minima-quae', 'Odit sint. Placeat voluptatibus alias voluptatibus.', 'Accusamus error qui veritatis repellendus in possimus quia eos. Officiis natus delectus nostrum id illo eos molestias. Molestiae suscipit aut illum voluptatem placeat corporis in.', 24, 20, 364, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53'),
-(17, '{\"ar\": \"Iure sit.\", \"en\": \"Commodi enim facilis ab.\"}', '{\"ar\": \"Eveniet provident dolorum dolorem totam nobis non dolorem. Debitis a rerum quia ea. Fugit eaque accusamus inventore quia rerum. Quia rerum laboriosam nobis officiis quia.\", \"en\": \"Molestiae voluptates unde voluptas nulla cum hic ratione. Consectetur sunt voluptatem omnis voluptatem consequatur blanditiis ducimus. Velit labore quia fuga. Deleniti ullam aspernatur rem error.\"}', 'https://via.placeholder.com/640x480.png/0022cc?text=courses+saepe', 'offline', 708.52, 'http://grimes.com/enim-odit-iure-quis', 'Commodi enim facilis ab. Iure sit.', 'Et odit ipsum ratione voluptas. Odit ea suscipit eius consequatur maxime sed eum dolore. Velit voluptatum aut unde ut vitae sed.', 25, NULL, 366, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53'),
-(18, '{\"ar\": \"Aut atque accusantium.\", \"en\": \"Cum consequatur optio nobis.\"}', '{\"ar\": \"Natus voluptatibus velit perspiciatis repellat modi suscipit. Soluta consequatur dolore laudantium beatae perspiciatis. Optio dolores neque animi eaque facere. Autem eaque pariatur perferendis ut sint esse.\", \"en\": \"Aut sed unde pariatur et veniam consectetur quidem. Ducimus quia iusto numquam eum. At dignissimos esse unde vitae. Velit qui non neque corporis placeat sit.\"}', 'https://via.placeholder.com/640x480.png/00dd77?text=courses+iusto', 'recorded', 169.16, 'http://prohaska.com/', 'Cum consequatur optio nobis. Aut atque accusantium.', 'Dicta velit corporis vel hic consectetur. Vel excepturi dicta dolor placeat odio possimus esse. Impedit sed laboriosam blanditiis ipsa pariatur.', 26, 22, 368, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53'),
-(19, '{\"ar\": \"Voluptate eaque corporis.\", \"en\": \"Similique earum numquam cumque.\"}', '{\"ar\": \"Quo reprehenderit facere atque eveniet. Rerum ullam minima vero necessitatibus cum impedit dolores nostrum. Dolore laudantium nihil dignissimos aut nam. Vitae eligendi nam quia laudantium.\", \"en\": \"Vero praesentium veritatis quos similique officia. Quisquam neque iusto temporibus saepe beatae dolore. Dolorem consequatur in nobis vel enim.\"}', 'https://via.placeholder.com/640x480.png/004488?text=courses+ut', 'recorded', 793.21, 'http://www.kovacek.com/et-libero-fuga-exercitationem-vel-animi-voluptas-aperiam', 'Similique earum numquam cumque. Voluptate eaque corporis.', 'Molestiae quaerat porro libero. Maxime omnis nam ea architecto. Molestias doloremque qui iusto ex vel.', 27, 23, 370, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53'),
-(20, '{\"ar\": \"Fugit corrupti rerum et.\", \"en\": \"Quis illo et.\"}', '{\"ar\": \"Ipsam et nihil magnam sed recusandae sapiente quia. Sed doloribus sapiente repudiandae quidem eaque eum porro. Vel earum vel ut omnis dignissimos repudiandae.\", \"en\": \"Dolores fugit illum nihil et eligendi magni. Harum officia optio soluta et quibusdam. Quisquam natus placeat dolore rerum accusantium aliquid.\"}', 'https://via.placeholder.com/640x480.png/0066cc?text=courses+explicabo', 'recorded', 599.83, 'http://www.pfannerstill.com/adipisci-qui-eum-cum-eos-aut-voluptatem-dolorem-et', 'Quis illo et. Fugit corrupti rerum et.', 'Eligendi cupiditate debitis maiores voluptatibus. Quia reiciendis expedita eius sunt ipsum. Cum non dolorem harum error et quia quia soluta. Non accusantium eligendi quidem aliquid.', 28, 24, 372, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53'),
-(21, '{\"ar\": \"Ut et.\", \"en\": \"Delectus quia voluptatem.\"}', '{\"ar\": \"In veniam quia esse beatae autem architecto. Facilis doloremque atque blanditiis rerum. Ea est odio similique omnis corporis eaque.\", \"en\": \"Magni ipsa ea consectetur fuga magni a voluptatem autem. In aut aut ab molestias recusandae. Vel accusantium animi odio ut. Voluptatum ut rem dicta sunt.\"}', 'https://via.placeholder.com/640x480.png/00eedd?text=courses+adipisci', 'offline', 224.79, 'http://gibson.com/sed-et-quasi-culpa-omnis-magni-unde-quisquam-impedit', 'Delectus quia voluptatem. Ut et.', 'Et ea expedita veritatis totam nesciunt. Repellendus non est omnis voluptates et ullam vel quod. Accusamus ducimus eaque dolorem. Est ut doloribus ea itaque possimus.', 29, 25, 374, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53'),
-(22, '{\"ar\": \"Non non repellendus eos voluptas.\", \"en\": \"Similique neque non.\"}', '{\"ar\": \"Eligendi deserunt et in sint. Consequuntur sed quo ut occaecati ut sint iure. Corrupti corrupti atque maxime sit adipisci ut. Debitis sed vitae itaque eius ut quos autem. Qui aperiam praesentium ab veritatis.\", \"en\": \"Voluptas et quas tempore. Adipisci repellat consequatur et voluptatum corrupti in. Temporibus debitis praesentium et.\"}', 'https://via.placeholder.com/640x480.png/009999?text=courses+voluptas', 'offline', 499.72, 'http://hodkiewicz.com/', 'Similique neque non. Non non repellendus eos voluptas.', 'Sint velit doloribus ut iste rerum assumenda aut error. Quam omnis natus quibusdam eius vero hic. Ut laborum voluptas ut sequi qui blanditiis iusto. Adipisci eligendi ut ea nisi expedita commodi debitis molestias. Ratione molestias eius non autem aperiam.', 30, 26, 376, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53'),
-(23, '{\"ar\": \"Harum similique sit.\", \"en\": \"Asperiores magni iste.\"}', '{\"ar\": \"Repellendus sint aut dolorum non at. Qui unde explicabo illo suscipit at. Corrupti corrupti qui qui rerum dolorum quae optio in. Optio sint est quo impedit dicta similique sit. Aut quaerat enim voluptate unde dolore omnis.\", \"en\": \"Nulla repellat sit itaque a. Ut dolorem autem illo ipsa.\"}', 'https://via.placeholder.com/640x480.png/006688?text=courses+dolorum', 'recorded', 405.51, 'http://okeefe.info/magni-molestiae-doloremque-ducimus-cum-ducimus-recusandae', 'Asperiores magni iste. Harum similique sit.', 'Nesciunt magnam impedit nesciunt veritatis repellat dolorem alias. Et totam provident ab sint. Ipsa et assumenda occaecati illo dolorem eaque ut.', 31, 27, 378, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53'),
-(24, '{\"ar\": \"Deleniti deserunt amet.\", \"en\": \"Dolorem aut corporis.\"}', '{\"ar\": \"Quibusdam est officiis voluptatem nemo. Quia doloribus dignissimos facilis saepe odio eum aliquid et. Reiciendis repellendus minima ducimus et eaque aperiam. Est voluptatem placeat ut maxime recusandae in.\", \"en\": \"Maiores autem ut dolorem fugit. Voluptates aperiam provident itaque est cupiditate qui amet. Et incidunt a aliquid sed eos.\"}', 'https://via.placeholder.com/640x480.png/009999?text=courses+voluptatem', 'recorded', 264.66, 'http://www.turcotte.com/', 'Dolorem aut corporis. Deleniti deserunt amet.', 'Et itaque officiis reprehenderit voluptas consequuntur saepe voluptate. Consequatur sunt non consequatur voluptatem. Dolorem voluptas ut et omnis cumque quia magni. Nihil voluptas quia libero aut repellendus.', 32, 28, 380, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53'),
-(25, '{\"ar\": \"Recusandae voluptatum.\", \"en\": \"Iusto vero quae.\"}', '{\"ar\": \"Dicta non nisi aperiam. Pariatur molestiae voluptas eius perspiciatis. Et temporibus ratione aspernatur et.\", \"en\": \"Sequi explicabo dolor magni sit non. Quaerat quas id et harum id ut. Placeat consequuntur non odio incidunt quam. Quos odit distinctio qui ipsa doloremque qui esse fugit. Enim natus veritatis ratione quod dolor voluptates.\"}', 'https://via.placeholder.com/640x480.png/0077aa?text=courses+ex', 'recorded', 789.43, 'http://www.russel.net/maiores-repellat-id-quod-voluptatibus-atque-atque', 'Iusto vero quae. Recusandae voluptatum.', 'Iure blanditiis accusamus numquam nemo cum mollitia enim. Id aliquid beatae eius ut. Et amet fugit et modi numquam eius est ipsa. Eveniet ut et dolore rerum nihil.', 33, 29, 382, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53'),
-(26, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/LKZY1yK3BhgTsDGj4zquLl3zOQLFKu56VJsgvYdB.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', NULL, 10, 10, '2026-02-09 11:39:05', 10, '2026-02-09 11:39:05', '2026-02-09 11:39:05'),
-(27, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/xCby5eRUYd7OaCwldT4UMN7K2u4rr0dsVI2hlWvV.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', NULL, 10, 10, '2026-02-11 13:57:11', 10, '2026-02-11 13:57:11', '2026-02-11 13:57:11'),
-(28, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/2a4DFjlosWVfRi9Ark6xBsrxQr10GshZsGLE4UIb.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', NULL, 10, 10, '2026-02-11 14:13:20', 10, '2026-02-11 14:13:20', '2026-02-11 14:13:20'),
-(29, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/AnEgpiMI04WLCquRODqmSwVr5DnD4cJWVPyWtMsX.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', NULL, 10, 10, '2026-02-11 14:17:45', 10, '2026-02-11 14:17:45', '2026-02-11 14:17:45'),
-(30, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/56xvVnlTRp0ilesipl5vmyd0JcaCRfNuYNXh83LF.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', NULL, 10, 10, '2026-02-11 14:19:31', 10, '2026-02-11 14:19:31', '2026-02-11 14:19:31'),
-(31, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/MKcCLFJAVwoi1QqGxeE0wgDbNpOkOKXnwwNVHplk.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', NULL, 10, 10, '2026-02-11 14:43:06', 10, '2026-02-11 14:43:06', '2026-02-11 14:43:06'),
-(32, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/C7D6Sui2rCRMoUil0yzv3rj1sQToPkGJB2OyzvzR.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', NULL, 10, 10, '2026-02-11 14:43:25', 10, '2026-02-11 14:43:25', '2026-02-11 14:43:25'),
-(33, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/y6cyXf9m9lrHJoTlG0hehMjzjt60V88Iw8tzLZ0b.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', NULL, 10, 10, '2026-02-11 15:04:34', 10, '2026-02-11 15:04:34', '2026-02-11 15:04:34');
+INSERT INTO `courses` (`id`, `name`, `description`, `image`, `type`, `price`, `url`, `searchable_name`, `searchable_description`, `level_id`, `mentor_id`, `accepted_at`, `earning_points`, `created_at`, `updated_at`, `sub_category_id`) VALUES
+(1, '{\"ar\": \"Itaque laboriosam neque et.\", \"en\": \"Facilis ut eveniet laudantium esse.\"}', '{\"ar\":\"Officia fugiat consequatur ipsam expedita. Soluta quia facilis ea.ewgew\",\"en\":\"Officia fugiat consequatur ipsam expedita. Soluta quia facilis ea.\"}', 'courses/bJ42gaAAZnSNWhuJVer2EuyG7orfiMnmdxKE5UCx.png', 'offline', 966.16, 'https://www.schowalter.com/non-quae-voluptatem-eaque-voluptas-voluptates', 'Facilis ut eveniet laudantium esse. Itaque laboriosam neque et.', 'Officia fugiat consequatur ipsam expedita. Soluta quia facilis ea. Officia fugiat consequatur ipsam expedita. Soluta quia facilis ea.ewgew', 5, 2, '2026-02-08 15:38:14', 0, '2026-02-03 14:32:48', '2026-02-11 13:59:06', NULL),
+(2, '{\"ar\": \"Et et aliquam id.\", \"en\": \"Aspernatur voluptates placeat quam.\"}', '{\"ar\":\"Et ipsa expedita et quia provident et ipsum qui. Aliquam esse est et ea reprehenderit et. Sapiente enim sit earum sed inventore numquam. Tempora temporibus eveniet aut ut.\",\"en\":\"Et ipsa expedita et quia provident et ipsum qui. Aliquam esse est et ea reprehenderit et. Sapiente enim sit earum sed inventore numquam. Tempora temporibus eveniet aut ut.\"}', 'https://via.placeholder.com/640x480.png/008800?text=courses+voluptatem', 'recorded', 521.07, 'https://collier.com/cumque-praesentium-ad-est-laborum-illum.html', 'Aspernatur voluptates placeat quam. Et et aliquam id.', 'Et ipsa expedita et quia provident et ipsum qui. Aliquam esse est et ea reprehenderit et. Sapiente enim sit earum sed inventore numquam. Tempora temporibus eveniet aut ut. Et ipsa expedita et quia provident et ipsum qui. Aliquam esse est et ea reprehenderit et. Sapiente enim sit earum sed inventore numquam. Tempora temporibus eveniet aut ut.', 6, 2, '2026-02-08 17:20:11', 0, '2026-02-03 14:32:48', '2026-02-08 15:38:41', NULL),
+(3, '{\"ar\": \"Qui ut hic est.\", \"en\": \"Quaerat ut doloremque.\"}', '{\"ar\":\"Cupiditate expedita ad possimus officiis dolorum. Vero unde debitis iure sed esse similique. Optio qui quo unde non sed et.\",\"en\":\"Cupiditate expedita ad possimus officiis dolorum. Vero unde debitis iure sed esse similique. Optio qui quo unde non sed et.\"}', 'https://via.placeholder.com/640x480.png/00aaff?text=courses+et', 'offline', 242.33, 'http://www.krajcik.biz/sunt-asperiores-enim-aspernatur-animi-quis', 'Quaerat ut doloremque. Qui ut hic est.', 'Cupiditate expedita ad possimus officiis dolorum. Vero unde debitis iure sed esse similique. Optio qui quo unde non sed et. Cupiditate expedita ad possimus officiis dolorum. Vero unde debitis iure sed esse similique. Optio qui quo unde non sed et.', 7, 5, '2026-02-09 11:25:19', 0, '2026-02-03 14:32:48', '2026-02-09 11:37:21', NULL),
+(4, '{\"ar\": \"Minus delectus voluptas.\", \"en\": \"Repudiandae facere dolorum magni consequatur.\"}', '{\"ar\": \"Quia sint quas quia unde excepturi facere iusto. Dolorum vel earum et ut. Vel beatae porro possimus sed tempora provident accusantium.\", \"en\": \"Voluptas qui eum sed nam natus vitae voluptatibus. Non a aut aut molestiae aut dolore earum rerum. Amet et deserunt aut quisquam earum. Sit quis ut ut voluptate quia quidem.\"}', 'https://via.placeholder.com/640x480.png/00aa77?text=courses+fugiat', 'live', 33.04, 'http://rice.com/ut-corporis-odit-enim-odio-eveniet-similique-facere.html', 'Repudiandae facere dolorum magni consequatur. Minus delectus voluptas.', 'Voluptates aspernatur delectus ut quo accusamus doloribus rerum. Laboriosam non maxime enim omnis. Nesciunt a quis iure sequi quam numquam.', 8, 6, '2026-02-09 13:17:21', 0, '2026-02-03 14:32:48', '2026-02-03 14:32:49', NULL),
+(5, '{\"ar\": \"Porro rerum ea fugiat.\", \"en\": \"Sint hic tenetur molestias.\"}', '{\"ar\":\"Voluptatibus nobis assumenda voluptas aut voluptate earum aspernatur quis. Consequatur distinctio vel aperiam quibusdam suscipit. Provident molestias aut similique suscipit. Aut distinctio aut ullam ipsum error.\",\"en\":\"Voluptatibus nobis assumenda voluptas aut voluptate earum aspernatur quis. Consequatur distinctio vel aperiam quibusdam suscipit. Provident molestias aut similique suscipit. Aut distinctio aut ullam ipsum error.\"}', 'https://via.placeholder.com/640x480.png/006644?text=courses+distinctio', 'offline', 400.00, 'http://www.fritsch.info/enim-ab-quo-ea-eius', 'Sint hic tenetur molestias. Porro rerum ea fugiat.', 'Voluptatibus nobis assumenda voluptas aut voluptate earum aspernatur quis. Consequatur distinctio vel aperiam quibusdam suscipit. Provident molestias aut similique suscipit. Aut distinctio aut ullam ipsum error. Voluptatibus nobis assumenda voluptas aut voluptate earum aspernatur quis. Consequatur distinctio vel aperiam quibusdam suscipit. Provident molestias aut similique suscipit. Aut distinctio aut ullam ipsum error.', 9, 5, '2026-02-11 15:37:42', 0, '2026-02-03 14:32:48', '2026-02-11 15:31:24', NULL),
+(6, '{\"ar\": \"Minima consequuntur sequi vero.\", \"en\": \"Et ut doloribus sequi.\"}', '{\"ar\": \"Perspiciatis soluta sint ipsum odit accusantium ut error. Ratione minima ducimus laboriosam quasi ipsam. Modi labore distinctio voluptates placeat. Ea et cumque minus quos. Distinctio impedit aut ut id aut qui corporis.\", \"en\": \"Adipisci cupiditate vitae aut autem corporis dignissimos voluptas perferendis. Quas nesciunt ut praesentium pariatur culpa quibusdam qui. Et sed in asperiores quasi repellat.\"}', 'https://via.placeholder.com/640x480.png/003388?text=courses+illum', 'offline', 953.37, 'http://ledner.com/doloremque-voluptates-nihil-perferendis.html', 'Et ut doloribus sequi. Minima consequuntur sequi vero.', 'Ducimus nulla sit magnam consequuntur dolor impedit ut iusto. Architecto natus quia facilis voluptatum. Facere fugiat consectetur itaque deserunt officiis.', 10, 5, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:49', NULL),
+(7, '{\"ar\": \"Quis tenetur libero necessitatibus.\", \"en\": \"Illo aperiam fugit.\"}', '{\"ar\": \"Et autem ad veritatis repudiandae. Maxime dolorem beatae et repellendus. Eos dolores reprehenderit nisi dolor ut quam cumque.\", \"en\": \"Dolore in placeat eum sed optio. Id id minima et nostrum qui impedit. Esse iste qui eius quia totam illo praesentium sit.\"}', 'https://via.placeholder.com/640x480.png/00dd22?text=courses+quod', 'offline', 49.65, 'https://www.denesik.net/velit-sed-quia-enim-aspernatur-ut', 'Illo aperiam fugit. Quis tenetur libero necessitatibus.', 'Molestiae mollitia ullam labore magnam provident qui nulla. Ut totam porro perferendis magni delectus. Voluptatem hic aperiam nisi sequi ipsam maxime. Officiis quis ut blanditiis sit.', 11, 3, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:50', NULL),
+(8, '{\"ar\": \"Ab corporis reprehenderit.\", \"en\": \"Eum enim et omnis.\"}', '{\"ar\": \"Quo iste exercitationem nostrum quidem iste qui est. Et optio quisquam non consequatur voluptatibus delectus aut. Suscipit rerum asperiores accusantium optio suscipit. Qui distinctio a possimus eligendi ut ut ad.\", \"en\": \"Eligendi quo aut consequuntur eveniet ratione. Architecto vel qui at aspernatur. Porro sit at soluta laborum cumque. Qui eum reprehenderit asperiores nobis omnis soluta.\"}', 'https://via.placeholder.com/640x480.png/004488?text=courses+aut', 'recorded', 930.07, 'http://www.stokes.com/amet-est-tempora-tempora-quae.html', 'Eum enim et omnis. Ab corporis reprehenderit.', 'Optio est omnis ad culpa. Incidunt velit quia eum repudiandae repudiandae officia. Maxime atque officiis et. Similique laboriosam modi et. Aspernatur sunt atque et ipsum voluptates odit.', 12, 5, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:50', NULL),
+(9, '{\"ar\": \"Dicta et.\", \"en\": \"Cumque itaque reprehenderit a.\"}', '{\"ar\": \"Quis ipsam aut et. Omnis alias sit aut illum et quo. Debitis corporis dolor quas voluptas quam voluptatem. Voluptas et nihil officiis accusamus. Amet eos aut laborum aperiam impedit corporis expedita.\", \"en\": \"Sed velit voluptatum voluptatem dolore dolorem ea. Aliquam omnis eligendi nobis at quae tenetur dolores tenetur. Ipsa et voluptatum voluptatem alias autem ipsam qui. Id laboriosam assumenda eligendi sed commodi voluptatum.\"}', 'https://via.placeholder.com/640x480.png/001144?text=courses+aliquam', 'recorded', 947.07, 'https://www.gulgowski.com/error-ut-et-unde-hic-numquam', 'Cumque itaque reprehenderit a. Dicta et.', 'Corrupti dolore accusantium dolor doloremque ad. Laborum repellat aliquid omnis aperiam cupiditate aut repellendus. Nemo aut eligendi voluptate harum voluptatem libero. Quo eum est fuga veniam.', 13, 6, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:51', NULL),
+(10, '{\"ar\": \"Quod eveniet dolore nulla ea.\", \"en\": \"Tempora iste laborum.\"}', '{\"ar\": \"Molestiae rerum ipsam rerum voluptatibus animi sunt facilis. Optio omnis enim tempore officia officia. Porro nostrum ut ut quam delectus.\", \"en\": \"Temporibus qui asperiores consectetur magnam nihil. Incidunt repudiandae nihil pariatur atque ipsum. Iste cumque illum dolorem sed. Aut natus sed et dolor consequuntur consectetur et.\"}', 'https://via.placeholder.com/640x480.png/007755?text=courses+rerum', 'recorded', 878.97, 'http://www.gerhold.com/id-qui-odio-dolor.html', 'Tempora iste laborum. Quod eveniet dolore nulla ea.', 'Libero optio ut ut molestiae. Debitis dolorum ipsa in quasi ut in. Labore iure natus sapiente officiis et. Cupiditate illo consequatur voluptatum.', 14, 6, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:51', NULL),
+(11, '{\"ar\": \"Necessitatibus odio et.\", \"en\": \"Quibusdam dicta nemo optio accusantium.\"}', '{\"ar\": \"Ratione sit quo doloribus incidunt. Consequatur rerum animi nulla maiores autem corrupti quidem deleniti. Quo saepe ducimus facere quia autem ad numquam praesentium.\", \"en\": \"Aut eos minus fugiat aut non. Porro quis cumque quisquam corporis ab at ea.\"}', 'https://via.placeholder.com/640x480.png/0055bb?text=courses+unde', 'offline', 593.67, 'http://www.lemke.com/excepturi-eius-vel-dolor-consequatur', 'Quibusdam dicta nemo optio accusantium. Necessitatibus odio et.', 'Facilis ut voluptates non debitis sint in eligendi. Consequuntur animi excepturi aut architecto aut. Rerum aut aut architecto aut deserunt sit ea.', 15, 2, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:51', NULL),
+(12, '{\"ar\": \"Asperiores repellat magni.\", \"en\": \"Eum facere ipsa provident.\"}', '{\"ar\": \"Dolores et nesciunt dolorum placeat. Sed sed beatae consequatur qui quo. Totam repudiandae tempore veritatis maxime vero aut.\", \"en\": \"Magnam modi veritatis dolores quia. Sed praesentium tempora ea non quia. Libero quis iure adipisci quam et sequi. Autem libero vero est sint fugit. Voluptate qui adipisci accusantium similique occaecati ipsam.\"}', 'https://via.placeholder.com/640x480.png/001199?text=courses+est', 'recorded', 459.33, 'http://haley.com/aliquid-est-quis-quia-temporibus-quaerat-autem', 'Eum facere ipsa provident. Asperiores repellat magni.', 'Sit officiis voluptatum vel aut laborum quia. Aut ut blanditiis aspernatur temporibus in enim sed. Harum nulla velit laboriosam earum rerum veritatis est.', 16, 4, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:52', NULL),
+(13, '{\"ar\": \"Quod id.\", \"en\": \"Tenetur soluta in.\"}', '{\"ar\": \"Laboriosam veniam vel unde earum ipsum eos. Provident ea recusandae beatae nihil. Qui et ut magnam ipsa perferendis alias consequuntur.\", \"en\": \"Aut qui natus quo laudantium perferendis harum. Animi non necessitatibus recusandae autem. Et corporis perferendis quia molestiae. Corrupti amet voluptates tempora excepturi accusantium tempora. Voluptatum eos autem totam debitis libero minima.\"}', 'https://via.placeholder.com/640x480.png/00eeee?text=courses+odio', 'recorded', 413.46, 'http://www.hilpert.com/iure-id-culpa-quidem-vel-tenetur', 'Tenetur soluta in. Quod id.', 'Odio voluptatem minima ex nihil. Quia sit quam nostrum. Earum quos aut qui repellat.', 17, 2, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:52', NULL),
+(14, '{\"ar\": \"Magni velit fugit ut.\", \"en\": \"Officiis eos sit.\"}', '{\"ar\": \"Enim molestias qui eos sed voluptas ut quos beatae. Animi velit placeat rerum dolor unde eum vel sit. Reprehenderit officiis qui perferendis qui nam et eius doloremque.\", \"en\": \"Velit asperiores et cumque non ut sunt. Architecto et voluptas facilis perspiciatis et vitae ut. Consequuntur et itaque dolorem ullam. Architecto nihil non in.\"}', 'https://via.placeholder.com/640x480.png/003377?text=courses+quo', 'live', 281.39, 'https://harvey.com/enim-rerum-nobis-iure.html', 'Officiis eos sit. Magni velit fugit ut.', 'Quia officia maxime voluptate sunt. Et adipisci eaque qui illo cupiditate qui nostrum. Ullam numquam aut voluptatem eius quas. Cumque eaque nihil ut.', 18, 4, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:52', NULL),
+(15, '{\"ar\": \"Vero cum illo.\", \"en\": \"Vero dolor dignissimos natus.\"}', '{\"ar\": \"Voluptatem et ut dignissimos. In optio recusandae totam ea itaque quia dolor. Hic repellendus dolores nobis.\", \"en\": \"Id aliquam eos aut quam eius. Vel eligendi reiciendis et est recusandae aut corporis sapiente. Eius praesentium accusantium enim et iusto animi rem.\"}', 'https://via.placeholder.com/640x480.png/00cc22?text=courses+laboriosam', 'live', 809.70, 'http://mayert.com/rerum-tempore-beatae-recusandae-minus-molestiae-modi-tenetur-velit', 'Vero dolor dignissimos natus. Vero cum illo.', 'Sunt ut perferendis et fuga delectus reprehenderit et. Rerum minus ad animi itaque. Reiciendis facere culpa asperiores autem iure magnam dolorem. Consectetur quos et repudiandae explicabo. Et vero sint et.', 19, 6, NULL, 0, '2026-02-03 14:32:48', '2026-02-03 14:32:52', NULL),
+(16, '{\"ar\": \"Placeat voluptatibus alias voluptatibus.\", \"en\": \"Odit sint.\"}', '{\"ar\": \"Recusandae facilis aperiam rem modi. Repellendus voluptates voluptatibus aut optio vero est aut. Qui natus architecto veniam repellendus doloremque facilis.\", \"en\": \"Perspiciatis beatae aspernatur ea sint est doloribus. Reprehenderit reprehenderit ducimus quibusdam nihil. Est omnis odio harum.\"}', 'https://via.placeholder.com/640x480.png/009933?text=courses+nobis', 'live', 720.33, 'http://www.haag.com/accusamus-quia-sapiente-quasi-tenetur-aut-minima-quae', 'Odit sint. Placeat voluptatibus alias voluptatibus.', 'Accusamus error qui veritatis repellendus in possimus quia eos. Officiis natus delectus nostrum id illo eos molestias. Molestiae suscipit aut illum voluptatem placeat corporis in.', 20, 364, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53', NULL),
+(17, '{\"ar\": \"Iure sit.\", \"en\": \"Commodi enim facilis ab.\"}', '{\"ar\": \"Eveniet provident dolorum dolorem totam nobis non dolorem. Debitis a rerum quia ea. Fugit eaque accusamus inventore quia rerum. Quia rerum laboriosam nobis officiis quia.\", \"en\": \"Molestiae voluptates unde voluptas nulla cum hic ratione. Consectetur sunt voluptatem omnis voluptatem consequatur blanditiis ducimus. Velit labore quia fuga. Deleniti ullam aspernatur rem error.\"}', 'https://via.placeholder.com/640x480.png/0022cc?text=courses+saepe', 'offline', 708.52, 'http://grimes.com/enim-odit-iure-quis', 'Commodi enim facilis ab. Iure sit.', 'Et odit ipsum ratione voluptas. Odit ea suscipit eius consequatur maxime sed eum dolore. Velit voluptatum aut unde ut vitae sed.', NULL, 366, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53', NULL),
+(18, '{\"ar\": \"Aut atque accusantium.\", \"en\": \"Cum consequatur optio nobis.\"}', '{\"ar\": \"Natus voluptatibus velit perspiciatis repellat modi suscipit. Soluta consequatur dolore laudantium beatae perspiciatis. Optio dolores neque animi eaque facere. Autem eaque pariatur perferendis ut sint esse.\", \"en\": \"Aut sed unde pariatur et veniam consectetur quidem. Ducimus quia iusto numquam eum. At dignissimos esse unde vitae. Velit qui non neque corporis placeat sit.\"}', 'https://via.placeholder.com/640x480.png/00dd77?text=courses+iusto', 'recorded', 169.16, 'http://prohaska.com/', 'Cum consequatur optio nobis. Aut atque accusantium.', 'Dicta velit corporis vel hic consectetur. Vel excepturi dicta dolor placeat odio possimus esse. Impedit sed laboriosam blanditiis ipsa pariatur.', 22, 368, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53', NULL),
+(19, '{\"ar\": \"Voluptate eaque corporis.\", \"en\": \"Similique earum numquam cumque.\"}', '{\"ar\": \"Quo reprehenderit facere atque eveniet. Rerum ullam minima vero necessitatibus cum impedit dolores nostrum. Dolore laudantium nihil dignissimos aut nam. Vitae eligendi nam quia laudantium.\", \"en\": \"Vero praesentium veritatis quos similique officia. Quisquam neque iusto temporibus saepe beatae dolore. Dolorem consequatur in nobis vel enim.\"}', 'https://via.placeholder.com/640x480.png/004488?text=courses+ut', 'recorded', 793.21, 'http://www.kovacek.com/et-libero-fuga-exercitationem-vel-animi-voluptas-aperiam', 'Similique earum numquam cumque. Voluptate eaque corporis.', 'Molestiae quaerat porro libero. Maxime omnis nam ea architecto. Molestias doloremque qui iusto ex vel.', 23, 370, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53', NULL),
+(20, '{\"ar\": \"Fugit corrupti rerum et.\", \"en\": \"Quis illo et.\"}', '{\"ar\": \"Ipsam et nihil magnam sed recusandae sapiente quia. Sed doloribus sapiente repudiandae quidem eaque eum porro. Vel earum vel ut omnis dignissimos repudiandae.\", \"en\": \"Dolores fugit illum nihil et eligendi magni. Harum officia optio soluta et quibusdam. Quisquam natus placeat dolore rerum accusantium aliquid.\"}', 'https://via.placeholder.com/640x480.png/0066cc?text=courses+explicabo', 'recorded', 599.83, 'http://www.pfannerstill.com/adipisci-qui-eum-cum-eos-aut-voluptatem-dolorem-et', 'Quis illo et. Fugit corrupti rerum et.', 'Eligendi cupiditate debitis maiores voluptatibus. Quia reiciendis expedita eius sunt ipsum. Cum non dolorem harum error et quia quia soluta. Non accusantium eligendi quidem aliquid.', 24, 372, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53', NULL),
+(21, '{\"ar\": \"Ut et.\", \"en\": \"Delectus quia voluptatem.\"}', '{\"ar\": \"In veniam quia esse beatae autem architecto. Facilis doloremque atque blanditiis rerum. Ea est odio similique omnis corporis eaque.\", \"en\": \"Magni ipsa ea consectetur fuga magni a voluptatem autem. In aut aut ab molestias recusandae. Vel accusantium animi odio ut. Voluptatum ut rem dicta sunt.\"}', 'https://via.placeholder.com/640x480.png/00eedd?text=courses+adipisci', 'offline', 224.79, 'http://gibson.com/sed-et-quasi-culpa-omnis-magni-unde-quisquam-impedit', 'Delectus quia voluptatem. Ut et.', 'Et ea expedita veritatis totam nesciunt. Repellendus non est omnis voluptates et ullam vel quod. Accusamus ducimus eaque dolorem. Est ut doloribus ea itaque possimus.', 25, 374, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53', NULL),
+(22, '{\"ar\": \"Non non repellendus eos voluptas.\", \"en\": \"Similique neque non.\"}', '{\"ar\": \"Eligendi deserunt et in sint. Consequuntur sed quo ut occaecati ut sint iure. Corrupti corrupti atque maxime sit adipisci ut. Debitis sed vitae itaque eius ut quos autem. Qui aperiam praesentium ab veritatis.\", \"en\": \"Voluptas et quas tempore. Adipisci repellat consequatur et voluptatum corrupti in. Temporibus debitis praesentium et.\"}', 'https://via.placeholder.com/640x480.png/009999?text=courses+voluptas', 'offline', 499.72, 'http://hodkiewicz.com/', 'Similique neque non. Non non repellendus eos voluptas.', 'Sint velit doloribus ut iste rerum assumenda aut error. Quam omnis natus quibusdam eius vero hic. Ut laborum voluptas ut sequi qui blanditiis iusto. Adipisci eligendi ut ea nisi expedita commodi debitis molestias. Ratione molestias eius non autem aperiam.', 26, 376, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53', NULL),
+(23, '{\"ar\": \"Harum similique sit.\", \"en\": \"Asperiores magni iste.\"}', '{\"ar\": \"Repellendus sint aut dolorum non at. Qui unde explicabo illo suscipit at. Corrupti corrupti qui qui rerum dolorum quae optio in. Optio sint est quo impedit dicta similique sit. Aut quaerat enim voluptate unde dolore omnis.\", \"en\": \"Nulla repellat sit itaque a. Ut dolorem autem illo ipsa.\"}', 'https://via.placeholder.com/640x480.png/006688?text=courses+dolorum', 'recorded', 405.51, 'http://okeefe.info/magni-molestiae-doloremque-ducimus-cum-ducimus-recusandae', 'Asperiores magni iste. Harum similique sit.', 'Nesciunt magnam impedit nesciunt veritatis repellat dolorem alias. Et totam provident ab sint. Ipsa et assumenda occaecati illo dolorem eaque ut.', 27, 378, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53', NULL),
+(24, '{\"ar\": \"Deleniti deserunt amet.\", \"en\": \"Dolorem aut corporis.\"}', '{\"ar\": \"Quibusdam est officiis voluptatem nemo. Quia doloribus dignissimos facilis saepe odio eum aliquid et. Reiciendis repellendus minima ducimus et eaque aperiam. Est voluptatem placeat ut maxime recusandae in.\", \"en\": \"Maiores autem ut dolorem fugit. Voluptates aperiam provident itaque est cupiditate qui amet. Et incidunt a aliquid sed eos.\"}', 'https://via.placeholder.com/640x480.png/009999?text=courses+voluptatem', 'recorded', 264.66, 'http://www.turcotte.com/', 'Dolorem aut corporis. Deleniti deserunt amet.', 'Et itaque officiis reprehenderit voluptas consequuntur saepe voluptate. Consequatur sunt non consequatur voluptatem. Dolorem voluptas ut et omnis cumque quia magni. Nihil voluptas quia libero aut repellendus.', 28, 380, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53', NULL),
+(25, '{\"ar\": \"Recusandae voluptatum.\", \"en\": \"Iusto vero quae.\"}', '{\"ar\": \"Dicta non nisi aperiam. Pariatur molestiae voluptas eius perspiciatis. Et temporibus ratione aspernatur et.\", \"en\": \"Sequi explicabo dolor magni sit non. Quaerat quas id et harum id ut. Placeat consequuntur non odio incidunt quam. Quos odit distinctio qui ipsa doloremque qui esse fugit. Enim natus veritatis ratione quod dolor voluptates.\"}', 'https://via.placeholder.com/640x480.png/0077aa?text=courses+ex', 'recorded', 789.43, 'http://www.russel.net/maiores-repellat-id-quod-voluptatibus-atque-atque', 'Iusto vero quae. Recusandae voluptatum.', 'Iure blanditiis accusamus numquam nemo cum mollitia enim. Id aliquid beatae eius ut. Et amet fugit et modi numquam eius est ipsa. Eveniet ut et dolore rerum nihil.', 29, 382, NULL, 0, '2026-02-03 14:32:53', '2026-02-03 14:32:53', NULL),
+(26, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/LKZY1yK3BhgTsDGj4zquLl3zOQLFKu56VJsgvYdB.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', 10, 10, '2026-02-09 11:39:05', 10, '2026-02-09 11:39:05', '2026-02-09 11:39:05', NULL),
+(27, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/xCby5eRUYd7OaCwldT4UMN7K2u4rr0dsVI2hlWvV.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', 10, 10, '2026-02-11 13:57:11', 10, '2026-02-11 13:57:11', '2026-02-11 13:57:11', NULL),
+(28, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/2a4DFjlosWVfRi9Ark6xBsrxQr10GshZsGLE4UIb.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', 10, 10, '2026-02-11 14:13:20', 10, '2026-02-11 14:13:20', '2026-02-11 14:13:20', NULL),
+(29, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/AnEgpiMI04WLCquRODqmSwVr5DnD4cJWVPyWtMsX.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', 10, 10, '2026-02-11 14:17:45', 10, '2026-02-11 14:17:45', '2026-02-11 14:17:45', NULL),
+(30, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/56xvVnlTRp0ilesipl5vmyd0JcaCRfNuYNXh83LF.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', 10, 10, '2026-02-11 14:19:31', 10, '2026-02-11 14:19:31', '2026-02-11 14:19:31', NULL),
+(31, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/MKcCLFJAVwoi1QqGxeE0wgDbNpOkOKXnwwNVHplk.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', 10, 10, '2026-02-11 14:43:06', 10, '2026-02-11 14:43:06', '2026-02-11 14:43:06', NULL),
+(32, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/C7D6Sui2rCRMoUil0yzv3rj1sQToPkGJB2OyzvzR.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', 10, 10, '2026-02-11 14:43:25', 10, '2026-02-11 14:43:25', '2026-02-11 14:43:25', NULL),
+(33, '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'courses/y6cyXf9m9lrHJoTlG0hehMjzjt60V88Iw8tzLZ0b.png', 'live', 200.00, NULL, 'new course new course', 'dfevcsgv sfrfvcs', 10, 10, '2026-02-11 15:04:34', 10, '2026-02-11 15:04:34', '2026-02-11 15:04:34', NULL),
+(34, '{\"en\":\"new Course by salem\",\"ar\":\"كورس جديد\"}', '{\"en\":\"en description\",\"ar\":\"ar description\"}', 'courses/3GWcjYlrBZ0vq70YbVfFzCwaPxwW5wnlcwwIXEwR.jpg', 'live', 110.00, NULL, 'new Course by salem كورس جديد', 'en description ar description', 10, 1, '2026-03-10 22:31:33', 10, '2026-03-10 22:31:33', '2026-03-10 22:31:33', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course_mentor`
+--
+
+CREATE TABLE `course_mentor` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `course_id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `is_primary` tinyint(1) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course_reservations`
+--
+
+CREATE TABLE `course_reservations` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `course_id` bigint(20) UNSIGNED NOT NULL,
+  `mentor_id` bigint(20) UNSIGNED NOT NULL,
+  `phone_number` varchar(255) NOT NULL,
+  `job_title` varchar(255) NOT NULL,
+  `human_type` varchar(255) NOT NULL,
+  `location` varchar(255) DEFAULT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL,
+  `payment_gateway` varchar(255) NOT NULL,
+  `payment_id` varchar(255) DEFAULT NULL,
+  `amount` decimal(10,2) NOT NULL,
+  `status` enum('pending','confirmed','cancelled','paid') NOT NULL DEFAULT 'pending',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -952,12 +1149,7 @@ CREATE TABLE `lessons` (
 --
 
 INSERT INTO `lessons` (`id`, `course_id`, `video_url`, `duration`, `created_at`, `updated_at`, `title`, `content`, `searchable_title`, `searchable_content`, `order`) VALUES
-(8, 2, 'videos/lessons/9537790c-4e40-4a30-a79e-7b5102089c76.mp4', 20, '2026-02-11 11:50:41', '2026-03-02 09:19:12', '{\"en\":\"egfarg\",\"ar\":\"ad\"}', '{\"en\":\"asffa\",\"ar\":\"asf\"}', 'egfarg ad', 'asffa asf', 2),
-(9, 12, 'https://www.youtube.com/watch?v=6Iidg_WxnnY', 23, '2026-02-11 11:52:10', '2026-02-11 11:52:10', '{\"en\":\"asfag\",\"ar\":\"zs\"}', '{\"en\":\"yoi;ioy;\",\"ar\":\"guioliu\"}', 'asfag zs', 'yoi;ioy; guioliu', 1),
-(11, 10, 'https://www.youtube.com/watch?v=6Iidg_WxnnY', 320, '2026-02-11 14:35:00', '2026-02-11 14:35:00', '{\"en\":\"sdfgsdg\",\"ar\":\"dsgdsg\"}', '{\"en\":\"sdafsdf\",\"ar\":\"safsdf\"}', 'sdfgsdg dsgdsg', 'sdafsdf safsdf', 2),
-(12, 2, 'videos/lessons/025276b9-87ff-4ae6-9a90-a68c1522492d.mp4', 30, '2026-02-11 15:35:31', '2026-03-02 13:17:34', '{\"en\":\"new lesson\",\"ar\":\"درس جديد\"}', '{\"en\":\"asddffh\",\"ar\":\"قثصلقثلق\"}', 'new lesson درس جديد', 'asddffh قثصلقثلق', 1),
-(13, 2, 'https://www.youtube.com/watch?v=6Iidg_WxnnY', 3, '2026-03-02 09:28:29', '2026-03-02 09:28:29', '{\"en\":\"new course\",\"ar\":\"new course\"}', '{\"en\":\"dfevcsgv\",\"ar\":\"sfrfvcs\"}', 'new course new course', 'dfevcsgv sfrfvcs', 3),
-(14, 2, 'videos/lessons/381f5fd2-080a-446d-bae8-fc16c2735e49.mp4', 120, '2026-03-02 09:45:54', '2026-03-02 09:49:59', '{\"en\":\"acewv\",\"ar\":\"شسؤ\"}', '{\"en\":\"svsvwrvdvv\",\"ar\":\"شؤثثص\"}', 'acewv شسؤ', 'svsvwrvdvv شؤثثص', 4);
+(17, 2, 'videos/lessons/14843a88-2159-4399-a91b-8ec26d3b0eab.mp4', 50, '2026-03-17 17:07:49', '2026-03-17 17:15:50', '{\"en\":\"new lesson\",\"ar\":\"درس جديد\"}', '{\"en\":\"يلانمىيبتلاي\",\"ar\":\"سشؤسث\"}', 'new lesson درس جديد', 'يلانمىيبتلاي سشؤسث', 1);
 
 -- --------------------------------------------------------
 
@@ -1065,7 +1257,9 @@ INSERT INTO `mentor_details` (`id`, `user_id`, `deduction_type`, `deduction_valu
 (2, 3, 'fixed', 35.22, 'Kihn Inc Bank', '2182336803', 'Porter Simonis', 'SA603411754374030457873925', 'RFHCFMJR', '009647466', '9156', '2026-02-03 14:32:47', '2026-02-03 14:32:47'),
 (3, 4, 'fixed', 17.59, 'Jones, Maggio and Kub Bank', '6820669456', 'Rico Larson', 'SA303096295169172734774862', 'HDLHZZBL', '226256677', '3326', '2026-02-03 14:32:47', '2026-02-03 14:32:47'),
 (4, 5, 'percentage', 9.48, 'Cruickshank-Gleichner Bank', '4175226203', 'Mr. Turner Mosciski III', 'SA742806087412437537621443', 'SVAJSLGI', '254011917', '6722', '2026-02-03 14:32:47', '2026-02-03 14:32:47'),
-(5, 6, 'fixed', 41.05, 'Will, Keebler and Stiedemann Bank', '6207216264', 'Prof. Sallie Jacobi', 'SA124893529585046366678529', 'RULVWWJT', '311780664', '3243', '2026-02-03 14:32:47', '2026-02-03 14:32:47');
+(5, 6, 'fixed', 41.05, 'Will, Keebler and Stiedemann Bank', '6207216264', 'Prof. Sallie Jacobi', 'SA124893529585046366678529', 'RULVWWJT', '311780664', '3243', '2026-02-03 14:32:47', '2026-02-03 14:32:47'),
+(6, 400, 'fixed', 1001.00, 'test bank', '1010', 'test acc', NULL, NULL, NULL, NULL, '2026-03-11 13:26:15', '2026-03-11 13:26:15'),
+(7, 405, 'fixed', 1001.00, 'test bank', '011', 'test acc name', '0124', '440', '550', '225', '2026-03-18 11:11:37', '2026-03-18 11:11:37');
 
 -- --------------------------------------------------------
 
@@ -1122,7 +1316,17 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (36, '2026_02_07_115705_add_title_and_content_colum_to_lessons_table', 4),
 (37, '2026_02_07_145730_add_title_column_to_articles_table', 5),
 (38, '2026_02_25_101930_add_slug_to_categories_table', 6),
-(39, '2026_02_25_130747_create_banners_table', 6);
+(39, '2026_02_25_130747_create_banners_table', 6),
+(40, '2026_03_10_000001_create_sub_categories_table', 7),
+(41, '2026_03_10_000002_update_courses_sub_category_id_column', 7),
+(42, '2026_03_14_132252_create_course_mentor_table', 8),
+(43, '2026_03_15_103321_create_course_reservations_table', 8),
+(44, '2026_03_15_124809_create_consultation_categories_table', 9),
+(45, '2026_03_15_124812_create_consultation_sub_categories_table', 9),
+(46, '2026_03_15_124814_create_consultation_sessions_table', 9),
+(47, '2026_03_15_124816_create_consultation_session_user_table', 9),
+(48, '2026_03_15_133507_create_consultation_reservations_table', 9),
+(49, '2026_03_17_103700_create_consultation_requests_table', 10);
 
 -- --------------------------------------------------------
 
@@ -1135,6 +1339,85 @@ CREATE TABLE `model_has_permissions` (
   `model_type` varchar(255) NOT NULL,
   `model_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `model_has_permissions`
+--
+
+INSERT INTO `model_has_permissions` (`permission_id`, `model_type`, `model_id`) VALUES
+(1, 'App\\Models\\User', 403),
+(2, 'App\\Models\\User', 403),
+(3, 'App\\Models\\User', 403),
+(1, 'App\\Models\\User', 404),
+(2, 'App\\Models\\User', 404),
+(3, 'App\\Models\\User', 404),
+(4, 'App\\Models\\User', 404),
+(5, 'App\\Models\\User', 404),
+(6, 'App\\Models\\User', 404),
+(7, 'App\\Models\\User', 404),
+(8, 'App\\Models\\User', 404),
+(9, 'App\\Models\\User', 404),
+(10, 'App\\Models\\User', 404),
+(11, 'App\\Models\\User', 404),
+(12, 'App\\Models\\User', 404),
+(13, 'App\\Models\\User', 404),
+(14, 'App\\Models\\User', 404),
+(15, 'App\\Models\\User', 404),
+(16, 'App\\Models\\User', 404),
+(17, 'App\\Models\\User', 404),
+(18, 'App\\Models\\User', 404),
+(19, 'App\\Models\\User', 404),
+(20, 'App\\Models\\User', 404),
+(21, 'App\\Models\\User', 404),
+(22, 'App\\Models\\User', 404),
+(23, 'App\\Models\\User', 404),
+(24, 'App\\Models\\User', 404),
+(25, 'App\\Models\\User', 404),
+(26, 'App\\Models\\User', 404),
+(27, 'App\\Models\\User', 404),
+(28, 'App\\Models\\User', 404),
+(29, 'App\\Models\\User', 404),
+(30, 'App\\Models\\User', 404),
+(31, 'App\\Models\\User', 404),
+(32, 'App\\Models\\User', 404),
+(33, 'App\\Models\\User', 404),
+(34, 'App\\Models\\User', 404),
+(35, 'App\\Models\\User', 404),
+(36, 'App\\Models\\User', 404),
+(37, 'App\\Models\\User', 404),
+(38, 'App\\Models\\User', 404),
+(39, 'App\\Models\\User', 404),
+(40, 'App\\Models\\User', 404),
+(41, 'App\\Models\\User', 404),
+(42, 'App\\Models\\User', 404),
+(43, 'App\\Models\\User', 404),
+(44, 'App\\Models\\User', 404),
+(45, 'App\\Models\\User', 404),
+(46, 'App\\Models\\User', 404),
+(47, 'App\\Models\\User', 404),
+(48, 'App\\Models\\User', 404),
+(49, 'App\\Models\\User', 404),
+(50, 'App\\Models\\User', 404),
+(51, 'App\\Models\\User', 404),
+(52, 'App\\Models\\User', 404),
+(53, 'App\\Models\\User', 404),
+(54, 'App\\Models\\User', 404),
+(55, 'App\\Models\\User', 404),
+(56, 'App\\Models\\User', 404),
+(57, 'App\\Models\\User', 404),
+(58, 'App\\Models\\User', 404),
+(59, 'App\\Models\\User', 404),
+(60, 'App\\Models\\User', 404),
+(61, 'App\\Models\\User', 404),
+(62, 'App\\Models\\User', 404),
+(63, 'App\\Models\\User', 404),
+(64, 'App\\Models\\User', 404),
+(65, 'App\\Models\\User', 404),
+(66, 'App\\Models\\User', 404),
+(67, 'App\\Models\\User', 404),
+(68, 'App\\Models\\User', 404),
+(69, 'App\\Models\\User', 404),
+(70, 'App\\Models\\User', 404);
 
 -- --------------------------------------------------------
 
@@ -1182,7 +1465,15 @@ INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
 (4, 'App\\Models\\User', 26),
 (3, 'App\\Models\\User', 395),
 (3, 'App\\Models\\User', 396),
-(3, 'App\\Models\\User', 397);
+(3, 'App\\Models\\User', 397),
+(4, 'App\\Models\\User', 398),
+(1, 'App\\Models\\User', 399),
+(3, 'App\\Models\\User', 400),
+(1, 'App\\Models\\User', 401),
+(2, 'App\\Models\\User', 402),
+(2, 'App\\Models\\User', 403),
+(1, 'App\\Models\\User', 404),
+(3, 'App\\Models\\User', 405);
 
 -- --------------------------------------------------------
 
@@ -1327,9 +1618,32 @@ CREATE TABLE `personal_access_tokens` (
 --
 
 INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `name`, `token`, `abilities`, `last_used_at`, `expires_at`, `created_at`, `updated_at`) VALUES
-(54, 'App\\Models\\User', 1, 'auth_token', '0caa283f6dc8dfba52b9ca6a0c0d44b869a83e55c0689be2d981de8f504c863d', '[\"*\"]', '2026-03-02 13:39:15', NULL, '2026-03-02 13:13:42', '2026-03-02 13:39:15'),
+(54, 'App\\Models\\User', 1, 'auth_token', '0caa283f6dc8dfba52b9ca6a0c0d44b869a83e55c0689be2d981de8f504c863d', '[\"*\"]', '2026-03-17 20:36:47', NULL, '2026-03-02 13:13:42', '2026-03-17 20:36:47'),
 (55, 'App\\Models\\User', 1, 'auth_token', '113536c6dbf70f9959a879fc17d6ba695187ae8d7792aea7590929eed1d568b0', '[\"*\"]', '2026-03-08 13:18:00', NULL, '2026-03-08 10:56:29', '2026-03-08 13:18:00'),
-(56, 'App\\Models\\User', 1, 'auth_token', 'd5082dc6c5a5be2e5b8311f31bf3f7fddbd4594068c98c190cd64f7b7a9dfdb7', '[\"*\"]', '2026-03-08 13:18:00', NULL, '2026-03-08 13:13:46', '2026-03-08 13:18:00');
+(56, 'App\\Models\\User', 1, 'auth_token', 'd5082dc6c5a5be2e5b8311f31bf3f7fddbd4594068c98c190cd64f7b7a9dfdb7', '[\"*\"]', '2026-03-08 13:18:00', NULL, '2026-03-08 13:13:46', '2026-03-08 13:18:00'),
+(57, 'App\\Models\\User', 2, 'auth_token', '303a35bc1579b452477c23bb9f0d577a6eacec58ec1046e37bdba71218aeb73d', '[\"*\"]', NULL, NULL, '2026-03-10 14:08:54', '2026-03-10 14:08:54'),
+(58, 'App\\Models\\User', 1, 'auth_token', '27afbacb56fcb52ee2e1f59b0d80c0953be299a62c656ab65ebb6f231f26c538', '[\"*\"]', '2026-03-10 22:32:25', NULL, '2026-03-10 22:21:21', '2026-03-10 22:32:25'),
+(59, 'App\\Models\\User', 398, 'auth_token', '06ff56afe351227ed24639bca4c15159254ea13c91e380144eb22b6785188a80', '[\"*\"]', NULL, NULL, '2026-03-11 09:55:54', '2026-03-11 09:55:54'),
+(60, 'App\\Models\\User', 398, 'auth_token', 'dc333d170b8869375167b34d9062a68d4db250971faaf9110a9fd983eabc7723', '[\"*\"]', NULL, NULL, '2026-03-11 09:56:48', '2026-03-11 09:56:48'),
+(61, 'App\\Models\\User', 398, 'auth_token', '28f8a26f88722f6050a7ac8b24780d7b94498dbc395186f5fee53210c76017dd', '[\"*\"]', NULL, NULL, '2026-03-11 10:08:36', '2026-03-11 10:08:36'),
+(62, 'App\\Models\\User', 398, 'auth_token', 'beb942b7c4a169dd69601a71ce93d7a5b4dcc1bcf95eeef01a1ddadfc2c97548', '[\"*\"]', NULL, NULL, '2026-03-11 10:18:13', '2026-03-11 10:18:13'),
+(63, 'App\\Models\\User', 1, 'auth_token', 'ea8838bb34ee5872c437f58d98ad88f7163209c79c2a1547381a39cbdd5c6b3e', '[\"*\"]', '2026-03-11 12:32:02', NULL, '2026-03-11 11:42:33', '2026-03-11 12:32:02'),
+(64, 'App\\Models\\User', 1, 'auth_token', 'ba8172253f444c067a1c36c77c08247172d9757302be83c87cdc1469f871ff13', '[\"*\"]', NULL, NULL, '2026-03-11 12:01:46', '2026-03-11 12:01:46'),
+(65, 'App\\Models\\User', 1, 'auth_token', '46ef663a33a5d3b3d74fa6871f3f9d7ef80d6bb19ec479e7905406361f148a7c', '[\"*\"]', '2026-03-11 13:24:19', NULL, '2026-03-11 12:51:37', '2026-03-11 13:24:19'),
+(66, 'App\\Models\\User', 399, 'auth_token', '9f7e89afc6240ecf846d684b1670fb6b2dffca3e40b348011a6a4db730f4b294', '[\"*\"]', '2026-03-11 13:47:41', NULL, '2026-03-11 13:24:38', '2026-03-11 13:47:41'),
+(67, 'App\\Models\\User', 399, 'auth_token', '45f79e34c34a5e0d0377c9ed0f996dceff37bf558e16f21fa1a4be039a967e42', '[\"*\"]', NULL, NULL, '2026-03-14 08:47:38', '2026-03-14 08:47:38'),
+(68, 'App\\Models\\User', 400, 'auth_token', 'd4182d1ab409879fe2f5e00e36990214df427480b8a5f02ff261d0ffeed0909e', '[\"*\"]', NULL, NULL, '2026-03-14 08:48:33', '2026-03-14 08:48:33'),
+(69, 'App\\Models\\User', 400, 'auth_token', '1025bf34bc707621afcf04ad858ad18c9700e4508af110f58280bd09d599b06f', '[\"*\"]', NULL, NULL, '2026-03-14 09:02:33', '2026-03-14 09:02:33'),
+(70, 'App\\Models\\User', 400, 'auth_token', '79507eeba8380e0db7636664e4779002af951c970cd42e38363a7347cde3235a', '[\"*\"]', NULL, NULL, '2026-03-14 09:05:11', '2026-03-14 09:05:11'),
+(71, 'App\\Models\\User', 400, 'auth_token', '8a0bfc50a32aa87df47c82dec4865109bb7357757756e2f6bb59b85e8b574380', '[\"*\"]', NULL, NULL, '2026-03-14 09:10:03', '2026-03-14 09:10:03'),
+(72, 'App\\Models\\User', 1, 'auth_token', '6b6e9793575d9fda96676f8e1ddd49e5fc8f35cdd6045b304a144cc21744c3f6', '[\"*\"]', '2026-03-14 12:55:33', NULL, '2026-03-14 12:40:56', '2026-03-14 12:55:33'),
+(73, 'App\\Models\\User', 400, 'auth_token', 'eec0884031ae27ba8272f52330907c2275c883a6e1b6edcceb40a2c81073b757', '[\"*\"]', '2026-03-17 09:49:11', NULL, '2026-03-17 09:48:54', '2026-03-17 09:49:11'),
+(74, 'App\\Models\\User', 1, 'auth_token', 'dd0bee126fe4f0fbdf8a4b959854275808079d87a7b9aad4bffbc43cadb197b5', '[\"*\"]', '2026-03-17 17:07:08', NULL, '2026-03-17 12:01:29', '2026-03-17 17:07:08'),
+(75, 'App\\Models\\User', 1, 'auth_token', 'e32e7dd1d490f5b7087cafc844167fa8ba4cb548e58074e909e9e6bc104b35f6', '[\"*\"]', '2026-03-17 17:22:25', NULL, '2026-03-17 13:24:27', '2026-03-17 17:22:25'),
+(76, 'App\\Models\\User', 399, 'auth_token', '702d4184d37d911b0d8049fe0b75d9c8c11bdb532d1eb011e820024fd9b30a46', '[\"*\"]', '2026-03-18 11:40:21', NULL, '2026-03-18 08:32:40', '2026-03-18 11:40:21'),
+(77, 'App\\Models\\User', 398, 'auth_token', 'b37c76d1bc391cb95ea11cebd6c9de2e773959208fea45b37511ee8db9b1279a', '[\"*\"]', NULL, NULL, '2026-03-18 11:07:45', '2026-03-18 11:07:45'),
+(78, 'App\\Models\\User', 1, 'auth_token', '06017433fb7b10aa6a02fda94ae726fbb8bd7b77981d76b9f6d2dc5abb4f7bb8', '[\"*\"]', '2026-03-18 11:09:47', NULL, '2026-03-18 11:08:16', '2026-03-18 11:09:47'),
+(79, 'App\\Models\\User', 404, 'auth_token', '99504aaee591663d5b4608ea3c118ccdb0b595a7fdd3816c037b6306474c57dc', '[\"*\"]', '2026-03-18 11:11:37', NULL, '2026-03-18 11:10:42', '2026-03-18 11:11:37');
 
 -- --------------------------------------------------------
 
@@ -2371,10 +2685,49 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('83H9zObxYoRkp3pjQA1PcDeDGSA43XyG2e88mfkr', NULL, '198.235.24.25', 'Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicHpxdU1NQWNsOURCeFpLcTJ2ekdtSDBFa0ZCTEhYOHRidFBrWmpLRyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHBzOi8vdG9iZS50ZWFtcWVlbWF0ZWNoLnNpdGUiO3M6NToicm91dGUiO3M6NDoiaG9tZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1773067771),
-('ILIqwewwgo1MVek8rEdoXJNK7R30HPvT8d9ALOZu', NULL, '34.68.112.172', 'Mozilla/5.0 (compatible; CMS-Checker/1.0; +https://example.com)', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiWDZreFpJVVp5djloOWhzajFBRTVVdDJnMkdxVDlUZHJLS012S0s2SyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly90b2JlLnRlYW1xZWVtYXRlY2guc2l0ZSI7czo1OiJyb3V0ZSI7czo0OiJob21lIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1773068901),
-('KXB4CYquXbzA30Y7sniNIN4sLgIEb8ErQYwLwEsM', NULL, '74.7.243.245', 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.3; +https://openai.com/gptbot)', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiREFFM1RlZkNFeWk2Z1BNTDBYQmloMFpxZWNESjNtWE05TXliUVFaWSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzU6Imh0dHBzOi8vd3d3LnRvYmUudGVhbXFlZW1hdGVjaC5zaXRlIjtzOjU6InJvdXRlIjtzOjQ6ImhvbWUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1773028694),
-('RDewQK0gsJSjaga5vxI1iGgh7PvrueA2WaCLEIOk', NULL, '198.235.24.155', 'Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibENWOFd3QktBS28wdGhJTWtEOVFKZEZRYktINzBETXdObG94aDFZOCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzU6Imh0dHBzOi8vd3d3LnRvYmUudGVhbXFlZW1hdGVjaC5zaXRlIjtzOjU6InJvdXRlIjtzOjQ6ImhvbWUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1773028519);
+('9uKHxJCj4CjD3RQpCTVD7u8tp7QBWutHXAUkAwfK', NULL, '87.236.176.50', 'Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/)', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiM2h0THVZQThmazJycUJySWxhaVNOcnRQakdrUVlHUEd0bjEzTUFoaiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzU6Imh0dHBzOi8vd3d3LnRvYmUudGVhbXFlZW1hdGVjaC5zaXRlIjtzOjU6InJvdXRlIjtzOjQ6ImhvbWUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1773393662),
+('aEOLUxqIUuLFCHJd5L3t4MloOUcPjyvrAv7G3shU', NULL, '205.210.31.83', 'Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiRWU1c1RTZmtZQ3EyRkdBOHFxM2M1a1llUVRqaVh4cTFxeDI2ZnZ0UiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHBzOi8vdG9iZS50ZWFtcWVlbWF0ZWNoLnNpdGUiO3M6NToicm91dGUiO3M6NDoiaG9tZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1773439913),
+('B4dxyzlrGRlJOR2EE2dw7DTyBLwDoZAqqzdxWOrG', NULL, '35.86.71.228', 'Mozilla/5.0 (compatible; wpbot/1.4; +https://forms.gle/ajBaxygz9jSR8p8G9)', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiWHo4WVpYNlhPbzZHMXlGM21jQVBSRnBEaDBGVXp6M1FBVGVpc1RFYiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHBzOi8vdG9iZS50ZWFtcWVlbWF0ZWNoLnNpdGUiO3M6NToicm91dGUiO3M6NDoiaG9tZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1773259254),
+('dkWVHzxe4Re4YGwEkAqOuc0Xs7ie8qvwlv5i9ZZs', NULL, '44.250.148.9', 'Mozilla/5.0 (compatible; wpbot/1.4; +https://forms.gle/ajBaxygz9jSR8p8G9)', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNU14YWd5dXhqZ2M0WlNreFN3UlZTRXFMemZIM3laR0JBbG9lM01NMyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzU6Imh0dHBzOi8vd3d3LnRvYmUudGVhbXFlZW1hdGVjaC5zaXRlIjtzOjU6InJvdXRlIjtzOjQ6ImhvbWUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1773271710),
+('eIdWpMCqU4qux8dALHBie9hcRm1Uh6GyooWrL5T3', NULL, '41.41.198.253', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiT2V6dVJNdHJtRVZCREF5YVg5WFRLRlEwWUpCWXE4a2JiVHlGcVlCaiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHBzOi8vdG9iZS50ZWFtcWVlbWF0ZWNoLnNpdGUiO3M6NToicm91dGUiO3M6NDoiaG9tZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1773234754),
+('GAZrJZZjDy9T108v2pgcEOvl9daDgU2ZTLOq4A8U', NULL, '167.94.138.116', 'Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoidFE2VzhRSzhjRXBzRlZ3QkxKVmJuWlJwVlpQVTRyblBrdTRPdDl0ciI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHBzOi8vdG9iZS50ZWFtcWVlbWF0ZWNoLnNpdGUiO3M6NToicm91dGUiO3M6NDoiaG9tZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1773666402),
+('HOU7CL6zSDC72m3lVl5Xo3uUvhKaNfSjf6nDPQnn', NULL, '198.235.24.161', 'Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQkJUaXdvcENpWU9uQnBma3lPNlNqRExnNDJJVzllbDZLaXBBQzhCQSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzU6Imh0dHBzOi8vd3d3LnRvYmUudGVhbXFlZW1hdGVjaC5zaXRlIjtzOjU6InJvdXRlIjtzOjQ6ImhvbWUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1773602744),
+('NCI2H15VcjCHlE0TaQC5Q76UMZAcf8o9hI3jEy52', NULL, '14.232.208.159', 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSWZrODVKajk3ZU8zRDkzYW1JYTVBbGZyYmlCMUhDajZkQmxyZGc1WiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzU6Imh0dHBzOi8vd3d3LnRvYmUudGVhbXFlZW1hdGVjaC5zaXRlIjtzOjU6InJvdXRlIjtzOjQ6ImhvbWUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1773343484),
+('SXnKUR6eKRXZ9nKXpcoJc07tJYp0tTcUETPytRSx', NULL, '205.210.31.176', 'Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUlJGWFhLM3dVa0ZVVllhMzROeE00cGxNbmtab3pDN3JCbHVkTUh0UiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHBzOi8vdG9iZS50ZWFtcWVlbWF0ZWNoLnNpdGUiO3M6NToicm91dGUiO3M6NDoiaG9tZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1773464919),
+('t3wzCH8RTp4GOsQpIJCytidgDquzNtsVAsokyA5e', NULL, '18.200.251.249', 'Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiWVJMc3dCN09rUUpMNXFac1Z6OUJtak5sRkZIaXMyTGx1M1N0ZWFzUCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHBzOi8vdG9iZS50ZWFtcWVlbWF0ZWNoLnNpdGUiO3M6NToicm91dGUiO3M6NDoiaG9tZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1773472478),
+('wOCRaa2qePFY8vXqzodk9WTgmXqwW41AzDTioM1H', NULL, '45.243.255.143', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNzJvY2hhZWtJbFJacUk1OElYNHdlNHl3cVVwVlY1WkpSamFEa2QyaiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHBzOi8vdG9iZS50ZWFtcWVlbWF0ZWNoLnNpdGUiO3M6NToicm91dGUiO3M6NDoiaG9tZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1773689589),
+('WyIeud4CXWN7wIa6tWDbkEjzdFyYOPys0FpbKl5W', NULL, '205.210.31.95', 'Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiS3ZRY3BXOUlyb01PcU5kQ1RXTGU1Zzc5aEhNQWtrVmk4YWpTam5LTSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHBzOi8vdG9iZS50ZWFtcWVlbWF0ZWNoLnNpdGUiO3M6NToicm91dGUiO3M6NDoiaG9tZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1773755256),
+('x6AGl4O4cf8AG33Laww98IjJc6R2wlssSYJkzG4m', NULL, '198.235.24.57', 'Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicFkyd21KeEllUlVXcnJXNDB0N2lQSU9rNHBJQ0JWTjhDTWM4QUFTSiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzU6Imh0dHBzOi8vd3d3LnRvYmUudGVhbXFlZW1hdGVjaC5zaXRlIjtzOjU6InJvdXRlIjtzOjQ6ImhvbWUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1773540324),
+('xwai8YiqbHDWvzjg3RTcb9CtgfBZc3XbNJDMEnV8', NULL, '45.243.255.143', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiTWhmem5Sd1N5eVZJdnMzdE9Zb1A3RFdNUlZOVDBuUU5meUtuR2RPUSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHBzOi8vdG9iZS50ZWFtcWVlbWF0ZWNoLnNpdGUiO3M6NToicm91dGUiO3M6NDoiaG9tZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1773689588),
+('YmCmihCnyXMTj6OhWGUZhWzDiXAAdn64LBiRn9zH', NULL, '41.41.198.253', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiY1BydGZ6TjZtd0JPQ09kOWh6UFE2MWF0NGNOdFN3N2xGUW0wOUZxNiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHBzOi8vdG9iZS50ZWFtcWVlbWF0ZWNoLnNpdGUiO3M6NToicm91dGUiO3M6NDoiaG9tZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1773229947),
+('YS5WjF5GyuxGUE9lbqOTRTEwfmyBKccVN7qpFIhP', NULL, '41.41.198.253', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibXFGMUQ4SWNVUzBJdGxQcUJWeUJIWHlvTlBCSDhkS245SkVLaTIyeSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHBzOi8vdG9iZS50ZWFtcWVlbWF0ZWNoLnNpdGUiO3M6NToicm91dGUiO3M6NDoiaG9tZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1773231681);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sub_categories`
+--
+
+CREATE TABLE `sub_categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`name`)),
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`description`)),
+  `image` varchar(255) DEFAULT NULL,
+  `searchable_name` text NOT NULL,
+  `searchable_description` text DEFAULT NULL,
+  `category_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sub_categories`
+--
+
+INSERT INTO `sub_categories` (`id`, `name`, `description`, `image`, `searchable_name`, `searchable_description`, `category_id`, `created_at`, `updated_at`) VALUES
+(1, '{\"en\":\"Test New sub-Category by salem\",\"ar\":\"اختبار محموعة مصغرة جديدة\"}', '{\"ar\":\"ديسكريبشن\"}', NULL, 'Test New sub-Category by salem اختبار محموعة مصغرة جديدة', 'ديسكريبشن', 44, '2026-03-10 22:26:50', '2026-03-10 22:26:50'),
+(2, '{\"en\":\"asdf\",\"ar\":\"شسيب\"}', '{\"en\":\"kmckavv\",\"ar\":\"نسؤيحسرن\"}', NULL, 'asdf شسيب', 'kmckavv نسؤيحسرن', 47, '2026-03-17 17:05:16', '2026-03-17 17:05:16'),
+(3, '{\"en\":\"new\",\"ar\":\"جديد\"}', '{\"en\":\"jbsvhsbwdln\",\"ar\":\"شستبيسعهلاص\"}', NULL, 'new جديد', 'jbsvhsbwdln شستبيسعهلاص', 48, '2026-03-17 20:18:08', '2026-03-17 20:18:08');
 
 -- --------------------------------------------------------
 
@@ -2802,7 +3155,14 @@ INSERT INTO `users` (`id`, `name`, `email`, `phone_number`, `fcm_token`, `phone_
 (383, 'Lilly Kuphal', 'little.noemie@example.net', '09232373929', NULL, NULL, '2026-02-03 14:32:53', '$2y$12$T3a630LqPWPLOr9982NV/.U/B.LR7GRv9HZqmfl/iAD0BUIwTXluu', 'GG9uUsRU6l', '2026-02-03 14:32:53', '2026-02-03 14:32:53', 0),
 (395, 'asdffdsf', 'fsafsa@fegwgfwe', '9876543210', NULL, NULL, NULL, '$2y$12$ShB0uzLJR/PgNqjwYvLCmuSNgXfSgiDnxFCIm2L8IacJrOFKbmTTa', NULL, '2026-02-09 11:26:10', '2026-02-09 11:26:50', 0),
 (396, 'fgvfasd', 'dsf@fgdg.df', '01234588962', NULL, NULL, NULL, '$2y$12$YdLo1bcumTD3Ne9jk4Vm/O/Vkgdh8ZBlnvMuVHArQ6iL8Gy48dfYi', NULL, '2026-02-11 14:33:03', '2026-02-11 14:33:08', 0),
-(397, 'abdo', 'asdd@gmail.com', NULL, NULL, NULL, NULL, '$2y$12$6csFOZN00KM736yHS3U.eu3Ux5BZFvSJqTQyyiyTaLpeon8TJyslC', NULL, '2026-02-11 15:24:52', '2026-02-11 15:24:52', 0);
+(397, 'abdo', 'asdd@gmail.com', NULL, NULL, NULL, NULL, '$2y$12$6csFOZN00KM736yHS3U.eu3Ux5BZFvSJqTQyyiyTaLpeon8TJyslC', NULL, '2026-02-11 15:24:52', '2026-02-11 15:24:52', 0),
+(398, 'Ahmed Salem', 'el3amed22@gmail.com', '01006573855', NULL, NULL, NULL, '$2y$12$4lmcn5E6XkydmcT8rYWcs.VK6LHG4kdgpOxnf0DPs/3lud.y3cUDu', NULL, '2026-03-11 09:55:54', '2026-03-11 09:55:54', 0),
+(399, 'ahmed salem', 'dashboard.user@gmail.com', NULL, NULL, NULL, NULL, '$2y$12$7hejk6b5GtYkMIo62zA0F.8ZqZqINgcQUr0F8l4Cgx.ZwikVtxg5m', NULL, '2026-03-11 13:24:19', '2026-03-11 13:24:19', 0),
+(400, 'salem mentor', 'dashboard.mentor@gmail.com', '12685965', NULL, NULL, NULL, '$2y$12$sfK08cBNCbmknkgkvfjtwejK2AF9Ka3iz.ywS6T4.N7U0SCtcsmDi', NULL, '2026-03-11 13:26:15', '2026-03-17 15:50:26', 0),
+(401, 'sdachk', 'sklcj@SKV.DFVV', '354865', NULL, NULL, NULL, '$2y$12$UjJ.dKJyizC8.ZefZIZyZuDAz2OifEWb2P5WGi5v9WCUq1u2rm9LW', NULL, '2026-03-17 15:13:20', '2026-03-17 15:13:20', 0),
+(402, 'dsv', 'wef@klvms.vedf', '6546', NULL, NULL, NULL, '$2y$12$sgxWRiPgM9jkIEl3Zo.ejekYM0tPJhRL.qvgoQQ7zVKcf41cW0xnC', NULL, '2026-03-17 15:13:55', '2026-03-17 15:13:55', 0),
+(404, 'Ahmed Salem', 'admin@superadmin.com', '0111022001', NULL, NULL, NULL, '$2y$12$pi1jmo3SZXkHC6KjgOblSu2JN3AhRzvt1C18mqShgxJf7JdIvTJfS', NULL, '2026-03-18 11:09:47', '2026-03-18 11:09:47', 0),
+(405, 'test mentor', 'test@mentor.com', '01124569633', NULL, NULL, NULL, '$2y$12$D/dcat0cL1rrKWo6sTdZiOVDPGDkZDWXANM/aCVbkWd2lLLIQv5Ca', NULL, '2026-03-18 11:11:37', '2026-03-18 11:11:37', 0);
 
 -- --------------------------------------------------------
 
@@ -3207,7 +3567,14 @@ INSERT INTO `wallets` (`id`, `user_id`, `balance`, `created_at`, `updated_at`) V
 (383, 383, 0.00, '2026-02-03 14:32:53', '2026-02-03 14:32:53'),
 (395, 395, 0.00, '2026-02-09 11:26:10', '2026-02-09 11:26:10'),
 (396, 396, 0.00, '2026-02-11 14:33:03', '2026-02-11 14:33:03'),
-(397, 397, 0.00, '2026-02-11 15:24:52', '2026-02-11 15:24:52');
+(397, 397, 0.00, '2026-02-11 15:24:52', '2026-02-11 15:24:52'),
+(398, 398, 0.00, '2026-03-11 09:55:54', '2026-03-11 09:55:54'),
+(399, 399, 0.00, '2026-03-11 13:24:19', '2026-03-11 13:24:19'),
+(400, 400, 0.00, '2026-03-11 13:26:15', '2026-03-11 13:26:15'),
+(401, 401, 0.00, '2026-03-17 15:13:20', '2026-03-17 15:13:20'),
+(402, 402, 0.00, '2026-03-17 15:13:55', '2026-03-17 15:13:55'),
+(404, 404, 0.00, '2026-03-18 11:09:47', '2026-03-18 11:09:47'),
+(405, 405, 0.00, '2026-03-18 11:11:37', '2026-03-18 11:11:37');
 
 -- --------------------------------------------------------
 
@@ -3303,16 +3670,77 @@ ALTER TABLE `comments`
   ADD KEY `comments_user_id_foreign` (`user_id`);
 
 --
+-- Indexes for table `consultation_categories`
+--
+ALTER TABLE `consultation_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `consultation_requests`
+--
+ALTER TABLE `consultation_requests`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `consultation_requests_user_id_foreign` (`user_id`);
+
+--
+-- Indexes for table `consultation_reservations`
+--
+ALTER TABLE `consultation_reservations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `consultation_reservations_user_id_foreign` (`user_id`),
+  ADD KEY `consultation_reservations_consultation_session_id_foreign` (`consultation_session_id`);
+
+--
+-- Indexes for table `consultation_sessions`
+--
+ALTER TABLE `consultation_sessions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `consultation_sessions_consultation_sub_category_id_foreign` (`consultation_sub_category_id`),
+  ADD KEY `consultation_sessions_mentor_id_foreign` (`mentor_id`);
+
+--
+-- Indexes for table `consultation_session_user`
+--
+ALTER TABLE `consultation_session_user`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `consultation_session_user_user_id_foreign` (`user_id`),
+  ADD KEY `consultation_session_user_consultation_session_id_foreign` (`consultation_session_id`);
+
+--
+-- Indexes for table `consultation_sub_categories`
+--
+ALTER TABLE `consultation_sub_categories`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `consultation_sub_categories_consultation_category_id_foreign` (`consultation_category_id`);
+
+--
 -- Indexes for table `courses`
 --
 ALTER TABLE `courses`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `courses_category_id_foreign` (`category_id`),
   ADD KEY `courses_level_id_foreign` (`level_id`),
   ADD KEY `courses_mentor_id_foreign` (`mentor_id`),
-  ADD KEY `courses_type_index` (`type`);
+  ADD KEY `courses_type_index` (`type`),
+  ADD KEY `courses_sub_category_id_foreign` (`sub_category_id`);
 ALTER TABLE `courses` ADD FULLTEXT KEY `courses_searchable_name_fulltext` (`searchable_name`);
 ALTER TABLE `courses` ADD FULLTEXT KEY `courses_searchable_description_fulltext` (`searchable_description`);
+
+--
+-- Indexes for table `course_mentor`
+--
+ALTER TABLE `course_mentor`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `course_mentor_course_id_foreign` (`course_id`),
+  ADD KEY `course_mentor_user_id_foreign` (`user_id`);
+
+--
+-- Indexes for table `course_reservations`
+--
+ALTER TABLE `course_reservations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `course_reservations_user_id_foreign` (`user_id`),
+  ADD KEY `course_reservations_course_id_foreign` (`course_id`),
+  ADD KEY `course_reservations_mentor_id_foreign` (`mentor_id`);
 
 --
 -- Indexes for table `course_user`
@@ -3502,6 +3930,15 @@ ALTER TABLE `sessions`
   ADD KEY `sessions_last_activity_index` (`last_activity`);
 
 --
+-- Indexes for table `sub_categories`
+--
+ALTER TABLE `sub_categories`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sub_categories_category_id_foreign` (`category_id`);
+ALTER TABLE `sub_categories` ADD FULLTEXT KEY `sub_categories_searchable_name_fulltext` (`searchable_name`);
+ALTER TABLE `sub_categories` ADD FULLTEXT KEY `sub_categories_searchable_description_fulltext` (`searchable_description`);
+
+--
 -- Indexes for table `transactions`
 --
 ALTER TABLE `transactions`
@@ -3558,7 +3995,7 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `comments`
@@ -3567,10 +4004,58 @@ ALTER TABLE `comments`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
 
 --
+-- AUTO_INCREMENT for table `consultation_categories`
+--
+ALTER TABLE `consultation_categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `consultation_requests`
+--
+ALTER TABLE `consultation_requests`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `consultation_reservations`
+--
+ALTER TABLE `consultation_reservations`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `consultation_sessions`
+--
+ALTER TABLE `consultation_sessions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `consultation_session_user`
+--
+ALTER TABLE `consultation_session_user`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `consultation_sub_categories`
+--
+ALTER TABLE `consultation_sub_categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `course_mentor`
+--
+ALTER TABLE `course_mentor`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `course_reservations`
+--
+ALTER TABLE `course_reservations`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -3600,7 +4085,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `lessons`
 --
 ALTER TABLE `lessons`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `lesson_user`
@@ -3618,13 +4103,13 @@ ALTER TABLE `levels`
 -- AUTO_INCREMENT for table `mentor_details`
 --
 ALTER TABLE `mentor_details`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `permissions`
@@ -3636,7 +4121,7 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `point_transactions`
@@ -3669,6 +4154,12 @@ ALTER TABLE `roles`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `sub_categories`
+--
+ALTER TABLE `sub_categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
@@ -3678,13 +4169,13 @@ ALTER TABLE `transactions`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=398;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=406;
 
 --
 -- AUTO_INCREMENT for table `wallets`
 --
 ALTER TABLE `wallets`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=398;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=406;
 
 --
 -- AUTO_INCREMENT for table `working_days`
@@ -3731,12 +4222,60 @@ ALTER TABLE `comments`
   ADD CONSTRAINT `comments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
 
 --
+-- Constraints for table `consultation_requests`
+--
+ALTER TABLE `consultation_requests`
+  ADD CONSTRAINT `consultation_requests_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `consultation_reservations`
+--
+ALTER TABLE `consultation_reservations`
+  ADD CONSTRAINT `consultation_reservations_consultation_session_id_foreign` FOREIGN KEY (`consultation_session_id`) REFERENCES `consultation_sessions` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `consultation_reservations_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `consultation_sessions`
+--
+ALTER TABLE `consultation_sessions`
+  ADD CONSTRAINT `consultation_sessions_consultation_sub_category_id_foreign` FOREIGN KEY (`consultation_sub_category_id`) REFERENCES `consultation_sub_categories` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `consultation_sessions_mentor_id_foreign` FOREIGN KEY (`mentor_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `consultation_session_user`
+--
+ALTER TABLE `consultation_session_user`
+  ADD CONSTRAINT `consultation_session_user_consultation_session_id_foreign` FOREIGN KEY (`consultation_session_id`) REFERENCES `consultation_sessions` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `consultation_session_user_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `consultation_sub_categories`
+--
+ALTER TABLE `consultation_sub_categories`
+  ADD CONSTRAINT `consultation_sub_categories_consultation_category_id_foreign` FOREIGN KEY (`consultation_category_id`) REFERENCES `consultation_categories` (`id`) ON DELETE CASCADE;
+
+--
 -- Constraints for table `courses`
 --
 ALTER TABLE `courses`
-  ADD CONSTRAINT `courses_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE SET NULL,
   ADD CONSTRAINT `courses_level_id_foreign` FOREIGN KEY (`level_id`) REFERENCES `levels` (`id`) ON DELETE SET NULL,
-  ADD CONSTRAINT `courses_mentor_id_foreign` FOREIGN KEY (`mentor_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+  ADD CONSTRAINT `courses_mentor_id_foreign` FOREIGN KEY (`mentor_id`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `courses_sub_category_id_foreign` FOREIGN KEY (`sub_category_id`) REFERENCES `sub_categories` (`id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `course_mentor`
+--
+ALTER TABLE `course_mentor`
+  ADD CONSTRAINT `course_mentor_course_id_foreign` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `course_mentor_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `course_reservations`
+--
+ALTER TABLE `course_reservations`
+  ADD CONSTRAINT `course_reservations_course_id_foreign` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `course_reservations_mentor_id_foreign` FOREIGN KEY (`mentor_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `course_reservations_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `course_user`
@@ -3822,6 +4361,12 @@ ALTER TABLE `post_user`
 ALTER TABLE `role_has_permissions`
   ADD CONSTRAINT `role_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `role_has_permissions_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `sub_categories`
+--
+ALTER TABLE `sub_categories`
+  ADD CONSTRAINT `sub_categories_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `transactions`

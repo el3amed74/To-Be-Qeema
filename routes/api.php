@@ -203,6 +203,7 @@ Route::group([
     Route::post('login', [AuthController::class , 'login']);
 
     Route::middleware('auth:sanctum')->group(function () {
+            Route::get('profile', [\App\Http\Controllers\Api\ProfileController::class, 'show']);
             Route::get('my-courses', [ListCourseController::class , 'myCourses']);
             Route::get('writers/{id}', [WriterController::class , 'show']);
 
