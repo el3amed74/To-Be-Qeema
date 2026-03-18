@@ -16,6 +16,10 @@ use App\Repositories\NotificationsRepository;
 use App\Repositories\WalletsRepository;
 use App\Repositories\TransactionsRepository;
 use App\Repositories\ReferralsRepository;
+use App\DTOs\StoreMentorDTO;
+use App\DTOs\UpdateMentorDTO;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class MentorService
 {
@@ -41,10 +45,26 @@ class MentorService
         return $this->usersRepository->getMentors($perPage, $search);
     }
 
-    public function createMentor(array $data , $role = 'mentor')
+    public function createMentor(StoreMentorDTO $dto)
     {
-        $data['role'] = $role;
-        return $this->usersRepository->create($data);
+        DB::beginTransaction();
+        try {
+            $data = $dto->toArray();
+            $data['role'] = 'mentor';
+            
+            $user = $this->usersRepository->create($data);
+            
+            if (!empty($data['mentor_details'])) {
+                $user->mentorDetail()->create($data['mentor_details']);
+            }
+
+            DB::commit();
+            return $user;
+        } catch (\Exception $e) {
+            DB::rollBack();
+            Log::error('Error creating mentor: ' . $e->getMessage());
+            throw $e;
+        }
     }
 
     public function findMentorById($id, $loads = [], $counts = [])
@@ -52,9 +72,27 @@ class MentorService
         return $this->usersRepository->findById($id, $loads, $counts);
     }
 
-    public function updateMentor(int $id, array $data)
+    public function updateMentor(int $id, UpdateMentorDTO $dto)
     {
-        return $this->usersRepository->update($id, $data);
+        DB::beginTransaction();
+        try {
+            $data = $dto->toArray();
+            $user = $this->usersRepository->update($id, $data);
+
+            if (!empty($data['mentor_details'])) {
+                $user->mentorDetail()->updateOrCreate(
+                    ['user_id' => $user->id],
+                    $data['mentor_details']
+                );
+            }
+
+            DB::commit();
+            return $user;
+        } catch (\Exception $e) {
+            DB::rollBack();
+            Log::error('Error updating mentor: ' . $e->getMessage());
+            throw $e;
+        }
     }
 
     public function deleteMentor(int $id)

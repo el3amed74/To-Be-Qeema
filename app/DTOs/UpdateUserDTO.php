@@ -2,7 +2,7 @@
 
 namespace App\DTOs;
 
-class StoreUserDTO
+class UpdateUserDTO
 {
     public function __construct(
         public readonly string $name,
@@ -10,20 +10,24 @@ class StoreUserDTO
         public readonly ?string $phoneNumber,
         public readonly ?array $roles = null,
         public readonly ?array $permissions = null,
-        
+        public readonly ?string $password = null,
     ) {
     }
 
     public function toArray(): array
     {
-        return [
+        $data = [
             'name' => $this->name,
             'email' => $this->email,
             'phone_number' => $this->phoneNumber,
-            'password' => 'password', // As requested
             'roles' => $this->roles,
             'permissions' => $this->permissions,
         ];
-    }
 
+        if ($this->password) {
+            $data['password'] = $this->password;
+        }
+
+        return $data;
+    }
 }

@@ -78,7 +78,7 @@ Route::group([
                 Route::group([
                     'middleware' => 'role_or_permission:super-admin',
                 ], function () {
-                    Route::apiResource('users', UserController::class)->except(['update']);
+                    Route::apiResource('users', UserController::class);
                 }
                 );
 

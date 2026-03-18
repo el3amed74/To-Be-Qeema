@@ -3,51 +3,46 @@
 namespace App\Http\Requests\Dashboard;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\DTOs\StoreUserDTO;
-use Illuminate\Validation\Rule;
-use Spatie\Permission\Models\Role;
+use App\DTOs\UpdateUserDTO;
 
-class StoreUserRequest extends FormRequest
+use Illuminate\Validation\Rule;
+use App\Models\User;
+
+class UpdateUserRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
     public function authorize(): bool
     {
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
-     */
     public function rules(): array
     {
+        $user = $this->route('user');
+        $userId = $user instanceof User ? $user->id : $user;
+
         return [
             'name' => 'required|string|max:255',
-            'email' => 'nullable|email|unique:users,email|required_without:phone_number',
-            'phone_number' => 'nullable|string|max:15|unique:users,phone_number|required_without:email',
+            'email' => 'nullable|email|required_without:phone_number|unique:users,email,' . $userId,
+            'phone_number' => 'nullable|string|max:15|required_without:email|unique:users,phone_number,' . $userId,
             'roles' => 'required|array',
             'roles.*' => 'exists:roles,id',
             'permissions' => in_array(2, array_map('intval', $this->input('roles', []))) 
                 ? 'required|array' 
                 : 'nullable|array',
             'permissions.*' => 'exists:permissions,id',
-           
+            'password' => 'nullable|string|min:8',
         ];
     }
 
-
-    public function toDTO(): StoreUserDTO
+    public function toDTO(): UpdateUserDTO
     {
-        return new StoreUserDTO(
+        return new UpdateUserDTO(
             name: $this->validated('name'),
             email: $this->validated('email'),
             phoneNumber: $this->validated('phone_number'),
             roles: array_map('intval', $this->validated('roles', [])),
             permissions: $this->validated('permissions', []),
-                    
+            password: $this->validated('password'),
         );
     }
 }

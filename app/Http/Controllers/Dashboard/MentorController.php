@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\UserRequest;
-use App\Http\Requests\UserUpdateRequest;
+use App\Http\Requests\Dashboard\MentorStoreRequest;
+use App\Http\Requests\Dashboard\MentorUpdateRequest;
 use App\Http\Resources\UserResource;
 use App\Services\MentorService;
 use Illuminate\Http\Request;
@@ -41,10 +41,10 @@ class MentorController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(UserRequest $request)
+    public function store(MentorStoreRequest $request)
     {
-        $data = $request->all();
-        $mentor = $this->mentorService->createMentor($data);
+        $dto = $request->toDTO();
+        $mentor = $this->mentorService->createMentor($dto);
 
         return response()->json([
             'message' => __('Mentor created successfully.'),
@@ -77,10 +77,10 @@ class MentorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UserUpdateRequest $request, string $id)
+    public function update(MentorUpdateRequest $request, string $id)
     {
-        $data = $request->all();
-        $mentor = $this->mentorService->updateMentor($id, $data);
+        $dto = $request->toDTO();
+        $mentor = $this->mentorService->updateMentor((int) $id, $dto);
 
         return response()->json([
             'message' => __('Mentor updated successfully.'),
