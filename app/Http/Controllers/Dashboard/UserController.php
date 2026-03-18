@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\Dashboard\StoreUserRequest;
 use App\Services\UserService;
+use App\Models\User;
+use App\Http\Requests\Dashboard\UpdateUserRequest;
+use App\Http\Resources\UserResource;
 
 class UserController extends Controller
 {
@@ -27,7 +30,8 @@ class UserController extends Controller
 
         return response()->json([
             'message' => 'User created successfully',
-            'data' => $user->load('roles', 'mentorDetail'),
+            'user' => $user,
+            'permissions' => $user->permissions,
         ], 201);
     }
 
@@ -38,7 +42,7 @@ class UserController extends Controller
     {
         $users = $this->userService->getAllUsers($request->all());
 
-        return \App\Http\Resources\UserResource::collection($users);
+        return UserResource::collection($users);
     }
 
     /**
@@ -48,7 +52,23 @@ class UserController extends Controller
     {
         $user = $this->userService->getUserById($id);
 
-        return new \App\Http\Resources\UserResource($user);
+        return new UserResource($user);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(UpdateUserRequest $request, User $user)
+    {
+        $dto = $request->toDTO();
+
+        $user = $this->userService->updateUser($user->id, $dto);
+
+        return response()->json([
+            'message' => 'User updated successfully',
+            'user' => $user,
+            'permissions' => $user->permissions,
+        ]);
     }
 
     /**

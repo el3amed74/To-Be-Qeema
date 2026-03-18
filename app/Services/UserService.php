@@ -31,11 +31,13 @@ class UserService
 
             if (!empty($data['roles'])) {
                 $user->syncRoles($data['roles']);
-            }
-
-            // Handle mentor details if applicable
-            if (!empty($data['mentor_details'])) {
-                $user->mentorDetail()->create($data['mentor_details']);
+                
+                if ($user->roles->contains('id', 1)) { // super-admin
+                    $user->syncPermissions(\Spatie\Permission\Models\Permission::all());
+                } elseif ($user->roles->contains('id', 2) && !empty($data['permissions'])) { // admin
+                    $permissions = \Spatie\Permission\Models\Permission::whereIn('id', $data['permissions'])->get();
+                    $user->syncPermissions($permissions);
+                }
             }
 
             DB::commit();
@@ -44,6 +46,38 @@ class UserService
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error('Error creating user: ' . $e->getMessage());
+            throw $e;
+        }
+    }
+
+    /**
+     * Update an existing user.
+     */
+    public function updateUser(int $id, \App\DTOs\UpdateUserDTO $dto)
+    {
+        DB::beginTransaction();
+
+        try {
+            $data = $dto->toArray();
+            $user = $this->usersRepository->update($id, $data);
+
+            if (isset($data['roles'])) {
+                $user->syncRoles($data['roles']);
+
+                if ($user->roles->contains('id', 1)) { // super-admin
+                    $user->syncPermissions(\Spatie\Permission\Models\Permission::all());
+                } elseif ($user->roles->contains('id', 2) && isset($data['permissions'])) { // admin
+                    $permissions = \Spatie\Permission\Models\Permission::whereIn('id', $data['permissions'])->get();
+                    $user->syncPermissions($permissions);
+                }
+            }
+
+            DB::commit();
+
+            return $user;
+        } catch (\Exception $e) {
+            DB::rollBack();
+            Log::error('Error updating user: ' . $e->getMessage());
             throw $e;
         }
     }
